@@ -1,5 +1,10 @@
 <?php
-    $conn = new mysqli("localhost", "root", "", "imageGallery");
+session_start();
+include('includes/config.php');
+
+?>
+<?php
+    $conn = new mysqli("localhost", "root", "", "tkj");
 
     if (isset($_POST['delImage'])) {
         $id = $conn->real_escape_string($_POST['id']);
@@ -35,10 +40,10 @@
     $sql = $conn->query("SELECT id FROM photos");
     $numRows = $sql->num_rows;
 ?>
-<html>
-	<head>
-		<title>jQuery File Upload Script</title>
-		<style type="text/css">
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <style type="text/css">
 			#dropZone {
 				border: 3px dashed #0088cc;
 				padding: 50px;
@@ -65,15 +70,47 @@
                 width: 100% !important;
             }
 		</style>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <title> | Manage Categories</title>
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/core.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/components.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/icons.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/pages.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/menu.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/responsive.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="../plugins/switchery/switchery.min.css">
+        <script src="assets/js/modernizr.min.js"></script>
+
     </head>
-	<body>
-		<div class="container">
+
+
+    <body class="fixed-left">
+
+        <!-- Begin page -->
+        <div id="wrapper">
+
+            <!-- Top Bar Start -->
+<?php include('includes/topheader.php');?>
+
+            <!-- ========== Left Sidebar Start ========== -->
+<?php include('includes/leftsidebar.php');?>
+            <!-- Left Sidebar End -->
+
+
+
+            <!-- ============================================================== -->
+            <!-- Start right Content here -->
+            <!-- ============================================================== -->
+            <div class="content-page">
+                <!-- Start content -->
+                <BR></BR>
+                        <!-- end row -->
+                <div class="container">
             <div class="row">
                 <div class="col-md-12" align="center">
-                <img src="images/logo.png"><br><br>
+                <img src="../../assets/img/Logo-removebg-preview.png" width="90px"><br><br>
                 <div id="dropZone">
-                    <h1>Drag & Drop Files...</h1>
+                    <h1>Drag & Drop Foto...</h1>
                     <input type="file" id="fileupload" name="attachments[]" multiple>
                 </div>
                 <h1 id="error"></h1><br><br>
@@ -82,7 +119,7 @@
                 </div>
             </div>
 		</div>
-        <div class="container" id="uploadedFiles">
+        <div class="container mt-1" id="uploadedFiles">
             <div class="row">
                 <!-- <div class="col-md-3 myImg"></div> -->
             </div>
@@ -179,5 +216,33 @@
                 $("#uploadedFiles").find('.row:last').append('<div id="img_'+id+'" class="col-md-3 myImg" onclick="delImg('+id+')"><img src="'+path+'" /></div>');
             }
         </script>
-	</body>
+                
+<?php include('includes/footer.php');?>
+            </div>
+
+        </div>
+        <!-- END wrapper -->
+
+
+
+        <script>
+            var resizefunc = [];
+        </script>
+
+        <!-- jQuery  -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/detect.js"></script>
+        <script src="assets/js/fastclick.js"></script>
+        <script src="assets/js/jquery.blockUI.js"></script>
+        <script src="assets/js/waves.js"></script>
+        <script src="assets/js/jquery.slimscroll.js"></script>
+        <script src="assets/js/jquery.scrollTo.min.js"></script>
+        <script src="../plugins/switchery/switchery.min.js"></script>
+
+        <!-- App js -->
+        <script src="assets/js/jquery.core.js"></script>
+        <script src="assets/js/jquery.app.js"></script>
+
+    </body>
 </html>

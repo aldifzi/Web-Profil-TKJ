@@ -57,7 +57,7 @@
                                 <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-format-list-bulleted"></i> <span> </span> <span class="menu-arrow"></span></a>
                                 <ul class="list-unstyled">
                                   <li><a href="admin.php">Data Siswa </a></li>
-                                    <li><a href="manage-comments.php">Galeri</a></li>
+                                    <li><a href="galeri">Galeri</a></li>
                                 </ul>
                             </li>   
 
