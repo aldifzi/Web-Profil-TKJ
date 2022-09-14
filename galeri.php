@@ -64,15 +64,39 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <!-- Template Main CSS File -->
   <link href="assets/css/Galeri.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Day - v4.8.0
-  * Template URL: https://bootstrapmade.com/day-multipurpose-html-template-for-free/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <style type="text/css">
+			#dropZone {
+				border: 3px dashed #0088cc;
+				padding: 50px;
+				width: 500px;
+				margin-top: 20px;
+			}
+
+			#files {
+				border: 1px dotted #0088cc;
+				padding: 20px;
+				width: 200px;
+				display: none;
+			}
+#img_ {
+  width: 122cm;
+}
+            #error {
+                color: red;
+            }
+
+            .container, .row {
+                margin-top: 50px;
+            }
+
+            #uploadedFiles img {
+                width: 100% !important;
+            }
+		</style>
 </head>
 
 <body>
@@ -147,7 +171,7 @@
 
   <div class="container mt-1" id="uploadedFiles">
             <div class="row">
-                <!-- <div class="col-md-3 myImg"></div> -->
+                <!-- <div class="col-md-9  myImg"></div> -->
             </div>
         </div>
 
@@ -223,7 +247,7 @@
                     $("#uploadedFiles").append('<div class="row"></div>');
 
 
-                $("#uploadedFiles").find('.row:last').append('<div id="img_'+id+'" class="col-md-3 myImg" onclick="delImg('+id+')"><img src="'+path+'" /></div>');
+                $("#uploadedFiles").find('.row:last').append('<div id="img_'+id+'" class="col-md-3 mt-3 myImg" onclick="delImg('+id+')"><img src="'+path+'" /></div>');
             }
         </script>
                 
@@ -249,7 +273,7 @@
         <script src="assets/js/jquery.slimscroll.js"></script>
         <script src="assets/js/jquery.scrollTo.min.js"></script>
         <script src="../plugins/switchery/switchery.min.js"></script>
-
+        <script src="https://cdn.tailwindcss.com"></script>
         <!-- App js -->
         <script src="assets/js/jquery.core.js"></script>
         <script src="assets/js/jquery.app.js"></script>
@@ -259,7 +283,7 @@
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
-    <div class="footer-top">
+    <div class="footer-top mt-6">
       <div class="container">
         <div class="row">
 
