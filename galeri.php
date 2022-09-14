@@ -68,35 +68,6 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/Galeri.css" rel="stylesheet">
 
-  <style type="text/css">
-			#dropZone {
-				border: 3px dashed #0088cc;
-				padding: 50px;
-				width: 500px;
-				margin-top: 20px;
-			}
-
-			#files {
-				border: 1px dotted #0088cc;
-				padding: 20px;
-				width: 200px;
-				display: none;
-			}
-#img_ {
-  width: 122cm;
-}
-            #error {
-                color: red;
-            }
-
-            .container, .row {
-                margin-top: 50px;
-            }
-
-            #uploadedFiles img {
-                width: 100% !important;
-            }
-		</style>
 </head>
 
 <body>
