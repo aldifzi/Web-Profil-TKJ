@@ -43,6 +43,7 @@
       <div class="contact-info d-flex align-items-center">
         <i class="bi bi-envelope-fill"></i><a href="mailto:contact@example.com">smeanbtl@yahoo.com</a>
         <i class="bi bi-phone-fill phone-icon"></i> 0274-367156
+        <span class="ml-3" id="jam" style="font-size:24"></span>
       </div>
       <div class="social-links d-none d-md-block">
         <a href="" class="twitter"><i class="bi bi-twitter"></i></a>
