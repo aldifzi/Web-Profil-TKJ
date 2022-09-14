@@ -197,19 +197,19 @@ if(isset($_GET['cari'])){
         </table>
  </div>
  <nav aria-label="Page navigation example">
-                <ul class="pagination flex-wrap">
+                <ul class="flex items-center space-x-1 mx-5 my-4 sm:flex hidden">
                     <li class="page-item">
-                        <a class=" page-link " <?php if($halaman > 1){ echo "href='?halaman=$sebelum'"; } ?>>Previous</a>
+                        <a class="flex items-center px-4 py-2 text-gray-500 bg-gray-300 rounded-md " <?php if($halaman > 1){ echo "href='?halaman=$sebelum'"; } ?>>Previous</a>
                     </li>
                     <?php 
                         for($x = 1; $x <= $total_halaman; $x++){
                     ?> 
-                    <li class="page-item"><a class="page-link" href="?halaman=<?php echo $x ?>"> <?php echo $x; ?></a></li>
+                    <li class="page-item"><a class="flex items-center px-3 py-1 text-gray-500 bg-gray-300 rounded-md" href="?halaman=<?php echo $x ?>"> <?php echo $x; ?></a></li>
                     <?php
                         }
                     ?> 
                     <li class="page-item">
-                        <a  class="page-link " <?php  if($halaman < $total_halaman) { echo "href='?halaman=$setelah'"; } ?>>Next</a>
+                        <a  class="flex items-center px-4 py-2 text-gray-500 bg-gray-300 rounded-md " <?php  if($halaman < $total_halaman) { echo "href='?halaman=$setelah'"; } ?>>Next</a>
                     </li>
                 </ul>
             </nav>

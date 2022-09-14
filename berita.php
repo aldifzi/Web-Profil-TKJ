@@ -181,7 +181,7 @@ while ($row=mysqli_fetch_array($query)) {
         </div>
 
         <!-- Sidebar Widgets Column -->
-    
+        <?php include('assets/includes/sidebar.php');?>
       </div>
       <!-- /.row -->
 
