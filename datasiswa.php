@@ -35,7 +35,7 @@
   ======================================================== -->
 </head>
 
-<body>
+<body  class="selection:bg-slate-600 selection:text-white">
 
   <!-- ======= Top Bar ======= -->
   <section id="topbar" class="d-flex align-items-center">
@@ -56,10 +56,9 @@
   <!-- ======= Header ======= -->
   <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
-      <a class="navbar-brand" href="index.html">
-        <img src="assets/img/Logo-removebg-preview.png" alt="" width="65" height="65"
-          class="d-inline-block align-text-top">
-        TKJ smk n1 bantul
+    <a class="navbar-brand logo me-auto flex" href="#">
+        <img src="assets/img/Logo-removebg-preview.png" alt=""   class="h-10 mr-3" width="51" height="70">
+        <span class="self-center text-base font-semibold whitespace-nowrap">TEKNIK KOMPUTER JARINGAN <p class="text-xs font-light">SMK 1 BANTUL</p></span>
       </a>
       <!-- Uncomment below if you prefer to use an image logo -->
 
@@ -198,7 +197,7 @@ if(isset($_GET['cari'])){
         </table>
  </div>
  <nav aria-label="Page navigation example">
-                <ul class="pagination">
+                <ul class="pagination flex-wrap">
                     <li class="page-item">
                         <a class=" page-link " <?php if($halaman > 1){ echo "href='?halaman=$sebelum'"; } ?>>Previous</a>
                     </li>
@@ -307,6 +306,7 @@ if(isset($_GET['cari'])){
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
