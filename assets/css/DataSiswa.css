@@ -158,54 +158,56 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Header
---------------------------------------------------------------*/
-#header {
-  background: rgba(25, 25, 25, 0.95);
-  transition: all 0.5s;
-  z-index: 997;
-  height: 70px;
-}
-
-#header.fixed-top {
-  background: #191919;
-}
-
-#header .logo {
-  font-size: 30px;
-  margin: 0;
-  padding: 0;
+  # Header
+  --------------------------------------------------------------*/
+  #header {
+    background: rgba(25, 25, 25, 0.95);
+    transition: all 0.5s;
+    z-index: 997;
+    height: 70px;
+  }
   
-  line-height: 1;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
+  #header.fixed-top {
+    background: #191919;
+  }
+  
 
-#header .navbar-brand{
-  padding: 0;
-  margin: 0;
-  line-height: 1;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  font-size: 39px;
-  color: #fff;
-  margin-top: 7px;
-  margin-bottom: 10px;
-}
+  #header .navbar-brand{
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 39px;
+    color: #fff;
+    margin-top: 7px;
+    margin-bottom: 7px;
+   
+    
+  }
 
-#header .logo a {
-  color: #fff;
-}
+  #header .navbar-brand .self-center {
+    color: red;
+    font-weight: bold;
+  }
 
-#header .logo img {
-  max-height: 60px;
-}
+  #header .navbar-brand .text-xs{
+    color: white;
+    font-weight: bold;
+  }
 
-.scrolled-offset {
-  margin-top: 70px;
-}
+  #header .logo a {
+    color: #fff;
+  }
+  
+  #header .logo img {
+    max-height: 60px;
+  }
+  
+  .scrolled-offset {
+    margin-top: 70px;
+  }
 
 /*--------------------------------------------------------------
 # Navigation Menu

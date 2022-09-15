@@ -142,7 +142,7 @@ include('includes/config.php');?>
                 <form action="" method="POST">
                     <div class="w-full md:w-1/2 px-3 py-9">
                             <div class="">
-                            <label for="NIS" class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">NIS</label>
+                            <label for="NIS" class="block uppercase tracking-wide text-gray-700 text-lg font-bold mb-2">NIS</label>
                             </div>
                             <div class="col-sm-10">
                             <input type="text" class="bg-gray-50 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500 hover:placeholder:text-slate-500"  id="NIS" name="NIS" placeholder="NIS...." value="<?php echo $NIS ?>">   
@@ -151,7 +151,7 @@ include('includes/config.php');?>
                     <br>
                     <div class="w-full md:w-1/2 px-3 py-4">
                         <div>
-                        <label for="name" class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Nama</label>
+                        <label for="name" class="block uppercase tracking-wide text-gray-700 text-lg font-bold mb-2">Nama</label>
                         </div>
                         <div class="col-sm-10">
                             <input type="text" class="bg-gray-50 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="name" name="name" value="<?php echo $name ?>">
@@ -161,7 +161,7 @@ include('includes/config.php');?>
                     
                     <br>
                     <div class="w-full md:w-1/2 px-3 py-4">
-                        <label for="kelas" class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Kelas</label>
+                        <label for="kelas" class="block uppercase tracking-wide text-gray-700 text-lg font-bold mb-2">Kelas</label>
                         <div class="col-sm-10">
                             <select class="bg-slate-400 rounded-full" name="kelas" id="kelas">
                                 <option value="">- Pilih Kelas -</option>

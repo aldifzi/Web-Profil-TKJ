@@ -1,4 +1,4 @@
-const words = ["SMK Bisa", "SMK Hebat", "SMK Bisa Hebat", "Vokasi kuat" ,"Menguatkan Indonesia"]
+const words = ["TKJ Bisa", "TKJ Hebat", "TKJ Bisa Hebat", "Vokasi kuat" ,"Menguatkan Indonesia"]
 
 let cursor = gsap.to('.cursor', {opacity:0, ease: "power2.inOut", repeat:-1})
 let masterTl = gsap.timeline({repeat: -1}).pause()

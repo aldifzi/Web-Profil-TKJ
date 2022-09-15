@@ -190,14 +190,21 @@ body {
     font-size: 39px;
     color: #fff;
     margin-top: 7px;
-    margin-bottom: 10px;
-    margin-left: 100px;
+    margin-bottom: 7px;
+   
+    
   }
 
-  #header .navbar {
-    margin-right: 100px;
+  #header .navbar-brand .self-center {
+    color: red;
+    font-weight: bold;
   }
-  
+
+  #header .navbar-brand .text-xs{
+    color: white;
+    font-weight: bold;
+  }
+
   #header .logo a {
     color: #fff;
   }

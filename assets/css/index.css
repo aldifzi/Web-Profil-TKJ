@@ -183,17 +183,7 @@ h6 {
     background: #191919;
   }
   
-  #header .logo {
-    font-size: 30px;
-    margin: 0;
-    padding: 0;
-    
-    line-height: 1;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-  }
-  
+
   #header .navbar-brand{
     padding: 0;
     margin: 0;
@@ -204,9 +194,21 @@ h6 {
     font-size: 39px;
     color: #fff;
     margin-top: 7px;
-    margin-bottom: 10px;
+    margin-bottom: 7px;
+   
+    
   }
-  
+
+  #header .navbar-brand .self-center {
+    color: red;
+    font-weight: bold;
+  }
+
+  #header .navbar-brand .text-xs{
+    color: white;
+    font-weight: bold;
+  }
+
   #header .logo a {
     color: #fff;
   }
@@ -583,8 +585,9 @@ banner
 .main-banner .video-overlay .caption h2 {
   color: rgb(235, 199, 199);
   margin-bottom: 20px;
-  font-size: 48px;
+  font-size: 40px;
   font-weight: 700;
+  text-transform: uppercase;
 }
 
 .main-banner .video-overlay .caption .hi{
@@ -638,6 +641,7 @@ banner
   color: #fff;
   letter-spacing: 0.5px;
 }
+
 
 
 
