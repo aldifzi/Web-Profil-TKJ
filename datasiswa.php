@@ -119,7 +119,7 @@ if(isset($_GET['cari'])){
 
 
     <div class="container my-5">
-<div class="shadow-4 rounded-5 overflow-hidden shadow p-3 mb-5 bg-white rounded">
+<div class="">
     <table class="table align-middle mb-0 bg-white">
  <thead class="bg-light">
   <tr>
@@ -127,7 +127,6 @@ if(isset($_GET['cari'])){
     <th>NIS</th>
     <TH>Nama</TH>
     <TH>Kelas</TH>
-    <th>Alamat</th>
   </tr>
  </thead>
 <tbody>
@@ -186,10 +185,10 @@ if(isset($_GET['cari'])){
     ?>
 </tbody>
     <tr>
-    <td><img src="assets/img/icon.png" alt="" width="80px" class="rounded ml-2"></td>
+    <td><img src="assets/img/icon.png" alt="" width="80px" class="rounded ml-2" id="foto"></td>
       <td><?php echo  $row['NIS'];?></td>
       <td><?php echo  $row['name'];?></td>
-      <td><?php echo  $row['kelas'];?></td>
+      <td class="kelas"><?php echo  $row['kelas'];?></td>
       
     </tr>
     <?php }  ?>
@@ -198,22 +197,22 @@ if(isset($_GET['cari'])){
         </table>
  </div>
  <nav aria-label="Page navigation example">
-                <ul class="flex items-center space-x-1 mx-5 my-4 sm:flex hidden">
+                <ul class="pagination flex-wrap">
                     <li class="page-item">
-                        <a class="flex items-center px-4 py-2 text-gray-500 bg-gray-300 rounded-md " <?php if($halaman > 1){ echo "href='?halaman=$sebelum'"; } ?>>Previous</a>
+                        <a class="page-link " <?php if($halaman > 1){ echo "href='?halaman=$sebelum'"; } ?>>Previous</a>
                     </li>
                     <?php 
                         for($x = 1; $x <= $total_halaman; $x++){
                     ?> 
-                    <li class="page-item"><a class="flex items-center px-3 py-1 text-gray-500 bg-gray-300 rounded-md" href="?halaman=<?php echo $x ?>"> <?php echo $x; ?></a></li>
+                    <li class="page-item"><a class="page-link" href="?halaman=<?php echo $x ?>"> <?php echo $x; ?></a></li>
                     <?php
                         }
                     ?> 
                     <li class="page-item">
-                        <a  class="flex items-center px-4 py-2 text-gray-500 bg-gray-300 rounded-md " <?php  if($halaman < $total_halaman) { echo "href='?halaman=$setelah'"; } ?>>Next</a>
+                        <a  class="page-link " <?php  if($halaman < $total_halaman) { echo "href='?halaman=$setelah'"; } ?>>Next</a>
                     </li>
                 </ul>
-            </nav>
+            </nav><script></script>
  </div>
       
     <!-- End tabel Section -->
@@ -308,6 +307,8 @@ if(isset($_GET['cari'])){
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="pagShrink.js"></script>
+
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
