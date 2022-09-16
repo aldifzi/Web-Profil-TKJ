@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>TKJ SMK N1 BANTUL</title>
+  <title>Siswa</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -197,7 +197,7 @@ if(isset($_GET['cari'])){
         </table>
  </div>
  <nav aria-label="Page navigation example">
-                <ul class="pagination flex-wrap">
+                <ul class="pagination flex-wrap mt-7">
                     <li class="page-item">
                         <a class="page-link " <?php if($halaman > 1){ echo "href='?halaman=$sebelum'"; } ?>>Previous</a>
                     </li>

@@ -17,7 +17,7 @@ if($num>0)
 
 $_SESSION['login']=$_POST['username'];
 $_SESSION['utype']=$num['userType'];
-    echo "<script type='text/javascript'> document.location = 'dashboard.php'; </script>";
+    echo "<script type='text/javascript'> document.location = 'dashboard'; </script>";
   }else{
 echo "<script>alert('Invalid Details');</script>";
   }
@@ -78,7 +78,7 @@ echo "<script>alert('Invalid Details');</script>";
                                                 <input class="form-control" type="text" required="" name="username" placeholder="Username or email" autocomplete="off">
                                             </div>
                                         </div>
-<a href="forgot-password.php"><i class="mdi mdi-lock"></i> Forgot your password?</a>
+<a href="forgot-password"><i class="mdi mdi-lock"></i> Forgot your password?</a>
 <hr>
                                         <div class="form-group">
                                             <div class="col-xs-12">
@@ -97,7 +97,7 @@ echo "<script>alert('Invalid Details');</script>";
                                     </form>
 
                                     <div class="clearfix"></div>
-<a href="../index.php"><i class="mdi mdi-home"></i> Back Home</a>
+<a href="../index"><i class="mdi mdi-home"></i> Back Home</a>
                                 </div>
                             </div>
                             <!-- end card-box-->
