@@ -35,7 +35,7 @@ include('assets/includes/config.php');
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-    <link href="assets/css/berita.css" rel="stylesheet">
+    <link href="assets/css/DataSiswa.css" rel="stylesheet">
   </head>
 
   <body class="selection:bg-slate-600 selection:text-white">
@@ -61,10 +61,9 @@ include('assets/includes/config.php');
   <!-- ======= Header ======= -->
   <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
-      <a class="navbar-brand" href="index.html">
-        <img src="assets/img/Logo-removebg-preview.png" alt="" width="65" height="65"
-          class="d-inline-block align-text-top">
-        TKJ smk n1 bantul
+    <a class="navbar-brand logo me-auto flex" href="#">
+        <img src="assets/img/Logo-removebg-preview.png" alt=""   class="h-10 mr-3" width="51" height="70">
+        <span class="self-center text-base font-semibold whitespace-nowrap">TEKNIK KOMPUTER JARINGAN <p class="text-xs font-light">SMK 1 BANTUL</p></span>
       </a>
       <!-- Uncomment below if you prefer to use an image logo -->
 
@@ -79,12 +78,12 @@ include('assets/includes/config.php');
               <li><a class="" href="galeri">Galeri</a></li>
               <li><a class="" href="Pembelajaran">Pembelajaran</a></li>
             </ul>
-          <li class="dropdown"><a href="#"><span>Data TKJ</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a class="active" href="#"><span>Data TKJ</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a class="" href="datasiswa">Data Siswa</a></li>
+              <li><a class="active" href="datasiswa">Data Siswa</a></li>
               <li><a class="" href="dataguru">Data Guru</a></li>
             </ul>
-          <li><a class="active" href="berita.php">Berita</a></li>
+          <li><a class="" href="berita.php">Berita</a></li>
           <li><a class="" href="contact">Kontak</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -92,7 +91,6 @@ include('assets/includes/config.php');
 
     </div>
   </header><!-- End Header -->
-
 
 
    

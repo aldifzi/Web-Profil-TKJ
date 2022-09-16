@@ -57,7 +57,7 @@
     <div class="container d-flex align-items-center justify-content-between">
       <a class="navbar-brand logo me-auto flex" href="#">
         <img src="assets/img/Logo-removebg-preview.png" alt=""   class="h-10 mr-3" width="51" height="70">
-        <span class="self-center text-base font-semibold whitespace-nowrap">TEKNIK KOMPUTER JARINGAN <p class="text-xs font-light">SMK 1 BANTUL</p></span>
+        <span class="self-center text-base font-semibold whitespace-nowrap" id="tkj">TEKNIK KOMPUTER JARINGAN <p class="text-xs font-light" id="tkj">SMK 1 BANTUL</p></span>
       </a>
       <!-- Uncomment below if you prefer to use an image logo -->
 
@@ -101,7 +101,7 @@
         <hr><span class="text"></span><span class="cursor">_</span>
       </h2>
       <div class="main-button scroll-to-section">
-        <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">PELAJARI LEBIH
+        <a href="#about" class=" animate__animated animate__fadeInUp scrollto">PELAJARI LEBIH
           LANJUT</a>
       </div>
     </div>
