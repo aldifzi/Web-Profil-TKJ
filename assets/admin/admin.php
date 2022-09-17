@@ -151,7 +151,7 @@ header('location:index.php');
                             <label for="NIS" class="block uppercase tracking-wide text-gray-700 text-lg font-bold mb-2">NIS</label>
                             </div>
                             <div class="col-sm-10">
-                            <input type="text" class="bg-gray-50 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500 hover:placeholder:text-slate-500"  id="NIS" name="NIS" placeholder="NIS...." value="<?php echo $NIS ?>">   
+                            <input type="text" class="bg-gray-50 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-red-500 hover:placeholder:text-slate-500"  id="NIS" name="NIS" placeholder="NIS...." value="<?php echo $NIS ?>">   
                             </div>                
                     </div>
                     <br>
@@ -160,7 +160,7 @@ header('location:index.php');
                         <label for="name" class="block uppercase tracking-wide text-gray-700 text-lg font-bold mb-2">Nama</label>
                         </div>
                         <div class="col-sm-10">
-                            <input type="text" class="bg-gray-50 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="name" name="name" value="<?php echo $name ?>">
+                            <input type="text" class="bg-gray-50 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-red-500" id="name" name="name" value="<?php echo $name ?>">
                         </div>
                     </div>
                     <br>
@@ -169,8 +169,8 @@ header('location:index.php');
                     <div class="w-full md:w-1/2 px-3 py-4">
                         <label for="kelas" class="block uppercase tracking-wide text-gray-700 text-lg font-bold mb-2">Kelas</label>
                         <div class="col-sm-10">
-                            <select class="bg-slate-400 rounded-full" name="kelas" id="kelas">
-                                <option value="">- Pilih Kelas -</option>
+                            <select class="bg-slate-500 text-slate-100 py-3 px-6 rounded-full" name="kelas" id="kelas">
+                                <option class="bg-black" value="">- Pilih Kelas -</option>
                                 <option value="X TKJ 1" <?php if ($kelas == "X TKJ 1") echo "selected" ?>>X TKJ 1</option>
                                 <option value="X TKJ 2" <?php if ($kelas == "X TKJ 2") echo "selected" ?>>X TKJ 2</option>
                                 <option value="XI TKJ 1" <?php if ($kelas == "XI TKJ 1") echo "selected" ?>>XI TKJ 1</option>
@@ -181,7 +181,7 @@ header('location:index.php');
                         </div>
                     </div>
                     <div class="col-12">
-                        <input type="submit" name="simpan" value="Simpan Data" class="btn btn-blue mt-3 bg-blue-500 hover:bg-white text-white font-bold py-1 px-4 left-5 rounded-full hover:text-blue-700 cursor-pointer hover:border-2 border-blue-500 border-2 hover:border-blue-600" />
+                        <input type="submit" name="simpan" value="Simpan Data" class="btn btn-blue mt-3 bg-blue-500 hover:bg-white  font-bold py-1 px-4 left-5 rounded-full hover:text-blue-700 cursor-pointer hover:border-2 border-blue-500 border-2 hover:border-blue-600" />
                     </div>
                 </form>
             </div>
