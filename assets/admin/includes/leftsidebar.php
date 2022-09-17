@@ -58,6 +58,7 @@
                                 <ul class="list-unstyled">
                                   <li><a href="admin">Data Siswa </a></li>
                                     <li><a href="galeri">Galeri</a></li>
+                                    <li><a href="data-guru">Data Guru</a></li>
                                 </ul>
                             </li>   
 
