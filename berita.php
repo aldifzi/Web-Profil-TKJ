@@ -78,12 +78,12 @@ include('assets/includes/config.php');
               <li><a class="" href="galeri">Galeri</a></li>
               <li><a class="" href="Pembelajaran">Pembelajaran</a></li>
             </ul>
-          <li class="dropdown"><a class="active" href="#"><span>Data TKJ</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a class="" href="#"><span>Data TKJ</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a class="active" href="datasiswa">Data Siswa</a></li>
+              <li><a class="" href="datasiswa">Data Siswa</a></li>
               <li><a class="" href="dataguru">Data Guru</a></li>
             </ul>
-          <li><a class="" href="berita.php">Berita</a></li>
+          <li><a class="active" href="berita.php">Berita</a></li>
           <li><a class="" href="contact">Kontak</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>

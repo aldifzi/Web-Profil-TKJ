@@ -17,12 +17,14 @@
           </div>
 
           <!-- Categories Widget -->
-          <div class="p-6 mt-4 max-w-fullfont-sans bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-            <h5 class="bg-red">Kategori </h5>
-            <div class="card-body mt-3">
+          <div class=" mt-4 max-w-full font-sans bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+            <div class="bg-red-600 p-3 px-8">
+            <h5 class="text-white">Kategori </h5>
+            </div>
+            <div class="card-body mt-1 p-4">
               <div class="row">
                 <div class="col-span-6">
-                  <ul class="list-unstyled mb-0 py-2 text-red-600 hover:text-red-500">
+                  <ul class="list-unstyled mb-0 py-2 text-red-600 hover:text-yellow-600">
 <?php $query=mysqli_query($con,"select id,CategoryName from tblcategory");
 while($row=mysqli_fetch_array($query))
 {
@@ -40,11 +42,13 @@ while($row=mysqli_fetch_array($query))
           </div>
 
           <!-- Side Widget -->
-          <div class="p-6 mt-4 max-w-full mb-3 font-sans bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-            <h5 class="card-header">Berita Terbaru</h5>
-            <div class="card-body mt-3">
+          <div class="mt-4 max-w-full mb-3 font-sans bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+          <div class="bg-red-600 p-3 px-8">
+            <h5 class="card-header text-white">Berita Terbaru</h5>
+          </div>
+            <div class="card-body mt-1 p-4">
               <div class="col-span-6">
-                      <ul class="mb-0  py-2 text-red-600 hover:text-red-500">
+                      <ul class="mb-0  py-2 text-red-600 hover:text-yellow-600">
 <?php
 $query=mysqli_query($con,"select tblposts.id as pid,tblposts.PostTitle as posttitle from tblposts left join tblcategory on tblcategory.id=tblposts.CategoryId left join  tblsubcategory on  tblsubcategory.SubCategoryId=tblposts.SubCategoryId limit 8");
 while ($row=mysqli_fetch_array($query)) {
