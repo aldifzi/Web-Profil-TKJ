@@ -199,7 +199,7 @@ while($result=mysqli_fetch_array($ret))
 <div class="col-sm-12">
  <div class="card-box">
 <h4 class="m-b-30 m-t-0 header-title"><b>Post Details</b></h4>
-<textarea class="summernote" name="postdescription" required></textarea>
+<textarea id="ckeditor" class="ckeditor" name="postdescription" required></textarea>
 </div>
 </div>
 </div>
@@ -259,6 +259,8 @@ while($result=mysqli_fetch_array($ret))
         <script src="assets/js/jquery.slimscroll.js"></script>
         <script src="assets/js/jquery.scrollTo.min.js"></script>
         <script src="../plugins/switchery/switchery.min.js"></script>
+        <script  type=”text/javascript” src="ckeditor/ckeditor.js"></script>
+        <script src="../../resources/js/jquery.js"></script>
 
         <!--Summernote js-->
         <script src="../plugins/summernote/summernote.min.js"></script>

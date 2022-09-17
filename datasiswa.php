@@ -23,16 +23,12 @@
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="resources/datatables/datatables.min.css">
 
   <!-- Template Main CSS File -->
   <link href="assets/css/DataSiswa.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Day - v4.8.0
-  * Template URL: https://bootstrapmade.com/day-multipurpose-html-template-for-free/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+
 </head>
 
 <body  class="selection:bg-slate-600 selection:text-white">
@@ -107,7 +103,7 @@
     <!-- ======= Tabel ======= -->
 
     <form action="" method="get" class="form mt-4">
- <input type="text" name="cari" placeholder="Cari Siswa..." class="inputtext">
+ <input x-model="searchInput" type="text" name="cari" placeholder="Cari Siswa..." class="inputtext">
  <button class="button-62">Cari</button>
 </form>
  
@@ -120,7 +116,7 @@ if(isset($_GET['cari'])){
 
     <div class="container my-5">
 <div class="">
-    <table class="table align-middle mb-0 bg-white">
+    <table  id="tabel-data" class="table table-striped table-bordered dataTable  align-middle mb-0 bg-white">
  <thead class="bg-light">
   <tr>
     <th></th>
@@ -287,10 +283,7 @@ if(isset($_GET['cari'])){
         &copy; Copyright <strong><span>bootstrap</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/day-multipurpose-html-template-for-free/ -->
+        
         Designed by Kelompok TKJ
       </div>
     </div>
@@ -312,14 +305,22 @@ if(isset($_GET['cari'])){
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
+  <script src="resources/datatables/datatables.min.js"></script>
+	<script src="resources/datatables/datatable.js"></script>
+  <script src="resources/js/jquery.js"></script>
+  <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+<script src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
   <script src="jam.js"></script>
 
 
 <script type="text/javascript" src="assets/js/jam.js">
       
   </script>
-
+<script>
+    $(document).ready(function(){
+        $('#tabel-data').DataTable();
+    });
+</script>
 </body>
 
 </html>
