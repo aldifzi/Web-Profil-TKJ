@@ -477,22 +477,21 @@ banner
 */
 
 .main-button a {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
   display: inline-block;
-  font-size: 20px;
-  padding: 12px 20px;
-  background-color: #ed563b;
+  padding: 12px 40px;
+  border-radius: 50px;
+  transition: 0.3s;
+  margin: 10px;
   color: #fff;
-  text-align: center;
-  font-weight: 400;
-  text-transform: uppercase;
-  transition: all .3s;
+  border: 3px solid red;
 }
 
 .main-button a:hover {
-  background-color: #ca807300;
-  border-radius: 2px;
-  border-width: 2px;
+  background: red;
 }
 
 .main-banner .video-overlay .caption h2 {
