@@ -121,25 +121,33 @@ $no = 1;
 
       </div>
       <?php while($row = mysqli_fetch_assoc($query)) : ?>
-      <div class="row">
-        <div class="col-4 col-md-6 container flex " data-aos="zoom-in">
-          <div class="member">
+      <div class="container">
+        <div class="card" data-aos="zoom-in">
+        <figure class="card__thumb">
             <img src="assets/img/team/team-1.jpg" alt="">
-        
-            <h4><?= $row['nama'] ?></h4>
-            <span><?= $row['mata_pelajaran'] ?></span>
-            <br>
-            <h5><?= $row['no_hp'] ?></h5>
+            <figcaption class="card__caption">
+				<h2 class="card__title"><?= $row['nama'] ?></h2>
+				<p class="card__snippet">NASA released a list of 219 new “planet candidates” discovered by the Kepler space telescope, 10 of which are similar to Earth’s size and may be habitable by other life forms.</p>
+        <h5><?= $row['no_hp'] ?></h5>
             <h5><?= $row['alamat'] ?></h5>
+            <span><?= $row['mata_pelajaran'] ?></span>
             <h5>Pendidikan : S3 Komputer</h5>
-            
-            <div class="social">
+        <div class="social">
               <a href=""><i class="bi bi-twitter"></i></a>
               <a href=""><i class="bi bi-facebook"></i></a>
               <a href=""><i class="bi bi-instagram"></i></a>
               <a href=""><i class="bi bi-linkedin"></i></a>
             </div>
-            <a href="detail-guru?id=<?= $row['id'] ?>"><button class="btn btn-danger btn-sm mt-3">Detail Guru</button></a>
+            <a href="detail-guru?id=<?= $row['id'] ?>"><button class="card__button">Detail Guru</button></a>
+			</figcaption>
+        </figure>
+            <h4></h4>
+            
+            
+           
+            
+            
+           
           </div>
         </div>
         <?php endwhile; ?>
