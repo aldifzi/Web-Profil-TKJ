@@ -121,7 +121,7 @@ $no = 1;
 
       </div>
       <?php while($row = mysqli_fetch_assoc($query)) : ?>
-      <div class="container">
+      <div class="row">
         <div class="col-4 col-md-6 container flex " data-aos="zoom-in">
           <div class="member">
             <img src="assets/img/team/team-1.jpg" alt="">
