@@ -568,22 +568,32 @@ section {
 
 .section-title {
   text-align: center;
-  padding: 30px 0;
-  position: relative;
+  padding-bottom: 70px;
 }
 
 .section-title h2 {
   font-size: 32px;
   font-weight: 700;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-  padding-bottom: 0;
-  color: #8d1849;
   position: relative;
-  z-index: 2;
+  color: red;
 }
 
+.section-title h2:before,
+.section-title h2:after {
+  content: "";
+  width: 50px;
+  height: 2px;
+  background: yellow;
+  display: inline-block;
+}
 
+.section-title h2:before {
+  margin: 0 15px 10px 0;
+}
+
+.section-title h2:after {
+  margin: 0 0 10px 15px;
+}
 
 .section-title span {
   position: absolute;
@@ -698,7 +708,7 @@ section {
   color: #34b7a7;
 }
 .cta h2 {
-  color: #fff;
+  color: red;
 }
 
 .cta p {

@@ -229,7 +229,6 @@
 
         <div class="section-title">
           <h2>Skills</h2>
-          <h2></h2>
           <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
             consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
             in iste officiis commodi quidem hic quas.</p>
@@ -302,7 +301,7 @@
     <section id="recent-blog-posts" class="recent-blog-posts">
       <div class="container" data-aos="fade-up"">
 
-<div class=" section-header">
+      <div class=" section-title">
         <h2>Sekilas Berita</h2>
         <p>In commodi voluptatem excepturi quaerat nihil error autem voluptate ut et officia consequuntu</p>
       </div>
