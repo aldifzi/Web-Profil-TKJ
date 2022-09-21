@@ -139,6 +139,16 @@
     </div>
   </section><!-- End Breadcrumbs -->
 
+  <section class="head">
+
+    <li class="Judul">
+             <h2>Galeri TKJ</h2>
+             <p>Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur.</p>
+   </li>
+  </section>
+
+ 
+
 
   <div class="container mt-1" id="uploadedFiles">
             <div class="row">

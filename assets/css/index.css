@@ -138,6 +138,15 @@ h6 {
   transition: 0.3s;
 }
 
+#topbar .contact-info .bi-clock-history{
+  color: yellow;
+  margin: 15px;
+}
+
+#topbar .contact-info .ml-3{
+  margin-left: 5px;
+}
+
 #topbar .contact-info a:hover {
   color: #fff;
 }
@@ -190,8 +199,6 @@ h6 {
     color: #fff;
     margin-top: 7px;
     margin-bottom: 7px;
-   
-    
   }
 
   #header .navbar-brand .self-center {
