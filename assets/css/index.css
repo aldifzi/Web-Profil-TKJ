@@ -111,35 +111,7 @@ h6 {
     transform: rotate(360deg);
   }
 }
-.section-title h2 {
-  font-size: 14px;
-  font-weight: 500;
-  padding: 0;
-  line-height: 1px;
-  margin: 0 0 5px 0;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #080505;
-  font-family: "Poppins", sans-serif;
-}
 
-.section-title1 h2::after {
-  content: "";
-  width: 120px;
-  height: 2px;
-  display: inline-block;
-  background: #b5b800;
-  margin: 4px 10px;
-}
-
-.section-title h2::after {
-  content: "";
-  width: 120px;
-  height: 2px;
-  display: inline-block;
-  background: #c21c1c;
-  margin: 4px 10px;
-}
 /*--------------------------------------------------------------
 # Disable aos animation delay on mobile devices
 --------------------------------------------------------------*/
