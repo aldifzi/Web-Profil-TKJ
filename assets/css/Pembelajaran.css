@@ -505,13 +505,35 @@ body {
   /*--------------------------------------------------------------
 # Resume
 --------------------------------------------------------------*/
+
 .resume .section-title {
-    text-align: center;
+  text-align: center;
+  padding-bottom: 70px;
+  margin-top: 50px;
 }
 
-.resume .section-title h2{
-    color: red;
-    margin-top: 50px;
+.resume .section-title h2 {
+  font-size: 32px;
+  font-weight: 700;
+  position: relative;
+  color: red;
+}
+
+.resume .section-title h2:before,
+.resume .section-title h2:after {
+  content: "";
+  width: 50px;
+  height: 2px;
+  background: yellow;
+  display: inline-block;
+}
+
+.resume .section-title h2:before {
+  margin: 0 15px 10px 0;
+}
+
+.resume .section-title h2:after {
+  margin: 0 0 10px 15px;
 }
 
 .resume .resume-title {
