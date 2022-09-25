@@ -34,7 +34,7 @@ $no = 1;
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/dataguru.css" rel="stylesheet">
+  <link href="assets/css/DataSiswa.css" rel="stylesheet">
 
   <!-- =======================================================
  
@@ -127,7 +127,6 @@ $no = 1;
             <img src="assets/img/team/team-1.jpg" alt="">
             <figcaption class="card__caption">
 				<h2 class="card__title"><?= $row['nama'] ?></h2>
-				<p class="card__snippet">NASA released a list of 219 new “planet candidates” discovered by the Kepler space telescope, 10 of which are similar to Earth’s size and may be habitable by other life forms.</p>
         <h5><?= $row['no_hp'] ?></h5>
             <h5><?= $row['alamat'] ?></h5>
             <span><?= $row['mata_pelajaran'] ?></span>
