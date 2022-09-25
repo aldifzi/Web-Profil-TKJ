@@ -40,8 +40,7 @@
       <div class="contact-info d-flex align-items-center">
         <i class="bi bi-envelope-fill"></i><a href="mailto:contact@example.com">smeanbtl@yahoo.com</a>
         <i class="bi bi-phone-fill phone-icon"></i> 0274-367156
-         <span class="ml-3" id="jam" style="font-size:24"></span>
-<span class="ml-3" id="jamServer"><?php date_default_timezone_set("Asia/jakarta");?></span>
+        <i class="bi bi-clock-history"><span class="ml-3" id="jam" style="font-size:24"></span></i>
       </div>
       <div class="social-links d-none d-md-block">
         <a href="" class="twitter"><i class="bi bi-twitter"></i></a>

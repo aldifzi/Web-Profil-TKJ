@@ -199,7 +199,7 @@
           </div>
 
           <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1"
+            <span data-purecounter-start="0" data-purecounter-end="576" data-purecounter-duration="1"
               class="purecounter"></span>
             <p>Jumlah Siswa</p>
           </div>

@@ -117,7 +117,7 @@ body {
   /*--------------------------------------------------------------
   # Top Bar
   --------------------------------------------------------------*/
-  #topbar {
+   #topbar {
     background: #191919;
     font-size: 15px;
     height: 40px;
@@ -129,6 +129,15 @@ body {
     line-height: 0;
     color: rgba(255, 255, 255, 0.6);
     transition: 0.3s;
+  }
+  
+  #topbar .contact-info .bi-clock-history{
+    color: red;
+    margin: 15px;
+  }
+  
+  #topbar .contact-info .ml-3{
+    margin-left: 5px;
   }
   
   #topbar .contact-info a:hover {
@@ -148,6 +157,7 @@ body {
   #topbar .social-links a {
     color: rgba(255, 255, 255, 0.6);
     padding: 4px 12px;
+    margin-top: 10px;
     display: inline-block;
     line-height: 1px;
     transition: 0.3s;

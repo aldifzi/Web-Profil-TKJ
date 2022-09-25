@@ -131,6 +131,15 @@ body {
     transition: 0.3s;
   }
   
+  #topbar .contact-info .bi-clock-history{
+    color: red;
+    margin: 15px;
+  }
+  
+  #topbar .contact-info .ml-3{
+    margin-left: 5px;
+  }
+  
   #topbar .contact-info a:hover {
     color: #fff;
   }
@@ -148,6 +157,7 @@ body {
   #topbar .social-links a {
     color: rgba(255, 255, 255, 0.6);
     padding: 4px 12px;
+    margin-top: 10px;
     display: inline-block;
     line-height: 1px;
     transition: 0.3s;
@@ -546,12 +556,36 @@ body {
 --------------------------------------------------------------*/
 .cards {
   padding: 50px 0 60px 0;
+  overflow: hidden;
 }
  
-.cards .Judul h2 {
+.cards .Judul {
   text-align: center;
-  margin-bottom: 30px;
+  padding-bottom: 70px;
+}
+
+.cards .Judul h2 {
+  font-size: 32px;
+  font-weight: 700;
+  position: relative;
   color: red;
+}
+
+.cards .Judul h2:before,
+.cards .Judul h2:after {
+  content: "";
+  width: 50px;
+  height: 2px;
+  background: yellow;
+  display: inline-block;
+}
+
+.cards .Judul h2:before {
+  margin: 0 15px 10px 0;
+}
+
+.cards .Judul h2:after {
+  margin: 0 0 10px 15px;
 }
 
 .cards img {
