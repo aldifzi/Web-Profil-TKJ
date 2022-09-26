@@ -81,6 +81,7 @@ $error="Something went wrong . Please try again.";
         <link href="assets/css/responsive.css" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" href="../plugins/switchery/switchery.min.css">
         <script src="assets/js/modernizr.min.js"></script>
+        <link href="../../plugins/summernote/summernote.css" rel="stylesheet">
  <script>
 function getSubCat(val) {
   $.ajax({
@@ -199,7 +200,7 @@ while($result=mysqli_fetch_array($ret))
 <div class="col-sm-12">
  <div class="card-box">
 <h4 class="m-b-30 m-t-0 header-title"><b>Post Details</b></h4>
-<textarea id="ckeditor" class="ckeditor" name="postdescription" required></textarea>
+<textarea class="summernote" name="postdescription" required></textarea>
 </div>
 </div>
 </div>
@@ -218,6 +219,7 @@ while($result=mysqli_fetch_array($ret))
 <button type="submit" name="submit" class="btn btn-success waves-effect waves-light">Save and Post</button>
  <button type="button" class="btn btn-danger waves-effect waves-light">Discard</button>
                                         </form>
+                                        
                                     </div>
                                 </div> <!-- end p-20 -->
                             </div> <!-- end col -->
@@ -245,6 +247,7 @@ while($result=mysqli_fetch_array($ret))
 
 
 
+       
         <script>
             var resizefunc = [];
         </script>
@@ -258,24 +261,20 @@ while($result=mysqli_fetch_array($ret))
         <script src="assets/js/waves.js"></script>
         <script src="assets/js/jquery.slimscroll.js"></script>
         <script src="assets/js/jquery.scrollTo.min.js"></script>
-        <script src="../plugins/switchery/switchery.min.js"></script>
-        <script  type=”text/javascript” src="ckeditor/ckeditor.js"></script>
-        <script src="../../resources/js/jquery.js"></script>
+        <script src="../../plugins/switchery/switchery.min.js"></script>
 
         <!--Summernote js-->
-        <script src="../plugins/summernote/summernote.min.js"></script>
+        <script src="../../plugins/summernote/summernote.min.js"></script>
         <!-- Select 2 -->
-        <script src="../plugins/select2/js/select2.min.js"></script>
+        <script src="../../plugins/select2/js/select2.min.js"></script>
         <!-- Jquery filer js -->
-        <script src="../plugins/jquery.filer/js/jquery.filer.min.js"></script>
-
+        <script src="../../plugins/jquery.filer/js/jquery.filer.min.js"></script>
         <!-- page specific js -->
         <script src="assets/pages/jquery.blog-add.init.js"></script>
 
         <!-- App js -->
         <script src="assets/js/jquery.core.js"></script>
         <script src="assets/js/jquery.app.js"></script>
-
         <script>
 
             jQuery(document).ready(function(){
@@ -294,13 +293,6 @@ while($result=mysqli_fetch_array($ret))
                 });
             });
         </script>
-  <script src="../plugins/switchery/switchery.min.js"></script>
-
-        <!--Summernote js-->
-        <script src="../plugins/summernote/summernote.min.js"></script>
-
-    
-
 
     </body>
 </html>

@@ -62,6 +62,7 @@ $error="Something went wrong . Please try again.";
         <link href="assets/css/responsive.css" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" href="../plugins/switchery/switchery.min.css">
         <script src="assets/js/modernizr.min.js"></script>
+        <link href="../../plugins/summernote/summernote.css" rel="stylesheet">
  <script>
 function getSubCat(val) {
   $.ajax({
@@ -245,14 +246,14 @@ while($result=mysqli_fetch_array($ret))
         <script src="assets/js/waves.js"></script>
         <script src="assets/js/jquery.slimscroll.js"></script>
         <script src="assets/js/jquery.scrollTo.min.js"></script>
-        <script src="../plugins/switchery/switchery.min.js"></script>
+        <script src="../../plugins/switchery/switchery.min.js"></script>
 
         <!--Summernote js-->
-        <script src="../plugins/summernote/summernote.min.js"></script>
+        <script src="../../plugins/summernote/summernote.min.js"></script>
         <!-- Select 2 -->
-        <script src="../plugins/select2/js/select2.min.js"></script>
+        <script src="../../plugins/select2/js/select2.min.js"></script>
         <!-- Jquery filer js -->
-        <script src="../plugins/jquery.filer/js/jquery.filer.min.js"></script>
+        <script src="../../plugins/jquery.filer/js/jquery.filer.min.js"></script>
 
         <!-- page specific js -->
         <script src="assets/pages/jquery.blog-add.init.js"></script>
@@ -260,7 +261,6 @@ while($result=mysqli_fetch_array($ret))
         <!-- App js -->
         <script src="assets/js/jquery.core.js"></script>
         <script src="assets/js/jquery.app.js"></script>
-
         <script>
 
             jQuery(document).ready(function(){
@@ -279,10 +279,8 @@ while($result=mysqli_fetch_array($ret))
                 });
             });
         </script>
-  <script src="../plugins/switchery/switchery.min.js"></script>
 
-        <!--Summernote js-->
-        <script src="../plugins/summernote/summernote.min.js"></script>
+       
 
 
 
