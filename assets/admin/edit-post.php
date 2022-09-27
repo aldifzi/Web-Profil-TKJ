@@ -40,7 +40,7 @@ $error="Something went wrong . Please try again.";
         <!-- App favicon -->
         <link rel="shortcut icon" href="assets/images/favicon.ico">
         <!-- App title -->
-        <title>Tambah Berita</title>
+        <title>Edit Berita</title>
 
         <!-- Summernote css -->
         <link href="../../plugins/summernote/summernote.css" rel="stylesheet" />

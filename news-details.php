@@ -191,9 +191,9 @@ $postid=intval($_GET['nid']);
         
                 <div class=" float-right flex">
                 <p class="font-semibold font-sans mr-3">Bagikan</p>
-                 <a href="http://www.facebook.com/share.php?u=<?php echo $currenturl;?>" target="_blank"><img src="assets/img/fb.png" alt=""  width="22px" class="mx-1"></a> 
-<a  href="https://twitter.com/share?url=<?php echo $currenturl;?>" target="_blank"> <img src="assets/img/twitter.png" alt="" width="22px"></a> 
-<a href="https://web.whatsapp.com/send?text=<?php echo $currenturl;?>" target="_blank"><img src="assets/img/wa.png" alt="" width="23px" class="
+                 <a href="http://www.facebook.com/share.php?u=<?php echo $currenturl;?>" target="_blank"><img src="assets/img/Icon/fb.png" alt=""  width="22px" class="mx-1"></a> 
+<a  href="https://twitter.com/share?url=<?php echo $currenturl;?>" target="_blank"> <img src="assets/img/Icon/twitter.png" alt="" width="22px"></a> 
+<a href="https://web.whatsapp.com/send?text=<?php echo $currenturl;?>" target="_blank"><img src="assets/img/Icon/wa.png" alt="" width="23px" class="
 mx-1"></a> 
 
 </div> 
