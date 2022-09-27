@@ -1,3 +1,8 @@
+<?php 
+session_start();
+include('assets/includes/config.php');
+
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -111,6 +116,74 @@
 
   <main id="main">
 
+  <section id="recent-blog-posts" class="recent-blog-posts">
+  
+    <div class="container py-5" data-aos="fade-up">
+    
+      <div class=" section-title">
+        <h2>Sekilas Berita</h2>
+      </div>
+      <?php 
+     if (isset($_GET['pageno'])) {
+            $pageno = $_GET['pageno'];
+        } else {
+            $pageno = 1;
+        }
+        $no_of_records_per_page = 3;
+        $offset = ($pageno-1) * $no_of_records_per_page;
+
+
+        $total_pages_sql = "SELECT COUNT(*) FROM tblposts";
+        $result = mysqli_query($con,$total_pages_sql);
+        $total_rows = mysqli_fetch_array($result)[0];
+        $total_pages = ceil($total_rows / $no_of_records_per_page);
+
+
+$query=mysqli_query($con,"select tblposts.id as pid,tblposts.PostTitle as posttitle,tblposts.postedBy,tblposts.PostImage,tblcategory.CategoryName as category,tblcategory.id as cid,tblsubcategory.Subcategory as subcategory,tblposts.PostDetails as postdetails,tblposts.PostingDate as postingdate,tblposts.PostUrl as url from tblposts left join tblcategory on tblcategory.id=tblposts.CategoryId left join  tblsubcategory on  tblsubcategory.SubCategoryId=tblposts.SubCategoryId where tblposts.Is_Active=1 order by tblposts.id desc  LIMIT $offset, $no_of_records_per_page");
+while ($row=mysqli_fetch_array($query)) {
+?>
+      <div class="row mt-3">
+
+        <div class="col-xs-12 col-sm-6 col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="post-item card mb-4 shadow-sm position-relative h-100">
+
+            <div class="post-img position-relative overflow-hidden">
+              <img src="assets/admin/postimages/<?php echo htmlentities($row['PostImage']);?>" class="img-fluid" alt="">
+              <span class="post-date"><?php echo htmlentities($row['postingdate']);?></span>
+            </div>
+
+            <div class="post-content d-flex flex-column">
+
+              <h3 class="post-title"><?php echo htmlentities($row['posttitle']);?></h3>
+
+              <div class="meta d-flex align-items-center">
+                <div class="d-flex align-items-center">
+                  <i class="bi bi-person"></i> <span class="ps-2"><?php echo htmlentities($row['postedBy'])?></span>
+                </div>
+                <span class="px-3 text-black-50">/</span>
+                <div class="d-flex align-items-center">
+                  <i class="bi bi-folder2"></i> <span class="ps-2"><?php echo htmlentities($row['category'])?></span>
+                </div>
+              </div>
+
+              <hr>
+
+              <a href="news-details?nid=<?php echo htmlentities($row['pid'])?>" class="readmore stretched-link"><span>Read More</span><i
+                  class="bi bi-arrow-right"></i></a>
+
+            </div>
+          </div>
+
+
+        </div><!-- End Berita 1 -->
+
+        <?php } ?>
+
+      </div>
+
+      </div>
+    </section>
+    <!-- End Tentang berita -->
     <!-- ======= Penjelasan TKJ ======= -->
     <section id="about" class="about">
       <div class="container">
@@ -297,119 +370,7 @@
       </div>
     </section><!-- End Skil yang di kembangkan -->
 
-    <!-- ======= Tentang Berita ======= -->
-    <section id="recent-blog-posts" class="recent-blog-posts">
-      <div class="container" data-aos="fade-up"">
-
-      <div class=" section-title">
-        <h2>Sekilas Berita</h2>
-        <p>In commodi voluptatem excepturi quaerat nihil error autem voluptate ut et officia consequuntu</p>
-      </div>
-
-      <div class="row gy-5">
-
-        <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-          <div class="post-item position-relative h-100">
-
-            <div class="post-img position-relative overflow-hidden">
-              <img src="assets/img/background-putih-batik-1.png" class="img-fluid" alt="">
-              <span class="post-date">December 12</span>
-            </div>
-
-            <div class="post-content d-flex flex-column">
-
-              <h3 class="post-title">Eum ad dolor et. Autem aut fugiat debitis</h3>
-
-              <div class="meta d-flex align-items-center">
-                <div class="d-flex align-items-center">
-                  <i class="bi bi-person"></i> <span class="ps-2">Julia Parker</span>
-                </div>
-                <span class="px-3 text-black-50">/</span>
-                <div class="d-flex align-items-center">
-                  <i class="bi bi-folder2"></i> <span class="ps-2">Politics</span>
-                </div>
-              </div>
-
-              <hr>
-
-              <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i
-                  class="bi bi-arrow-right"></i></a>
-
-            </div>
-          </div>
-
-
-        </div><!-- End Berita 1 -->
-
-        <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-          <div class="post-item position-relative h-100">
-
-            <div class="post-img position-relative overflow-hidden">
-              <img src="assets/img/about.jpg" class="img-fluid" alt="">
-              <span class="post-date">July 17</span>
-            </div>
-
-            <div class="post-content d-flex flex-column">
-
-              <h3 class="post-title">Et repellendus molestiae qui est sed omnis</h3>
-
-              <div class="meta d-flex align-items-center">
-                <div class="d-flex align-items-center">
-                  <i class="bi bi-person"></i> <span class="ps-2">Mario Douglas</span>
-                </div>
-                <span class="px-3 text-black-50">/</span>
-                <div class="d-flex align-items-center">
-                  <i class="bi bi-folder2"></i> <span class="ps-2">Sports</span>
-                </div>
-              </div>
-
-              <hr>
-
-              <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i
-                  class="bi bi-arrow-right"></i></a>
-
-            </div>
-
-          </div>
-        </div><!-- End Berita 2 -->
-
-        <div class="col-xl-4 col-md-6">
-          <div class="post-item position-relative h-100" data-aos="fade-up" data-aos-delay="300">
-
-            <div class="post-img position-relative overflow-hidden">
-              <img src="assets/img/Halaman Depan.jpeg" class="img-fluid" alt="">
-              <span class="post-date">September 05</span>
-            </div>
-
-            <div class="post-content d-flex flex-column">
-
-              <h3 class="post-title">Quia assumenda est et veritati tirana ploder</h3>
-
-              <div class="meta d-flex align-items-center">
-                <div class="d-flex align-items-center">
-                  <i class="bi bi-person"></i> <span class="ps-2">Lisa Hunter</span>
-                </div>
-                <span class="px-3 text-black-50">/</span>
-                <div class="d-flex align-items-center">
-                  <i class="bi bi-folder2"></i> <span class="ps-2">Economics</span>
-                </div>
-              </div>
-
-              <hr>
-
-              <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i
-                  class="bi bi-arrow-right"></i></a>
-
-            </div>
-
-          </div>
-        </div><!-- End Berita 3 -->
-
-      </div>
-
-      </div>
-    </section>
-    <!-- End Tentang berita -->
+   
 
   </main><!-- End #main -->
 
@@ -509,7 +470,7 @@
           <div class="col-lg-2 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="index.html">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="index">Home</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="https://www.smkn1bantul.sch.id/">SMK N1 Bantul</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="https://skansaba.id/login/index.php">Elerning</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="https://policies.google.com/terms?hl=en-US">Terms of

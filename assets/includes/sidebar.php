@@ -41,31 +41,7 @@ while($row=mysqli_fetch_array($query))
             </div>
           </div>
 
-          <!-- Side Widget -->
-          <div class="mt-4 max-w-full mb-3 font-sans bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-          <div class="bg-red-600 p-3 px-8">
-            <h5 class="card-header text-white">Berita Terbaru</h5>
-          </div>
-            <div class="card-body mt-1 p-4">
-              <div class="col-span-6">
-                      <ul class="mb-0  py-2 text-red-600 hover:text-yellow-600">
-<?php
-$query=mysqli_query($con,"select tblposts.id as pid,tblposts.PostTitle as posttitle from tblposts left join tblcategory on tblcategory.id=tblposts.CategoryId left join  tblsubcategory on  tblsubcategory.SubCategoryId=tblposts.SubCategoryId limit 8");
-while ($row=mysqli_fetch_array($query)) {
-
-?>
-
-  <li class="my-3">
-                      <a href="news-details.php?nid=<?php echo htmlentities($row['pid'])?>"><?php echo htmlentities($row['posttitle']);?></a>
-                    </li>
-            <?php } ?>
-          </ul>
-          </div>
-            </div>
-          </div>
-
-
-   <!-- Side Widget -->
+          
           
 
         </div>

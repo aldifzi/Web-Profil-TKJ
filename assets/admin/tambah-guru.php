@@ -13,7 +13,7 @@ else{
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Tambah Data Guru - SMK Negeri 1 Wanareja</title>
+	<title>Tambah Data Guru</title>
 	<link rel="stylesheet" href="../../resources/css/bootstrap.min.css">
     <!-- App css -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />

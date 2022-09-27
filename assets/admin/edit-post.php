@@ -40,10 +40,10 @@ $error="Something went wrong . Please try again.";
         <!-- App favicon -->
         <link rel="shortcut icon" href="assets/images/favicon.ico">
         <!-- App title -->
-        <title>Newsportal | Add Post</title>
+        <title>Edit Berita</title>
 
         <!-- Summernote css -->
-        <link href="../plugins/summernote/summernote.css" rel="stylesheet" />
+        <link href="../../plugins/summernote/summernote.css" rel="stylesheet" />
 
         <!-- Select2 -->
         <link href="../plugins/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
