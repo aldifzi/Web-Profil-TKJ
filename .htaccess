@@ -12,4 +12,4 @@
         RewriteRule ^(.*)$ $1.html
         </IfModule>
 
-        ErrorDocument 404 /notfound.html
+        ErrorDocument 404 "<h1>Halaman Tidak Ditemukan</h1>"
