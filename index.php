@@ -90,7 +90,7 @@
  <!-- ***** Main Banner Area Start ***** -->
  <div class="main-banner" id="top">
   <video autoplay muted loop id="bg-video">
-    <source src="assets/img/Video/Vidio1.mp4" type="">
+    <source src="assets/img/Video/vidio2.mp4" type="">
   </video>
 
   <div class="video-overlay header-text">
@@ -211,7 +211,7 @@
           </div>
 
           <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="1"
+            <span data-purecounter-start="0" data-purecounter-end="4" data-purecounter-duration="1"
               class="purecounter"></span>
             <p>Jumlah Lab</p>
           </div>
