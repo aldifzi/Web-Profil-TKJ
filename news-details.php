@@ -53,7 +53,7 @@ $postid=intval($_GET['nid']);
 
   <head>
  <!-- Favicons -->
-    <link href="assets/img/logo.jpg" rel="icon">
+    <link href="assets/img/Logo-removebg-preview.png" rel="icon">
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <meta charset="utf-8">
@@ -81,7 +81,7 @@ $postid=intval($_GET['nid']);
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/index.css" rel="stylesheet">
+  <link href="assets/css/galeri.css" rel="stylesheet">
     
 
   </head>
@@ -89,63 +89,70 @@ $postid=intval($_GET['nid']);
   <body class="selection:bg-slate-400 selection:text-white">
 
     <!-- Navigation -->
- <!-- ======= Header ======= -->
- <header id="header" class="d-flex align-items-center">
-  <div class="container d-flex align-items-center justify-content-between">
-  <a class="navbar-brand logo me-auto flex" href="#">
+ <!-- ======= Top Bar ======= -->
+ <section id="topbar" class="d-flex align-items-center">
+    <div class="container d-flex justify-content-center justify-content-md-between">
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-envelope-fill"></i><a href="mailto:contact@example.com">smeanbtl@yahoo.com</a>
+        <i class="bi bi-phone-fill phone-icon"></i> 0274-367156
+        <i class="bi bi-clock-history"><span class="ml-3" id="jam" style="font-size:24"></span></i>
+      </div>
+      <div class="social-links d-none d-md-block">
+        <a href="" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="https://id-id.facebook.com/smknegeri1bantul/" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+      <a class="navbar-brand logo me-auto flex" href="#">
         <img src="assets/img/Logo-removebg-preview.png" alt=""   class="h-10 mr-3" width="51" height="70">
         <span class="self-center text-base font-semibold whitespace-nowrap" id="tkj">TEKNIK KOMPUTER JARINGAN <p class="text-xs font-light" id="tkj">SMK 1 BANTUL</p></span>
       </a>
-    <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- Uncomment below if you prefer to use an image logo -->
+
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="" href="index">Home</a></li>
+          <li class="dropdown"><a class="" href="#"><span>Profil</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a class="" href="visiMisi">Visi dan Misi</a></li>
+              <li><a class="" href="Prestasi">Prestasi</a></li>
+              <li><a class="" href="galeri">Galeri</a></li>
+              <li><a class="" href="Pembelajaran">Pembelajaran</a></li>
+            </ul>
+          <li class="dropdown"><a href="#"><span>Data TKJ</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a class="" href="datasiswa">Data Siswa</a></li>
+              <li><a class="" href="dataguru">Data Guru</a></li>
+            </ul>
+          <li><a class="" href="berita.php">Berita</a></li>
+          <li><a class="" href="contact">Kontak</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+   <!-- ======= Breadcrumbs ======= -->
+  <section id="breadcrumbs" class="breadcrumbs">
+    <div class="container">
     
-
-    <nav id="navbar" class="navbar">
-      <ul>
-        <li><a class="" href="index">Home</a></li>
-        <li class="dropdown"><a class="" href="#"><span>Profil</span> <i class="bi bi-chevron-down"></i></a>
-              <ul>
-                  <li><a class="" href="visiMisi.html">Visi dan Misi</a></li>
-                  <li><a class="" href="Prestasi.html">Prestasi</a></li>
-                  <li><a class="" href="galeri.html">Galeri</a></li>
-                  <li><a class="" href="Pembelajaran.html">Pembelajaran</a></li>
-              </ul>
-        <li class="dropdown"><a href="#"><span>Data TKJ</span> <i class="bi bi-chevron-down"></i></a>
-              <ul>
-                  <li class="dropdown"><a href="#"><span>Data Siswa</span> <i class="bi bi-chevron-right"></i></a>
-                    <ul>
-                      <li><a href="kelas10.php">Kelas 10</a></li>
-                      <li><a href="kelas11.php">Kelas 11</a></li>
-                      <li><a href="kelas12.php">Kelas 12</a></li>
-                    </ul>
-                  </li>
-          
-                  <li><a class="" href="dataguru.html">Data Guru</a></li>
-              </ul>
-        <li><a class="active" href="berita.html">Berita</a></li>
-        <li><a class="" href="contact.html">Contact</a></li>
-      </ul>
-      <i class="bi bi-list mobile-nav-toggle"></i>
-    </nav><!-- .navbar -->
-
-  </div>
-</header><!-- End Header -->
-   <br>
-   <!--breadcumbs-->
-
-   <section id="breadcrumbs" class="breadcrumbs max-w-full  h-auto"style="background-image: url(assets/img/bread/breadcumb-berita.jpg); height: auto; width: auto; background-size: 100% 100%; max-width: 100%;" >
-      <div class="container bg-fixed"  >
-
-        <div class="d-flex justify-content-between items-center mb-11">
-          <h2 class="px-3 mt-4 text-slate-100 font-sans" id="teksbread">Detail Berita</h2>
-          <ol class="bg-slate-100 rounded px-3 py-3 absolute right-6 mt-9">
-            <li><a href="index.php" class="text-red-800">Home</a></li>
-            <li>Berita</li>
-          </ol>
-        </div>
-
+      <div class="d-flex justify-content-between align-items-center">
+        <h2>Detail Berita</h2>
+        <ol>
+          <li><a href="index">Home</a></li>
+          <li>Galeri</li>
+        </ol>
       </div>
-    </section>
-<!--end breadcumbs-->
+    </div>
+  </section><!-- End Breadcrumbs -->
 
 
 
@@ -345,10 +352,7 @@ while ($row=mysqli_fetch_array($query)) {
         &copy; Copyright <strong><span>bootstrap</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/day-multipurpose-html-template-for-free/ -->
+       
         Designed by Kelompok TKJ
       </div>
     </div>
