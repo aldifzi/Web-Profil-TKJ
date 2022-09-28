@@ -13,3 +13,4 @@
         </IfModule>
 
         ErrorDocument 404 "<h1>Halaman Tidak Ditemukan</h1>"
+

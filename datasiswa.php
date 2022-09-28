@@ -160,7 +160,7 @@ if(isset($_GET['cari'])){
                     $sebelum        = $halaman - 1;
                     $setelah        = $halaman + 1;
     
-                    // mengambil data dari tabel pegawai untuk ditotal
+                    // mengambil data dari tabel siswa untuk ditotal
                     $datas           = mysqli_query($koneksi, "select * from user");
     
                     // jumlah data pegawai ditotal
@@ -218,7 +218,9 @@ if(isset($_GET['cari'])){
   </main><!-- End #main -->
 
    <!-- ======= Footer ======= -->
-   <footer id="footer">
+   <footer id="footer" class=" pt-5 lg:pt-[120px] sm:pt-[150px] mt-4 pb-0 lg:pb-20 relative z-10">
+   <div class="bg-yellow-400 pt-4 lg:pt-[110px] pb-0 lg:pb-0 relative z-10">
+  <div class="bg-slate-800 pt-9 lg:pt-[120px] pb-5 lg:pb-20 relative z-10">
     <div class="footer-top">
       <div class="container">
         <div class="row">
@@ -287,6 +289,8 @@ if(isset($_GET['cari'])){
         Designed by Kelompok TKJ
       </div>
     </div>
+  </div>
+   </div>
   </footer><!-- End Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
@@ -316,11 +320,7 @@ if(isset($_GET['cari'])){
 <script type="text/javascript" src="assets/js/jam.js">
       
   </script>
-<script>
-    $(document).ready(function(){
-        $('#tabel-data').DataTable();
-    });
-</script>
+
 </body>
 
 </html>

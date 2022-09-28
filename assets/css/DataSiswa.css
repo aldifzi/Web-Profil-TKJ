@@ -848,7 +848,7 @@ h6 {
 #footer {
   background: #0c0c0c;
   padding: 0 0 30px 0;
-  color: #fff;
+  color: rgb(212, 110, 110);
   font-size: 14px;
 }
 
@@ -858,7 +858,7 @@ h6 {
 
 #footer .footer-top .footer-info {
   margin-bottom: 15px;
-  background: #191919;
+  background: #c42a2a;
   color: #fff;
   border-top: 4px solid #cc1616;
   text-align: center;
