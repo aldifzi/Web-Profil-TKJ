@@ -116,7 +116,7 @@ if(isset($_GET['cari'])){
 
     <div class="container my-5">
 <div class="">
-    <table  id="tabel-data" class="table table-striped table-bordered dataTable  align-middle mb-0 bg-white">
+    <table  id="table1" class="table table-striped table-bordered dataTable  align-middle mb-0 bg-white">
  <thead class="bg-light">
   <tr>
     <th></th>
@@ -320,6 +320,14 @@ if(isset($_GET['cari'])){
 <script type="text/javascript" src="assets/js/jam.js">
       
   </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+  
+<script>
+    $(document).ready(function () {
+        $('#table1').DataTable();
+    });
+</script>
 
 </body>
 
