@@ -751,7 +751,7 @@ h6 {
 
 
   .card {
-  width: 250px;
+  width: 550px;
   margin: 10px;
   background-color: white;
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
@@ -842,13 +842,13 @@ h6 {
   color: black;
   background-color: white;
 }
-   /*--------------------------------------------------------------
+ /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
 #footer {
   background: #0c0c0c;
   padding: 0 0 30px 0;
-  color: rgb(212, 110, 110);
+  color: #fff;
   font-size: 14px;
 }
 
@@ -858,7 +858,7 @@ h6 {
 
 #footer .footer-top .footer-info {
   margin-bottom: 15px;
-  background: #c42a2a;
+  background: #191919;
   color: #fff;
   border-top: 4px solid #cc1616;
   text-align: center;
@@ -971,6 +971,12 @@ h6 {
 #footer .credits a {
   color: #e82d2d;
 }
+
+@media (max-width: 575px) {
+  #footer .footer-top .footer-info {
+    margin: -20px 0 30px 0;
+  }
+} 
 
 @media (max-width: 575px) {
   #footer .footer-top .footer-info {

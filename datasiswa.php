@@ -23,7 +23,10 @@
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="resources/datatables/datatables.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css
+">
+  
 
   <!-- Template Main CSS File -->
   <link href="assets/css/DataSiswa.css" rel="stylesheet">
@@ -102,16 +105,6 @@
 
     <!-- ======= Tabel ======= -->
 
-    <form action="" method="get" class="form mt-4">
- <input x-model="searchInput" type="text" name="cari" placeholder="Cari Siswa..." class="inputtext">
- <button class="button-62">Cari</button>
-</form>
- 
-<?php 
-if(isset($_GET['cari'])){
- $cari = $_GET['cari'];
-}
-?>
 
 
     <div class="container my-5">
@@ -132,54 +125,11 @@ if(isset($_GET['cari'])){
  require('koneksi.php');
  $query1= mysqli_query($connection,"SELECT * FROM user");
 
- if(isset($_GET['cari'])){
-	$cari = $_GET['cari'];
-	echo "<b>Hasil pencarian : ".$cari."</b>";
-}
-
-if(isset($_GET['cari'])){
-  $cari = $_GET['cari'];
-  $query1 = mysqli_query($connection,"SELECT * FROM user where name like '%".$cari."%'");    
- }else{
-  $query1 = mysqli_query($connection,"SELECT * FROM user");  
- }
-   
-
-
-    // misalnya kalian akan melihat ?halaman= 3 pada url di atas, maka 3 akan disimpan ke dalam var halaman
-                    $halaman        = isset($_GET['halaman'])?(int)$_GET['halaman'] : 1;
-    
-                    // jika nilai halaman lebih besar dari 1 maka halaman awal adalah halaman dikali 10 - 10
-                    // jika nilai halaman lebih kecil dari 1 maka halaman awal adalah 0
-                    $halaman_awal   = ($halaman > 1) ? ($halaman * 10) - 10 : 0;
-    
-                    // membuat koneksi ke database
-                    $koneksi        = mysqli_connect("localhost", "root", "", "tkj");
-    
-                    // jika kembali dikurangi 1 dan jika setelahnya ditambah 1
-                    $sebelum        = $halaman - 1;
-                    $setelah        = $halaman + 1;
-    
-                    // mengambil data dari tabel siswa untuk ditotal
-                    $datas           = mysqli_query($koneksi, "select * from user");
-    
-                    // jumlah data pegawai ditotal
-                    $jumlah_data    = mysqli_num_rows($datas);
-    
-                    // ceil adalah fungsi pembulatan pada php
-                    $total_halaman  = ceil($jumlah_data / 10);
-    
-                    // yang ini mengambil data pengawai untuk ditampilkan dengan fungsi limit
-                    // satu halaman akan ditampilkan paling banyak 10 atau limit 10
-                    $query1   = mysqli_query($koneksi, "select * from user limit $halaman_awal, 10");
-    
-                    // nomor digunakan untuk penomoran pada kolom no
-                    // karena index dimulai dari angka 0 maka perlu ditambah 1
-                    $nomor          = $halaman_awal + 1;
+ 
  while($row=mysqli_fetch_array($query1))
  {
     ?>
-</tbody>
+
     <tr>
     <td><img src="assets/img/icon.png" alt="" width="80px" class="rounded ml-2" id="foto"></td>
       <td><?php echo  $row['NIS'];?></td>
@@ -192,23 +142,7 @@ if(isset($_GET['cari'])){
 
         </table>
  </div>
- <nav aria-label="Page navigation example">
-                <ul class="pagination flex-wrap mt-7">
-                    <li class="page-item">
-                        <a class="page-link " <?php if($halaman > 1){ echo "href='?halaman=$sebelum'"; } ?>>Previous</a>
-                    </li>
-                    <?php 
-                        for($x = 1; $x <= $total_halaman; $x++){
-                    ?> 
-                    <li class="page-item"><a class="page-link" href="?halaman=<?php echo $x ?>"> <?php echo $x; ?></a></li>
-                    <?php
-                        }
-                    ?> 
-                    <li class="page-item">
-                        <a  class="page-link " <?php  if($halaman < $total_halaman) { echo "href='?halaman=$setelah'"; } ?>>Next</a>
-                    </li>
-                </ul>
-            </nav><script></script>
+<script></script>
  </div>
       
     <!-- End tabel Section -->
@@ -217,10 +151,8 @@ if(isset($_GET['cari'])){
 
   </main><!-- End #main -->
 
-   <!-- ======= Footer ======= -->
-   <footer id="footer" class=" pt-5 lg:pt-[120px] sm:pt-[150px] mt-4 pb-0 lg:pb-20 relative z-10">
-   <div class="bg-yellow-400 pt-4 lg:pt-[110px] pb-0 lg:pb-0 relative z-10">
-  <div class="bg-slate-800 pt-9 lg:pt-[120px] pb-5 lg:pb-20 relative z-10">
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
     <div class="footer-top">
       <div class="container">
         <div class="row">
@@ -247,12 +179,14 @@ if(isset($_GET['cari'])){
           <div class="col-lg-2 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-            <li><i class="bx bx-chevron-right"></i> <a href="index.html">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="index">Home</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="https://www.smkn1bantul.sch.id/">SMK N1 Bantul</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="https://skansaba.id/login/index.php">Elerning</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="https://policies.google.com/terms?hl=en-US">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="form.html">Admin</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="https://www.google.com/intl/id/policies/privacy/archive/20160325/">Privacy policy</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://policies.google.com/terms?hl=en-US">Terms of
+                  service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="assets//admin/index.php">Admin</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a
+                  href="https://www.google.com/intl/id/policies/privacy/archive/20160325/">Privacy policy</a></li>
             </ul>
           </div>
 
@@ -260,7 +194,7 @@ if(isset($_GET['cari'])){
           <div class="col-lg-2 col-md-6 footer-links">
             <h4>Anggota Pembuat</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i>Fadlan Buwono Mukti</li>
+              <li><i class="bx bx-chevron-right"><a href="#"></i>Fadlan Buwono Mukti</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Aldi Fauzi</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Denok Wahyuni</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Arul</a></li>
@@ -271,8 +205,16 @@ if(isset($_GET['cari'])){
 
           <div class="col-lg-4 col-md-6 footer-newsletter">
             <h4>Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis dolorum fugiat numquam minus tempora incidunt quibusdam. Aperiam rerum eligendi ratione ullam quas odit nobis, laborum omnis expedita exercitationem illum vitae excepturi error quisquam quod neque. Minus, consequuntur fugit nam obcaecati, eveniet deserunt commodi voluptatem earum dolore deleniti praesentium. Dignissimos, libero odio! Omnis natus beatae eveniet distinctio repudiandae voluptatibus perspiciatis iste nihil sequi, accusamus incidunt cum animi molestiae nobis, porro ratione quidem voluptatem neque enim nulla, obcaecati inventore ad repellendus. Quibusdam voluptatibus incidunt velit iure illum voluptatem exercitationem id distinctio, esse laborum eum quasi laudantium possimus voluptates provident est ipsa? Officia.</p>
-            
+            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna Lorem ipsum dolor sit, amet
+              consectetur adipisicing elit. Perferendis dolorum fugiat numquam minus tempora incidunt quibusdam. Aperiam
+              rerum eligendi ratione ullam quas odit nobis, laborum omnis expedita exercitationem illum vitae excepturi
+              error quisquam quod neque. Minus, consequuntur fugit nam obcaecati, eveniet deserunt commodi voluptatem
+              earum dolore deleniti praesentium. Dignissimos, libero odio! Omnis natus beatae eveniet distinctio
+              repudiandae voluptatibus perspiciatis iste nihil sequi, accusamus incidunt cum animi molestiae nobis,
+              porro ratione quidem voluptatem neque enim nulla, obcaecati inventore ad repellendus. Quibusdam
+              voluptatibus incidunt velit iure illum voluptatem exercitationem id distinctio, esse laborum eum quasi
+              laudantium possimus voluptates provident est ipsa? Officia.</p>
+
 
           </div>
 
@@ -285,12 +227,10 @@ if(isset($_GET['cari'])){
         &copy; Copyright <strong><span>bootstrap</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
-        
+  
         Designed by Kelompok TKJ
       </div>
     </div>
-  </div>
-   </div>
   </footer><!-- End Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
@@ -309,19 +249,16 @@ if(isset($_GET['cari'])){
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-  <script src="resources/datatables/datatables.min.js"></script>
-	<script src="resources/datatables/datatable.js"></script>
   <script src="resources/js/jquery.js"></script>
-  <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
-<script src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
   <script src="jam.js"></script>
 
 
 <script type="text/javascript" src="assets/js/jam.js">
       
   </script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
   
 <script>
     $(document).ready(function () {
