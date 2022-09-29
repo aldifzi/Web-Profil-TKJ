@@ -32,6 +32,8 @@ $no = 1;
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
 
   <!-- Template Main CSS File -->
   <link href="assets/css/DataSiswa.css" rel="stylesheet">
@@ -122,32 +124,23 @@ $no = 1;
       </div>
       <?php while($row = mysqli_fetch_assoc($query)) : ?>
       <div class="container">
-        <div class="card" data-aos="zoom-in">
-        <figure class="card__thumb">
-            <img src="assets/img/team/team-1.jpg" alt="">
-            <figcaption class="card__caption">
-				<h2 class="card__title"><?= $row['nama'] ?></h2>
-        <h5><?= $row['no_hp'] ?></h5>
-            <h5><?= $row['alamat'] ?></h5>
-            <span><?= $row['mata_pelajaran'] ?></span>
-            <h5>Pendidikan : S3 Komputer</h5>
-        <div class="social">
-              <a href=""><i class="bi bi-twitter"></i></a>
-              <a href=""><i class="bi bi-facebook"></i></a>
-              <a href=""><i class="bi bi-instagram"></i></a>
-              <a href=""><i class="bi bi-linkedin"></i></a>
+      <div class="row justify-content-center">
+      <div class="col-12 col-sm-6 col-lg-3">
+            <div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+              <!-- Team Thumb-->
+              <div class="advisor_thumb"><img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="">
+                <!-- Social Info-->
+                <div class="social-info"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
+              </div>
+              <!-- Team Details-->
+              <div class="single_advisor_details_info">
+                <h6><?= $row['nama'] ?></h6>
+                <a href="detail-guru?id=<?= $row['id'] ?>"><button class="bg-red-500 hover:bg-blue-700 text-white font-bold py-1 mt-2 px-2 rounded">Detail Guru</button></a>
+              </div>
             </div>
-            <a href="detail-guru?id=<?= $row['id'] ?>"><button class="card__button">Detail Guru</button></a>
-			</figcaption>
-        </figure>
-            <h4></h4>
-            
-            
-           
-            
-            
-           
           </div>
+      </div>
+      </div>
         </div>
         <?php endwhile; ?>
        

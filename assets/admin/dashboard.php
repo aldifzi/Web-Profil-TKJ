@@ -27,7 +27,7 @@ else{
         <link href="assets/css/pages.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/menu.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/responsive.css" rel="stylesheet" type="text/css" />
-		<link rel="stylesheet" href="../plugins/switchery/switchery.min.css">
+		<link rel="stylesheet" href="../../plugins/switchery/switchery.min.css">
         <script src="assets/js/modernizr.min.js"></script>
 
     </head>
@@ -94,6 +94,9 @@ else{
 							</div>
 						</div>
                         <!-- end row -->
+
+
+                        <h2>Selamat Datang<p></p></h2>
 
                         <div class="row">
 <a href="manage-categories.php">

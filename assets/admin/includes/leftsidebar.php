@@ -27,8 +27,10 @@
                                 <ul class="list-unstyled">
                                 	<li><a href="add-category">Tambah Kategori</a></li>
                                     <li><a href="manage-categories">Kelola Kategori</a></li>
+                                    <li><a href="manage-subcategories">Kelola Sub Kategori</a></li>
                                 </ul>
                             </li>
+                            
 
     
   <li class="has_sub">

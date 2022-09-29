@@ -42,15 +42,7 @@ $error="Something went wrong . Please try again.";
         <!-- App title -->
         <title>Edit Berita</title>
 
-        <!-- Summernote css -->
-        <link href="../../plugins/summernote/summernote.css" rel="stylesheet" />
-
-        <!-- Select2 -->
-        <link href="../plugins/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
-
-        <!-- Jquery filer css -->
-        <link href="../plugins/jquery.filer/css/jquery.filer.css" rel="stylesheet" />
-        <link href="../plugins/jquery.filer/css/themes/jquery.filer-dragdropbox-theme.css" rel="stylesheet" />
+       
 
         <!-- App css -->
         <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -246,15 +238,12 @@ while($result=mysqli_fetch_array($ret))
         <script src="assets/js/waves.js"></script>
         <script src="assets/js/jquery.slimscroll.js"></script>
         <script src="assets/js/jquery.scrollTo.min.js"></script>
-        <script src="../../plugins/switchery/switchery.min.js"></script>
-
-        <!--Summernote js-->
-        <script src="../../plugins/summernote/summernote.min.js"></script>
-        <!-- Select 2 -->
-        <script src="../../plugins/select2/js/select2.min.js"></script>
-        <!-- Jquery filer js -->
-        <script src="../../plugins/jquery.filer/js/jquery.filer.min.js"></script>
-
+      
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote-bs4.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote-bs4.js"></script>
         <!-- page specific js -->
         <script src="assets/pages/jquery.blog-add.init.js"></script>
 
