@@ -691,7 +691,18 @@ body {
   }
 }
 
-
+table {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  
+  .table-users {
+    border: 1px solid darken(baseColor, 5%);
+    border-radius: 1px;
+    box-shadow: 3px 3px 0 rgba(0,0,0,0.1);
+    margin: 1em auto;
+    overflow: hidden;
+    width: 800px;
+  }
 
   /*--------------------------------------------------------------
 # Footer

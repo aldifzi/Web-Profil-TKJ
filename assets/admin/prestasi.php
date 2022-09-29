@@ -37,18 +37,6 @@ if ($op == 'edit') {
     $sql1       = "SELECT * from prestasi where id = '$id'";
     $q1         = mysqli_query($koneksi, $sql1);
     $r1         = mysqli_fetch_array($q1);
-    $NIS        = $r1['nama'];
-    $nama       = $r1['kelas'];
-    $jenis   = $r1['jenis'];
-    $hasil   = $r1['hasil'];
-    $tingkat   = $r1['tingkat'];
-    $tgl   = $r1['tgl'];
-
-    if ($NIS == '') {
-        $error = "Data tidak ditemukan";
-    }
-}
-if (isset($_POST['simpan'])) { //untuk create
     $nama        = $r1['nama'];
     $kelas       = $r1['kelas'];
     $jenis   = $r1['jenis'];
@@ -56,7 +44,19 @@ if (isset($_POST['simpan'])) { //untuk create
     $tingkat   = $r1['tingkat'];
     $tgl   = $r1['tgl'];
 
-    if ($NIS && $name &&  $kelas) {
+    if ($nama == '') {
+        $error = "Data tidak ditemukan";
+    }
+}
+if (isset($_POST['simpan'])) { //untuk create
+    $nama        = $_POST['nama'];
+    $kelas       = $_POST['kelas'];
+    $jenis   = $_POST['jenis'];
+    $hasil   = $_POST['hasil'];
+    $tingkat   = $_POST['tingkat'];
+    $tgl   = $_POST['tgl'];
+
+    if ($nama && $jenis &&  $kelas && $tgl && $tingkat && $hasil) {
         if ($op == 'edit') { //untuk update
             $sql1       = "UPDATE prestasi set nama = '$nama',kelas='$kelas',tingkat='$tingkat',tgl='$tgl',hasil='$hasil' where id = '$id'";
             $q1         = mysqli_query($koneksi, $sql1);
@@ -161,7 +161,7 @@ header('location:index.php');
                             <label for="nama" class="block uppercase tracking-wide text-gray-700 text-lg font-bold mb-2">Nama</label>
                             </div>
                             <div class="col-sm-10">
-                            <input type="text" class="bg-gray-50 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-red-500 hover:placeholder:text-slate-500"  id="nama" name="nama" placeholder="NIS...." value="<?php echo $NIS ?>">   
+                            <input type="text" class="bg-gray-50 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-red-500 hover:placeholder:text-slate-500"  id="nama" name="nama" placeholder="Masukkan Nama...." value="<?php echo $nama ?>">   
                             </div>                
                     </div>
                     <br>
@@ -176,10 +176,10 @@ header('location:index.php');
                     <br>
                     <div class="w-full md:w-1/2 px-3 py-4">
                         <div>
-                        <label for="jenis" class="block uppercase tracking-wide text-gray-700 text-lg font-bold mb-2">Jenis</label>
+                        <label for="tgl" class="block uppercase tracking-wide text-gray-700 text-lg font-bold mb-2">Tanggal</label>
                         </div>
                         <div class="col-sm-10">
-                            <input type="date" class="bg-gray-50 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-red-500" id="name" name="name" value="<?php echo $tgl ?>">
+                            <input type="date" class="bg-gray-50 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-red-500" id="tgl" name="tgl" value="<?php echo $tgl ?>">
                         </div>
                     </div>
 
@@ -188,7 +188,7 @@ header('location:index.php');
                         <label for="hasil" class="block uppercase tracking-wide text-gray-700 text-lg font-bold mb-2">Hasil</label>
                         <div class="col-sm-10">
                             <select class="bg-slate-500 text-slate-100 py-3 px-6 rounded-full" name="hasil" id="hasil">
-                                <option class="bg-black" value="">- Pilih -</option>
+                                <option class="bg-black" value="">- Pilih Hasil -</option>
                                 <option value="1" <?php if ($hasil == "1") echo "selected" ?>> 1</option>
                                 <option value="2" <?php if ($hasil == "2") echo "selected" ?>> 2</option>
                                 <option value="3" <?php if ($hasil == "1") echo "selected" ?>> 3</option>
@@ -200,10 +200,10 @@ header('location:index.php');
                         <label for="tingkat" class="block uppercase tracking-wide text-gray-700 text-lg font-bold mb-2">Tingkat</label>
                         <div class="col-sm-10">
                             <select class="bg-slate-500 text-slate-100 py-3 px-6 rounded-full" name="tingkat" id="tingkat">
-                                <option class="bg-black" value="">- Pilih Kelas -</option>
-                                <option value="nasional" <?php if ($kelas == "nasional") echo "selected" ?>>Nasional</option>
-                                <option value="provinsi" <?php if ($kelas == "provinsi") echo "selected" ?>>Provinsi</option>
-                                <option value="kabupaten" <?php if ($kelas == "kabupaten") echo "selected" ?>>Kabupaten</option>
+                                <option class="bg-black" value="">- Pilih Tingkat -</option>
+                                <option value="nasional" <?php if ($tingkat == "nasional") echo "selected" ?>>Nasional</option>
+                                <option value="provinsi" <?php if ($tingkat == "provinsi") echo "selected" ?>>Provinsi</option>
+                                <option value="kabupaten" <?php if ($tingkat == "kabupaten") echo "selected" ?>>Kabupaten</option>
                             </select>
                         </div>
                     </div>
@@ -238,6 +238,7 @@ header('location:index.php');
                 <table class="table-fixed">
                     <thead>
                         <tr >
+                            <th class="px-4 py-2">No</th>
                             <th class="px-4 py-2">Nama</th>
                             <th class="px-4 py-2">Kelas</th>
                             <th class=" py-2 px-7">Jenis Prestasi</th>
@@ -266,11 +267,14 @@ header('location:index.php');
                             <tr class="">
                                 <th class="border px-9 py-2"><?php echo $urut++ ?></th>
                                 <td class="border px-9 py-2"><?php echo $nama ?></td>
-                                <td class="border px-9 py-2"><?php echo $name ?></td>
                                 <td class="border px-9 py-2"><?php echo $kelas ?></td>
+                                <td class="border px-9 py-2"><?php echo $jenis ?></td>
+                                <td class="border px-9 py-2"><?php echo $hasil ?></td>
+                                <td class="border px-9 py-2"><?php echo $tingkat ?></td>
+                                <td class="border px-9 py-2"><?php echo $tgl ?></td>
                                 <td class="border px-9 py-2">
-                                    <a href="admin.php?op=edit&id=<?php echo $id ?>"><button type="button" class="btn btn-blue bg-blue-500 hover:bg-blue-900 text-white font-bold py-1 px-4 rounded-full">Edit</button></a>
-                                    <a href="admin.php?op=delete&id=<?php echo $id?>" onclick="return confirm('Yakin mau delete data?')"><button type="button" class="btn btn-red ml-3  bg-red-600 focus:ring-2 hover:bg-red-900 text-white font-bold py-1 px-4 rounded-full">Hapus</button></a>            
+                                    <a href="prestasi.php?op=edit&id=<?php echo $id ?>"><button type="button" class="btn btn-blue bg-blue-500 hover:bg-blue-900 text-white font-bold py-1 px-4 rounded-full">Edit</button></a>
+                                    <a href="prestasi.php?op=delete&id=<?php echo $id?>" onclick="return confirm('Yakin mau delete data?')"><button type="button" class="btn btn-red ml-3  bg-red-600 focus:ring-2 hover:bg-red-900 text-white font-bold py-1 px-4 rounded-full">Hapus</button></a>            
                                 </td>
                             </tr>
                         <?php
