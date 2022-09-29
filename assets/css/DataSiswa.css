@@ -909,7 +909,7 @@ h6 {
     -webkit-transition-duration: 500ms;
     transition-duration: 500ms;
     border-radius: 0 0 15px 15px;
-    background-color: #aa1818;
+    background-color: #ffffff;
 }
 .single_advisor_profile .single_advisor_details_info::after {
     -webkit-transition-duration: 500ms;
@@ -918,7 +918,7 @@ h6 {
     z-index: 1;
     width: 50px;
     height: 3px;
-    background-color: #04041a;
+    background-color: #afafb0;
     content: "";
     top: 12px;
     right: 30px;
@@ -946,11 +946,11 @@ h6 {
 }
 .single_advisor_profile:hover .advisor_thumb::after,
 .single_advisor_profile:focus .advisor_thumb::after {
-    background-color: #070a57;
+    background-color: #921e1e;
 }
 .single_advisor_profile:hover .advisor_thumb .social-info a,
 .single_advisor_profile:focus .advisor_thumb .social-info a {
-    color: #ffffff;
+    color: white;
 }
 .single_advisor_profile:hover .advisor_thumb .social-info a:hover,
 .single_advisor_profile:hover .advisor_thumb .social-info a:focus,
@@ -975,6 +975,10 @@ h6 {
     color: #ffffff;
 }
 
+#bguru:hover {
+background-color: beige;
+text-shadow: #3f43fd;
+}
 
  /*--------------------------------------------------------------
 # Footer

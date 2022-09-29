@@ -135,7 +135,7 @@ $no = 1;
               <!-- Team Details-->
               <div class="single_advisor_details_info">
                 <h6><?= $row['nama'] ?></h6>
-                <a href="detail-guru?id=<?= $row['id'] ?>"><button class="bg-red-500 hover:bg-blue-700 text-white font-bold py-1 mt-2 px-2 rounded">Detail Guru</button></a>
+                <a href="detail-guru?id=<?= $row['id'] ?>"><button id="bguru" class="bg-red-500  text-white font-bold py-1 mt-2 px-2 rounded">Detail Guru</button></a>
               </div>
             </div>
           </div>
