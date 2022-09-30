@@ -526,6 +526,7 @@ body {
   font-weight: 700;
   position: relative;
   color: red;
+  text-decoration: none;
 }
 
 .head .Judul h2:before,
