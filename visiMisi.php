@@ -171,8 +171,7 @@
 
         <div class="section-header">
           <h2> Tujuan Visi Misi</h2>
-          <p>Nulla dolorum nulla nesciunt rerum facere sed ut inventore quam porro nihil id ratione ea sunt quis dolorem
-            dolore earum</p>
+          <p> </p>
         </div>
 
         <div class="row gy-4">
@@ -186,8 +185,7 @@
                 <div class="col-xl-7 d-flex align-items-center">
                   <div class="card-body">
                     <h4 class="card-title">VISI</h4>
-                    <p>Fuga in dolorum et iste et culpa. Commodi possimus nesciunt modi voluptatem placeat deleniti
-                      adipisci. Cum delectus doloribus non veritatis. Officia temporibus illo magnam. Dolor eos et.</p>
+                    <p>Mewujudkan Lulusan Teknik Komputer dan Jaringan yang berkualitas,produktif,berkarakter dan berwawasan Global khususnya dalam bidang teknologi informasi dan komunikasi yang di landaskan pada keungulan akademis,sikap,mental,dan karimah </p>
                   </div>
                 </div>
               </div>
@@ -203,9 +201,20 @@
                 <div class="col-xl-7 d-flex align-items-center">
                   <div class="card-body">
                     <h4 class="card-title">MISI</h4>
-                    <p>Sunt deserunt maiores voluptatem autem est rerum perferendis rerum blanditiis. Est laboriosam qui
-                      iste numquam laboriosam voluptatem architecto. Est laudantium sunt at quas aut hic. Eum
-                      dignissimos.</p>
+                     
+                        <ul>
+                          <li><p>1.Membekali siswa dengan pengetahuan keterampilan dan sikap yang mulia bermartabat dan bertaqwa kepada Tuhan Yang Maha Esa</p> </li>
+                        </ul>
+                        <br>
+                        <ul>
+                          <li>2.Melatih siswa dengan menyelenggarakan Pendidikan dengan basis kompetisi sesuai dengan kebutuhan industri</li>
+                        </ul>
+                        <br>
+                        <ul>
+                          <li>3.Menghasilkan Lulusan yang berkompeten, professional dan mampu bersaing di pasar tenaga kerja di bidang teknologi dan computer</li>
+                        </ul>
+                       
+                  
                   </div>
                 </div>
               </div>

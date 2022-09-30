@@ -689,8 +689,8 @@ section {
   display: block;
   color: #34b7a7;
 }
-.cta h2 {
-  color: red;
+.cta .section-title h2 {
+  color: whitesmoke;
 }
 
 .cta p {
