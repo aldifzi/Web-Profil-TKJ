@@ -192,7 +192,7 @@
  require('koneksi.php');
  $query1= mysqli_query($connection,"SELECT * FROM visi_misi");
 
-<<<<<<< HEAD
+
  
  while($row=mysqli_fetch_array($query1))
  { 
@@ -206,23 +206,7 @@
 </div><!-- End Card Item -->
 
     
-=======
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="card-item">
-              <div class="row">
-                <div class="col-xl-5">
-                  <div class="card-bg" style="background-image: url(assets/img/constructions-1.jpg);"></div>
-                </div>
-                <div class="col-xl-7 d-flex align-items-center">
-                  <div class="card-body">
-                    <h4 class="card-title">VISI</h4>
-                    <p>Mewujudkan Lulusan Teknik Komputer dan Jaringan yang berkualitas,produktif,berkarakter dan berwawasan Global khususnya dalam bidang teknologi informasi dan komunikasi yang di landaskan pada keungulan akademis,sikap,mental,dan karimah </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Card Item -->
->>>>>>> adbd9055de7dce6a342d69831f28ca26d3d592c9
+
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
             <div class="card-item">
@@ -233,7 +217,7 @@
                 <div class="col-xl-7 d-flex align-items-center">
                   <div class="card-body">
                     <h4 class="card-title">MISI</h4>
-<<<<<<< HEAD
+
                     <?php
  
     
@@ -260,8 +244,7 @@
                           <li>3.Menghasilkan Lulusan yang berkompeten, professional dan mampu bersaing di pasar tenaga kerja di bidang teknologi dan computer</li>
                         </ul>
                        
-                  
->>>>>>> adbd9055de7dce6a342d69831f28ca26d3d592c9
+ 
                   </div>
                 </div>
               </div>
