@@ -43,20 +43,21 @@
 
 <!-- ======= Top Bar ======= -->
 <section id="topbar" class="d-flex align-items-center">
-  <div class="container d-flex justify-content-center justify-content-md-between">
-    <div class="contact-info d-flex align-items-center">
-      <i class="bi bi-envelope-fill"></i><a href="mailto:contact@example.com">smeanbtl@yahoo.com</a>
-      <i class="bi bi-phone-fill phone-icon"></i> 0274-367156
-      <i class="bi bi-clock-history"><span class="ml-3" id="jam" style="font-size:24"></span></i>
+    <div class="container d-flex justify-content-center justify-content-md-between">
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-envelope-fill"></i><a href="mailto:contact@example.com">smeanbtl@yahoo.com</a>
+        <i class="bi bi-phone-fill phone-icon"></i> 0274-367156
+        <i class="bi bi-clock-history"><span class="ml-3" id="jam" style="font-size:24"></span></i>
+      </div>
+      <div class="social-links d-none d-md-block">
+        <a href="https://twitter.com/skansaba_id" target="_blank" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="https://id-id.facebook.com/smknegeri1bantul/" target="_blank" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/smkn1bantul/" target="_blank" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.youtube.com/channel/UCQgXA3YAufCRhmBVXjNZisw" target="_blank" class="youtube"><i class="bi bi-youtube"></i></i></a>
+        <a href="https://www.tiktok.com/@skansaba.id" target="_blank" class="linkedin"><i class="bi bi-tiktok"></i></i></a>
+      </div>
     </div>
-    <div class="social-links d-none d-md-block">
-      <a href="" class="twitter"><i class="bi bi-twitter"></i></a>
-      <a href="https://id-id.facebook.com/smknegeri1bantul/" class="facebook"><i class="bi bi-facebook"></i></a>
-      <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-      <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
-    </div>
-  </div>
-</section>
+  </section>
 
 <!-- ======= Header ======= -->
 <header id="header" class="d-flex align-items-center">
@@ -99,7 +100,7 @@
       <div class="d-flex justify-content-between align-items-center">
         <h2>Pembelajaran</h2>
         <ol>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="index">Home</a></li>
           <li>Pembelajaran</li>
         </ol>
       </div>
@@ -173,11 +174,11 @@
                 <strong>Email:</strong> smeanbtl@yahoo.com<br>
               </p>
               <div class="social-links mt-3">
-                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              <a href="https://twitter.com/skansaba_id" target="_blank" class="twitter"><i class="bi bi-twitter"></i></a>
+              <a href="https://id-id.facebook.com/smknegeri1bantul/" target="_blank" class="facebook"><i class="bi bi-facebook"></i></a>
+              <a href="https://www.instagram.com/smkn1bantul/" target="_blank" class="instagram"><i class="bi bi-instagram"></i></a>
+              <a href="https://www.youtube.com/channel/UCQgXA3YAufCRhmBVXjNZisw" target="_blank" class="youtube"><i class="bi bi-youtube"></i></i></a>
+              <a href="https://www.tiktok.com/@skansaba.id" target="_blank" class="linkedin"><i class="bi bi-tiktok"></i></i></a>
               </div>
             </div>
           </div>
@@ -185,14 +186,14 @@
           <div class="col-lg-2 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="index.html">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="https://www.smkn1bantul.sch.id/">SMK N1 Bantul</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="https://skansaba.id/login/index.php">Elerning</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="https://policies.google.com/terms?hl=en-US">Terms of
+              <li><i class="bx bx-chevron-right"></i> <a href="index">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://www.smkn1bantul.sch.id/" target="_blank" >SMK N1 Bantul</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://skansaba.id/login/index.php" target="_blank" >Elerning</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://policies.google.com/terms?hl=en-US" target="_blank" >Terms of
                   service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="form.html">Admin</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="assets//admin/index.php">Admin</a></li>
               <li><i class="bx bx-chevron-right"></i> <a
-                  href="https://www.google.com/intl/id/policies/privacy/archive/20160325/">Privacy policy</a></li>
+                  href="https://www.google.com/intl/id/policies/privacy/archive/20160325/" target="_blank" >Privacy policy</a></li>
             </ul>
           </div>
 
@@ -200,9 +201,9 @@
           <div class="col-lg-2 col-md-6 footer-links">
             <h4>Anggota Pembuat</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i>Fadlan Buwono Mukti</li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Aldi Fauzi</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Denok Wahyuni</a></li>
+              <li><i class="bx bx-chevron-right"><a href="#"></i>Fadlan Buwono Mukti</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://www.instagram.com/aldyfzi_/">Aldi Fauzi</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://www.instagram.com/dnkwy_/">Denok Wahyuni</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Arul</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Ridho</a></li>
             </ul>
@@ -210,17 +211,12 @@
 
 
           <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna Lorem ipsum dolor sit, amet
-              consectetur adipisicing elit. Perferendis dolorum fugiat numquam minus tempora incidunt quibusdam. Aperiam
-              rerum eligendi ratione ullam quas odit nobis, laborum omnis expedita exercitationem illum vitae excepturi
-              error quisquam quod neque. Minus, consequuntur fugit nam obcaecati, eveniet deserunt commodi voluptatem
-              earum dolore deleniti praesentium. Dignissimos, libero odio! Omnis natus beatae eveniet distinctio
-              repudiandae voluptatibus perspiciatis iste nihil sequi, accusamus incidunt cum animi molestiae nobis,
-              porro ratione quidem voluptatem neque enim nulla, obcaecati inventore ad repellendus. Quibusdam
-              voluptatibus incidunt velit iure illum voluptatem exercitationem id distinctio, esse laborum eum quasi
-              laudantium possimus voluptates provident est ipsa? Officia.</p>
-
+            <h4>Kata Pengantar</h4>
+            <p>WebSide ini di buat sepenuh hati oleh kelompok TKJ 
+              yang beranggotakan 5 orang yaitu : 1.Fadlan Buwono Mukti,2.Aldi fauzi,3.Denok Wahyuni,4.Arul,5.Ridho Yang berasal dari sekolah SMK N1 Bantul dengan jurusan XI RPL1.
+              Web ini di buat untuk menyelesaikan tugas project yang di berikan oleh guru jurusan RPL.Web ini akan di jadikan nilai di semua pelajaran produktif.
+              Dengan webside ini semoga dapat mengangkat nama sekolah agar di lirik oleh dunia kerja.
+              Dan Terimakasih kami ucapkan untuk guru produktif TKJ yang telah membantu kami dalam pembuatan webside ini</p>
 
           </div>
 
