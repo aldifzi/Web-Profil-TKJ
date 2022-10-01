@@ -38,7 +38,7 @@ $sqlslide = "select * from slideshow_banner";
 
 </head>
 
-<body>
+<body class="selection:bg-slate-600 selection:text-white">
 
  <!-- ======= Top Bar ======= -->
  <section id="topbar" class="d-flex align-items-center">
@@ -96,7 +96,8 @@ $sqlslide = "select * from slideshow_banner";
     <div class="container">
 
       <div class="d-flex justify-content-between align-items-center">
-        <h2>Prestasi</h2>
+        <h2><i class="fa fa-trophy" aria-hidden="true"></i>
+Prestasi</h2>
         <ol>
           <li><a href="index.html">Home</a></li>
           <li>prestasi</li>
@@ -111,27 +112,7 @@ $sqlslide = "select * from slideshow_banner";
  <!— Banner SlideShow nya —>
      <div id="dmbannerhead" class="carousel slide" data-ride="carousel">
        <div class="carousel-inner">
- <?php
-   if($res = $con->query($sqlslide)) {
-    $x = 0;
-    while ($row = $res->fetch_assoc()) {
-	  if($x==0) $aktif = "active";
-      else $aktif = '';
-  ?>
-        <div class="item <?php echo $aktif ?>">
-		   <a href="<?php echo $row['link_slide'] ?>" target="_blank">
-		      <img src="<?php echo $row['gambar_slide'] ?>" alt="<?php echo $row['judul_slide'] ?>" title="<?php echo $row['judul_slide'] ?>">
-			   <div class="carousel-caption">
-			      <h3><?php echo $row['judul_slide'] ?></h3> <!— judul slide —>
-			      <p><?php echo $row['keterangan_slide'] ?></p><!— keterangan slide —>
-			   </div>
-		   </a>
-		</div>
-  <?php 
-      $x++;
-    } // tutup while
-  }	// tutup if
-   ?>
+
      </div>
 		
 	 <a class="left carousel-control" href="#dmbannerhead" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
@@ -279,7 +260,7 @@ $sqlslide = "select * from slideshow_banner";
   <script src="resources/js/jquery.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
   <script src="jam.js"></script>
-
+  <script src="https://kit.fontawesome.com/6f2ba42180.js" crossorigin="anonymous"></script>
 
 <script type="text/javascript" src="assets/js/jam.js">
       

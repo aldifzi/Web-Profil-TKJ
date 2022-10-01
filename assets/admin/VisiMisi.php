@@ -40,7 +40,7 @@ if ($op == 'edit') {
     $visi        = $r1['visi'];
     $misi       = $r1['misi'];
 
-    if ($nama == '') {
+    if ($id == '') {
         $error = "Data tidak ditemukan";
     }
 }
@@ -53,7 +53,7 @@ if (isset($_POST['simpan'])) { //untuk create
             $sql1       = "UPDATE visi_misi set visi = '$visi',misi='$misi' where id = '$id'";
             $q1         = mysqli_query($koneksi, $sql1);
             if ($q1) {
-                $sukses = "Data siswa berhasil diupdate";
+                $sukses = "Data Visi Misi berhasil diupdate";
             } else {
                 $error  = "Data gagal diupdate";
             }
@@ -148,12 +148,12 @@ header('location:index.php');
                 }
                 ?>
                 <form action="" method="POST">
-                    <div class="w-full md:w-1/2 px-3 py-9 mb-7">
+                    <div class="w-full md:w-1/2 px-3 py-9">
                             <div class="">
                             <label for="visi" class="block uppercase tracking-wide text-gray-700 text-lg font-bold mb-2">Visi</label>
                             </div>
                             <div class="col-sm-10">
-                            <div class="summernote" name="visi" id="visi" cols="30" rows="10"><?php echo $visi ?></div>
+                            <textarea id="" name="visi" id="visi" cols="30" rows="10"><?php echo $visi ?></textarea>
                             </div>                
                     </div>
                     <br>
@@ -165,7 +165,7 @@ header('location:index.php');
                         </div>
                         <div class="col-sm-10">
                            
-                            <div class="summernote" name="misi" id="misi" cols="30" rows="10"><?php echo $misi ?></div>
+                            <textarea id="" name="misi" id="misi" cols="30" rows="10"><?php echo $misi ?></textarea>
                         </div>
                     </div>
                     <br>
@@ -176,7 +176,7 @@ header('location:index.php');
                     
                     
                     <div class="col-12">
-                        <input type="submit" name="simpan" value="Simpan Data" class="btn btn-blue mt-9 bg-blue-500 hover:bg-white  font-bold py-1 px-4 left-5 rounded-full hover:text-blue-700 cursor-pointer hover:border-2 border-blue-500 border-2 hover:border-blue-600" />
+                        <input type="submit" name="simpan" value="Simpan Data" class="btn btn-blue mt-9 text-white bg-blue-500 hover:bg-blue-800  font-bold py-1 px-4 left-5 rounded-full hover:text-blue-700 cursor-pointer hover:border-2 border-blue-500 border-2 hover:border-blue-600" />
                     </div>
                 </form>
             </div>
@@ -185,7 +185,7 @@ header('location:index.php');
         <!-- untuk mengeluarkan data -->
         <div class="my-auto pl-96 block bg-slate-50">
             <div class="card font-sans font-bold py-4">
-                Data Siswa
+                Data Visi Misi
             </div>
             <div class="card-body ">
                 
@@ -249,7 +249,7 @@ header('location:index.php');
 
             jQuery(document).ready(function(){
 
-                $('.summernote').summernote({
+                $('#summernote').summernote({
                     placeholder: '',
                     height: 240,                 // set editor height
                     minHeight: null,             // set minimum height of editor

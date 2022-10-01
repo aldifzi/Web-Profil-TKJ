@@ -230,20 +230,7 @@
     ?>
                     <p><?php echo  $row['misi'];?></p>
                       <?php }  ?>
-=======
-                     
-                        <ul>
-                          <li><p>1.Membekali siswa dengan pengetahuan keterampilan dan sikap yang mulia bermartabat dan bertaqwa kepada Tuhan Yang Maha Esa</p> </li>
-                        </ul>
-                        <br>
-                        <ul>
-                          <li>2.Melatih siswa dengan menyelenggarakan Pendidikan dengan basis kompetisi sesuai dengan kebutuhan industri</li>
-                        </ul>
-                        <br>
-                        <ul>
-                          <li>3.Menghasilkan Lulusan yang berkompeten, professional dan mampu bersaing di pasar tenaga kerja di bidang teknologi dan computer</li>
-                        </ul>
-                       
+
  
                   </div>
                 </div>
