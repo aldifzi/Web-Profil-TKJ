@@ -135,7 +135,7 @@
             </div>
           </div>
         </div>
-
+        
         <!-- Slide 3 -->
         <div class="carousel-item" style="background-image: url(assets/img/slide/slide-3.jpg)">
           <div class="carousel-container">
@@ -176,23 +176,35 @@
         </div>
 
         <div class="row gy-4">
+        
+<div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+  <div class="card-item">
+    <div class="row">
+      <div class="col-xl-5">
+        <div class="card-bg" style="background-image: url(assets/img/constructions-1.jpg);"></div>
+      </div>
+      <div class="col-xl-7 d-flex align-items-center">
+        <div class="card-body">
+          <h4 class="card-title">VISI</h4>
+          <?php
+ 
+    
+ require('koneksi.php');
+ $query1= mysqli_query($connection,"SELECT * FROM visi_misi");
 
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="card-item">
-              <div class="row">
-                <div class="col-xl-5">
-                  <div class="card-bg" style="background-image: url(assets/img/constructions-1.jpg);"></div>
-                </div>
-                <div class="col-xl-7 d-flex align-items-center">
-                  <div class="card-body">
-                    <h4 class="card-title">VISI</h4>
-                    <p>Fuga in dolorum et iste et culpa. Commodi possimus nesciunt modi voluptatem placeat deleniti
-                      adipisci. Cum delectus doloribus non veritatis. Officia temporibus illo magnam. Dolor eos et.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Card Item -->
+ 
+ while($row=mysqli_fetch_array($query1))
+ { 
+    ?>
+          <p><?php echo  $row['visi'];?></p>
+          <?php }  ?>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- End Card Item -->
+
+    
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
             <div class="card-item">
@@ -203,9 +215,18 @@
                 <div class="col-xl-7 d-flex align-items-center">
                   <div class="card-body">
                     <h4 class="card-title">MISI</h4>
-                    <p>Sunt deserunt maiores voluptatem autem est rerum perferendis rerum blanditiis. Est laboriosam qui
-                      iste numquam laboriosam voluptatem architecto. Est laudantium sunt at quas aut hic. Eum
-                      dignissimos.</p>
+                    <?php
+ 
+    
+ require('koneksi.php');
+ $query1= mysqli_query($connection,"SELECT * FROM visi_misi");
+
+ 
+ while($row=mysqli_fetch_array($query1))
+ { 
+    ?>
+                    <p><?php echo  $row['misi'];?></p>
+                      <?php }  ?>
                   </div>
                 </div>
               </div>

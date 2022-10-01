@@ -62,6 +62,7 @@
                                     <li><a href="galeri">Galeri</a></li>
                                     <li><a href="data-guru">Data Guru</a></li>
                                     <li><a href="prestasi">Preetasi</a></li>
+                                    <li><a href="VisiMisi">Visi Misi</a></li>
                                 </ul>
                             </li>   
 

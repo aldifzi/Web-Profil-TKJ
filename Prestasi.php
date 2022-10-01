@@ -1,3 +1,8 @@
+<?php 
+session_start();
+include('assets/includes/config.php');
+$sqlslide = "select * from slideshow_banner";
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -102,35 +107,37 @@
   </section><!-- End Breadcrumbs -->
 
  <!-- ======= Hero Slider Section ======= -->
- <section id="hero-slider" class="hero-slider">
-  <div class="container-md" data-aos="fade-in">
-    <div class="row">
-      <div class="col-12">
-        <div class="swiper sliderFeaturedPosts">
-          <div class="swiper-wrapper">
-            
-            <div class="swiper-slide">
-              <a href="single-post.html" class="img-bg d-flex align-items-end" style="background-image: url('assets/img/lobi.jpeg');">
-                <div class="img-bg-inner">
-                  <h2>9 Half-up/half-down Hairstyles for Long and Medium Hair</h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem neque est mollitia! Beatae minima assumenda repellat harum vero, officiis ipsam magnam obcaecati cumque maxime inventore repudiandae quidem necessitatibus rem atque.</p>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="custom-swiper-button-next">
-            <span class="bi-chevron-right"></span>
-          </div>
-          <div class="custom-swiper-button-prev">
-            <span class="bi-chevron-left"></span>
-          </div>
 
-          <div class="swiper-pagination"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section><!-- End Hero Slider Section -->
+ <!— Banner SlideShow nya —>
+     <div id="dmbannerhead" class="carousel slide" data-ride="carousel">
+       <div class="carousel-inner">
+ <?php
+   if($res = $con->query($sqlslide)) {
+    $x = 0;
+    while ($row = $res->fetch_assoc()) {
+	  if($x==0) $aktif = "active";
+      else $aktif = '';
+  ?>
+        <div class="item <?php echo $aktif ?>">
+		   <a href="<?php echo $row['link_slide'] ?>" target="_blank">
+		      <img src="<?php echo $row['gambar_slide'] ?>" alt="<?php echo $row['judul_slide'] ?>" title="<?php echo $row['judul_slide'] ?>">
+			   <div class="carousel-caption">
+			      <h3><?php echo $row['judul_slide'] ?></h3> <!— judul slide —>
+			      <p><?php echo $row['keterangan_slide'] ?></p><!— keterangan slide —>
+			   </div>
+		   </a>
+		</div>
+  <?php 
+      $x++;
+    } // tutup while
+  }	// tutup if
+   ?>
+     </div>
+		
+	 <a class="left carousel-control" href="#dmbannerhead" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+	 <a class="right carousel-control" href="#dmbannerhead" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+   </div>
+   <!— /Banner Slideshow nya —><!-- End Hero Slider Section -->
 
 
   <!-- ======= Tabel ======= -->
