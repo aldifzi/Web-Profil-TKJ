@@ -96,7 +96,7 @@ include('assets/includes/config.php');
  <!-- ***** Main Banner Area Start ***** -->
  <div class="main-banner" id="top">
   <video autoplay muted loop id="bg-video">
-    <source src="assets/img/Video/vidio3.mp4" type="">
+    <source src="assets/img/Video/vidio2.mp4" type="">
   </video>
 
   <div class="video-overlay header-text">
@@ -119,7 +119,7 @@ include('assets/includes/config.php');
 
   <section id="recent-blog-posts" class="recent-blog-posts">
   
-    <div class="container py-5" data-aos="fade-up">
+    <div class="" data-aos="fade-up">
     
       <div class=" section-title">
         <h2>Sekilas Berita</h2>
@@ -130,7 +130,7 @@ include('assets/includes/config.php');
         } else {
             $pageno = 1;
         }
-        $no_of_records_per_page = 3;
+        $no_of_records_per_page = 1;
         $offset = ($pageno-1) * $no_of_records_per_page;
 
 
@@ -143,10 +143,10 @@ include('assets/includes/config.php');
 $query=mysqli_query($con,"select tblposts.id as pid,tblposts.PostTitle as posttitle,tblposts.postedBy,tblposts.PostImage,tblcategory.CategoryName as category,tblcategory.id as cid,tblsubcategory.Subcategory as subcategory,tblposts.PostDetails as postdetails,tblposts.PostingDate as postingdate,tblposts.PostUrl as url from tblposts left join tblcategory on tblcategory.id=tblposts.CategoryId left join  tblsubcategory on  tblsubcategory.SubCategoryId=tblposts.SubCategoryId where tblposts.Is_Active=1 order by tblposts.id desc  LIMIT $offset, $no_of_records_per_page");
 while ($row=mysqli_fetch_array($query)) {
 ?>
-      <div class="row mt-3 ">
+      <div class="owl-carousel">
 
-        <div class="col-xs-12 col-sm-6 col-md-4" data-aos="fade-up" data-aos-delay="100 ">
-          <div class="post-item card mb-4 shadow-sm position-relative h-100 ">
+        <div class="col-xs-12 col-sm-6 col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="post-item card mb-4 shadow-sm position-relative h-100">
 
             <div class="post-img position-relative overflow-hidden">
               <img src="assets/admin/postimages/<?php echo htmlentities($row['PostImage']);?>" class="img-fluid" alt="">
@@ -180,9 +180,12 @@ while ($row=mysqli_fetch_array($query)) {
 
         <?php } ?>
 
+        
+
       </div>
 
       </div>
+</div>
     </section>
     <!-- End Tentang berita -->
     <!-- ======= Penjelasan TKJ ======= -->
@@ -439,6 +442,7 @@ while ($row=mysqli_fetch_array($query)) {
 
     </div>
   </section><!-- End Testimonials Section -->
+  
 
   </main><!-- End #main -->
 
@@ -514,10 +518,7 @@ while ($row=mysqli_fetch_array($query)) {
         &copy; Copyright <strong><span>bootstrap</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/day-multipurpose-html-template-for-free/ -->
+       
         Designed by Kelompok TKJ
       </div>
     </div>
@@ -541,11 +542,34 @@ while ($row=mysqli_fetch_array($query)) {
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/TextPlugin.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/EasePack.min.js"></script>
+  <script src="resources/js/jquery.min.js"></script>
   <script src="app.js"></script>
 
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>
+  $(document).ready(function() {
+    var owl = $('.owl-carousel');
+    owl.owlCarousel({
+      margin: 10,
+      nav: true,
+      loop: true,
+      responsive: {
+        0: {
+          items: 1
+        },
+        600: {
+          items: 3
+        },
+        1000: {
+          items: 5
+        }
+      }
+    })
+  })
+</script>
+
 </body>
 
 </html>

@@ -43,7 +43,7 @@ $no = 1;
   ======================================================== -->
 </head>
 
-<body>
+<body class="selection:bg-slate-600 selection:text-white">
 
   <!-- ======= Top Bar ======= -->
   <section id="topbar" class="d-flex align-items-center">
