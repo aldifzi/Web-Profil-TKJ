@@ -96,7 +96,7 @@ include('assets/includes/config.php');
  <!-- ***** Main Banner Area Start ***** -->
  <div class="main-banner" id="top">
   <video autoplay muted loop id="bg-video">
-    <source src="assets/img/Video/vidio2.mp4" type="">
+    <source src="assets/img/Video/vidio3.mp4" type="">
   </video>
 
   <div class="video-overlay header-text">
@@ -143,10 +143,10 @@ include('assets/includes/config.php');
 $query=mysqli_query($con,"select tblposts.id as pid,tblposts.PostTitle as posttitle,tblposts.postedBy,tblposts.PostImage,tblcategory.CategoryName as category,tblcategory.id as cid,tblsubcategory.Subcategory as subcategory,tblposts.PostDetails as postdetails,tblposts.PostingDate as postingdate,tblposts.PostUrl as url from tblposts left join tblcategory on tblcategory.id=tblposts.CategoryId left join  tblsubcategory on  tblsubcategory.SubCategoryId=tblposts.SubCategoryId where tblposts.Is_Active=1 order by tblposts.id desc  LIMIT $offset, $no_of_records_per_page");
 while ($row=mysqli_fetch_array($query)) {
 ?>
-      <div class="row mt-3">
+      <div class="row mt-3 ">
 
-        <div class="col-xs-12 col-sm-6 col-md-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="post-item card mb-4 shadow-sm position-relative h-100">
+        <div class="col-xs-12 col-sm-6 col-md-4" data-aos="fade-up" data-aos-delay="100 ">
+          <div class="post-item card mb-4 shadow-sm position-relative h-100 ">
 
             <div class="post-img position-relative overflow-hidden">
               <img src="assets/admin/postimages/<?php echo htmlentities($row['PostImage']);?>" class="img-fluid" alt="">
