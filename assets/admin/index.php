@@ -82,7 +82,7 @@ echo "<script>alert('Invalid Details');</script>";
 <hr>
                                         <div class="form-group">
                                             <div class="col-xs-12">
-                                                <input class="form-control" type="password" name="password" required="" placeholder="Password" autocomplete="off">
+                                                <input class="form-control " type="password" name="password" required="" placeholder="Password" autocomplete="off">
                                             </div>
                                         </div>
 

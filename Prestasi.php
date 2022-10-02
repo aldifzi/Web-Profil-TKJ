@@ -127,14 +127,14 @@ Prestasi</h2>
 
   <div class="container my-5">
 <div class="">
-    <table  id="table1" class="table table-striped table-bordered" style="width:100%">
+    <table  id="dataTable" class="table table-striped table-bordered" style="width:100%">
  <thead class="bg-light">
   <tr>
-    <th class="px-5">Nama</th>
-    <th>Tanggal</th>
-    <TH>Kelas</TH>
+    <th class="px-5">Nama Lengkap</th>
+    <th>Tanggal Pelaksanaan</th>
+    <TH>Kelas/Jurusan</TH>
     <TH>Hasil</TH>
-    <th>Tingkat</th>
+    <th>Tingkat Kejuaraan</th>
     <th>Jenis</th>
   </tr>
  </thead>
@@ -276,8 +276,9 @@ Prestasi</h2>
   
 <script>
     $(document).ready(function () {
-        $('#table1').DataTable({
+        $('#dataTable').DataTable({
           responsive: true
+          
         });
     });
 </script>
