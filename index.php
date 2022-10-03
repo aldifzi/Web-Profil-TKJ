@@ -115,7 +115,7 @@ include('assets/includes/config.php');
 </div>
 <!-- ***** Main Banner Area End ***** -->
 
-  <main id="main">
+  <!--<main id="main">
 
   <section id="recent-blog-posts" class="recent-blog-posts">
   
@@ -176,14 +176,14 @@ while ($row=mysqli_fetch_array($query)) {
           </div>
 
 
-        </div><!-- End Berita 1 -->
+        </div>
 
         <?php } ?>
 
         
 
       </div>
-
+-->
       </div>
 </div>
     </section>
