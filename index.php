@@ -76,7 +76,6 @@ include('assets/includes/config.php');
               <li><a class="" href="visiMisi">Visi dan Misi</a></li>
               <li><a class="" href="Prestasi">Prestasi</a></li>
               <li><a class="" href="galeri">Galeri</a></li>
-              <li><a class="" href="Pembelajaran">Pembelajaran</a></li>
             </ul>
           <li class="dropdown"><a href="#"><span>Data TKJ</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
@@ -96,7 +95,7 @@ include('assets/includes/config.php');
  <!-- ***** Main Banner Area Start ***** -->
  <div class="main-banner" id="top">
   <video autoplay muted loop id="bg-video">
-    <source src="assets/img/Video/vidio2.mp4" type="">
+    <source src="assets/img/Video/vidio3.mp4" type="">
   </video>
 
   <div class="video-overlay header-text">
@@ -262,27 +261,24 @@ while ($row=mysqli_fetch_array($query)) {
 
         <div class="section-title">
           <h2>Data Tentang TKJ</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-            consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
-            in iste officiis commodi quidem hic quas.</p>
         </div>
 
         <div class="row counters">
 
           <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="23" data-purecounter-duration="1"
+            <span data-purecounter-start="0" data-purecounter-end="6" data-purecounter-duration="1"
               class="purecounter"></span>
             <p>Jumlah Kelas</p>
           </div>
 
           <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="576" data-purecounter-duration="1"
+            <span data-purecounter-start="0" data-purecounter-end="210" data-purecounter-duration="1"
               class="purecounter"></span>
             <p>Jumlah Siswa</p>
           </div>
 
           <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="1"
+            <span data-purecounter-start="0" data-purecounter-end="4" data-purecounter-duration="1"
               class="purecounter"></span>
             <p>Jumlah Guru Produktif</p>
           </div>

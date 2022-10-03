@@ -56,12 +56,12 @@
                         <ul>
                         <li class="menu-title"></li>
                         <li class="has_sub">
-                                <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-format-list-bulleted"></i> <span> </span> <span class="menu-arrow"></span></a>
+                                <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-format-list-bulleted"></i> <span>Ubah Data </span> <span class="menu-arrow"></span></a>
                                 <ul class="list-unstyled">
                                   <li><a href="admin">Data Siswa </a></li>
                                     <li><a href="galeri">Galeri</a></li>
                                     <li><a href="data-guru">Data Guru</a></li>
-                                    <li><a href="prestasi">Preetasi</a></li>
+                                    <li><a href="prestasi">Prestasi</a></li>
                                     <li><a href="VisiMisi">Visi Misi</a></li>
                                 </ul>
                             </li>   

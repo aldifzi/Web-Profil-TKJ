@@ -64,7 +64,7 @@ echo "<script>alert('Invalid Details');</script>";
                             <div class="m-t-40 account-pages">
                                 <div class="text-center account-logo-box">
                                     <h2 class="text-uppercase">
-                                        <a href="index.html" class="text-success">
+                                        <a href="index.php" class="text-success">
                                             <span><img src="../img/Logo-removebg-preview.png" alt="" height="56"></span>
                                         </a>
                                     </h2>
@@ -78,7 +78,7 @@ echo "<script>alert('Invalid Details');</script>";
                                                 <input class="form-control" type="text" required="" name="username" placeholder="Username or email" autocomplete="off">
                                             </div>
                                         </div>
-<a href="forgot-password"><i class="mdi mdi-lock"></i> Forgot your password?</a>
+<a href="forgot-password"><i class="mdi mdi-lock"></i> Lupa Password?</a>
 <hr>
                                         <div class="form-group">
                                             <div class="col-xs-12">
@@ -97,7 +97,7 @@ echo "<script>alert('Invalid Details');</script>";
                                     </form>
 
                                     <div class="clearfix"></div>
-<a href="../index"><i class="mdi mdi-home"></i> Back Home</a>
+<a href="../index"><i class="mdi mdi-home"></i> Kembali</a>
                                 </div>
                             </div>
                             <!-- end card-box-->

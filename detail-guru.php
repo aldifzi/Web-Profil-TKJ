@@ -79,7 +79,6 @@ $aktif = 'siswa';
               <li><a class="" href="visiMisi">Visi dan Misi</a></li>
               <li><a class="" href="Prestasi">Prestasi</a></li>
               <li><a class="" href="galeri">Galeri</a></li>
-              <li><a class="" href="Pembelajaran">Pembelajaran</a></li>
             </ul>
           <li class="dropdown"><a class="active" href="#"><span>Data TKJ</span> <i class="bi bi-chevron-down"></i></a>
             <ul>

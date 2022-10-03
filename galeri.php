@@ -108,7 +108,6 @@
               <li><a class="" href="visiMisi">Visi dan Misi</a></li>
               <li><a class="" href="Prestasi">Prestasi</a></li>
               <li><a class="active" href="galeri">Galeri</a></li>
-              <li><a class="" href="Pembelajaran">Pembelajaran</a></li>
             </ul>
           <li class="dropdown"><a href="#"><span>Data TKJ</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
@@ -130,7 +129,8 @@
     <div class="container">
 
       <div class="d-flex justify-content-between align-items-center">
-        <h2>Galeri</h2>
+        <h2><i class="fa fa-picture-o" aria-hidden="true"></i>
+Galeri</h2>
         <ol>
           <li><a href="index">Home</a></li>
           <li>Galeri</li>
@@ -353,6 +353,7 @@
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="https://kit.fontawesome.com/6f2ba42180.js" crossorigin="anonymous"></script>
   <script src="app.js"></script>
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>

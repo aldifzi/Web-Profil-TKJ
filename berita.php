@@ -77,7 +77,6 @@ include('assets/includes/config.php');
               <li><a class="" href="visiMisi">Visi dan Misi</a></li>
               <li><a class="" href="Prestasi">Prestasi</a></li>
               <li><a class="" href="galeri">Galeri</a></li>
-              <li><a class="" href="Pembelajaran">Pembelajaran</a></li>
             </ul>
           <li class="dropdown"><a class="" href="#"><span>Data TKJ</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
@@ -100,7 +99,8 @@ include('assets/includes/config.php');
     <div class="container">
 
       <div class="d-flex justify-content-between align-items-center">
-        <h2>Berita</h2>
+        <h2><i class="fa fa-newspaper-o" aria-hidden="true"></i>
+Berita</h2>
         <ol>
           <li><a href="index">Home</a></li>
           <li>Berita</li>
@@ -260,10 +260,7 @@ while ($row=mysqli_fetch_array($query)) {
         &copy; Copyright <strong><span>bootstrap</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/day-multipurpose-html-template-for-free/ -->
+     
         Designed by Kelompok TKJ
       </div>
     </div>
@@ -278,6 +275,7 @@ while ($row=mysqli_fetch_array($query)) {
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="https://kit.fontawesome.com/6f2ba42180.js" crossorigin="anonymous"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>

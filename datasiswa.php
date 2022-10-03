@@ -46,10 +46,11 @@
         <i class="bi bi-clock-history"><span class="ml-3" id="jam" style="font-size:24"></span></i>
       </div>
       <div class="social-links d-none d-md-block">
-        <a href="" class="twitter"><i class="bi bi-twitter"></i></a>
-        <a href="https://id-id.facebook.com/smknegeri1bantul/" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+        <a href="https://twitter.com/skansaba_id" target="_blank" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="https://id-id.facebook.com/smknegeri1bantul/" target="_blank" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/smkn1bantul/" target="_blank" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.youtube.com/channel/UCQgXA3YAufCRhmBVXjNZisw" target="_blank" class="youtube"><i class="bi bi-youtube"></i></i></a>
+        <a href="https://www.tiktok.com/@skansaba.id" target="_blank" class="linkedin"><i class="bi bi-tiktok"></i></i></a>
       </div>
     </div>
   </section>
@@ -72,7 +73,6 @@
               <li><a class="" href="visiMisi">Visi dan Misi</a></li>
               <li><a class="" href="Prestasi">Prestasi</a></li>
               <li><a class="" href="galeri">Galeri</a></li>
-              <li><a class="" href="Pembelajaran">Pembelajaran</a></li>
             </ul>
           <li class="dropdown"><a class="active" href="#"><span>Data TKJ</span> <i class="bi bi-chevron-down"></i></a>
             <ul>

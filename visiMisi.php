@@ -71,7 +71,6 @@
               <li><a class="active" href="visiMisi">Visi dan Misi</a></li>
               <li><a class="" href="Prestasi">Prestasi</a></li>
               <li><a class="" href="galeri">Galeri</a></li>
-              <li><a class="" href="Pembelajaran">Pembelajaran</a></li>
             </ul>
           <li class="dropdown"><a href="#"><span>Data TKJ</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
@@ -112,7 +111,7 @@
       <div class="carousel-inner" role="listbox">
 
         <!-- Slide 1 -->
-        <div class="carousel-item active" style="background-image: url(assets/img/slide/slide-1.jpg)">
+        <div class="carousel-item active" style="background-image: url(assets/img/fot)">
           <div class="carousel-container">
             <div class="container">
               <h2 class="animate__animated animate__fadeInDown">Visi Dan Misi TKJ <span>TKJ</span></h2>
@@ -181,7 +180,7 @@
   <div class="card-item">
     <div class="row">
       <div class="col-xl-5">
-        <div class="card-bg" style="background-image: url(assets/img/constructions-1.jpg);"></div>
+        <div class="card-bg" style="background-image: url(assets/img/foto11.jpg);"></div>
       </div>
       <div class="col-xl-7 d-flex align-items-center">
         <div class="card-body">
@@ -212,7 +211,7 @@
             <div class="card-item">
               <div class="row">
                 <div class="col-xl-5">
-                  <div class="card-bg" style="background-image: url(assets/img/constructions-2.jpg);"></div>
+                  <div class="card-bg" style="background-image: url(assets/img/foto12.jpg);"></div>
                 </div>
                 <div class="col-xl-7 d-flex align-items-center">
                   <div class="card-body">
