@@ -226,7 +226,7 @@ $pt=$row['postdetails'];
 <!---Comment Section --->
 
           <div class="row left-1" style="margin-top: -8%">
-            <div class="col-md-8">
+            <div class="col-md-8 mt-6">
             <div class=" my-4">
                         <h5 class="font-bold">Komentar</h5>
                         <div class="mt-2">
@@ -242,12 +242,16 @@ $pt=$row['postdetails'];
 
 
                   <div class="form-group mt-3">
-                    <textarea type="Comment" class="bg-white border-2 border-gray-400 rounded py-2 px-44 text-gray-700  focus:outline-none focus:bg-white focus:border-red-500" name="Comment" rows="3" placeholder="Comment" required></textarea>
+                    <textarea type="Comment" class="bg-white border-2 border-gray-400 rounded py-2 px-44 text-gray-700  focus:outline-none focus:bg-white focus:border-red-500" name="comment" rows="3" placeholder="Comment" required></textarea>
                   </div>
                   <button type="submit" class=" bg-red-500 mt-2 text-white font-bold py-1 px-4 rounded-full cursor-pointer hover:bg-red-900" name="submit">Kirim</button>
                 </form>
               </div>
             </div>
+
+
+   
+          </div>
 <!---End Comment Section --->
  
   
