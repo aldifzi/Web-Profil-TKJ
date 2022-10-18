@@ -45,16 +45,21 @@ echo "<script>alert('Invalid Details');</script>";
         <link href="assets/css/pages.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/menu.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/responsive.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/login.css" rel="stylesheet" type="text/css" />
+        <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
 
         <script src="assets/js/modernizr.min.js"></script>
 
     </head>
 
 
-    <body class="bg-transparent">
+    <body class="">
 
         <!-- HOME -->
-        <section>
+      <!--
             <div class="container-alt">
                 <div class="row">
                     <div class="col-sm-12">
@@ -68,7 +73,7 @@ echo "<script>alert('Invalid Details');</script>";
                                             <span><img src="../img/Logo-removebg-preview.png" alt="" height="56"></span>
                                         </a>
                                     </h2>
-                                    <!--<h4 class="text-uppercase font-bold m-b-0">Sign In</h4>-->
+                                    <h4 class="text-uppercase font-bold m-b-0">Sign In</h4>
                                 </div>
                                 <div class="account-content">
                                     <form class="form-horizontal" method="post">
@@ -88,7 +93,7 @@ echo "<script>alert('Invalid Details');</script>";
 
 
                      
-                                        <div class="form-group account-btn text-center m-t-10">
+                                        <div class="input-field button">
                                             <div class="col-xs-12">
                                                 <button class="btn w-md btn-bordered btn-danger waves-effect waves-light" type="submit" name="login">Log In</button>
                                             </div>
@@ -100,19 +105,59 @@ echo "<script>alert('Invalid Details');</script>";
 <a href="../index"><i class="mdi mdi-home"></i> Kembali</a>
                                 </div>
                             </div>
-                            <!-- end card-box-->
+                            
 
 
                     
 
                         </div>
-                        <!-- end wrapper -->
+                      
 
                     </div>
                 </div>
-            </div>
-          </section>
+            </div>-->
+
+            <div class="container">
+      <header>login</header>
+      <form action="" method="post">
+        <div class="field email-field">
+          <div class="input-field">
+          <input class="form-control" type="text" required="" name="username" placeholder="Username or email" autocomplete="off">
+          </div>
+          <span class="error email-error">
+            <i class="bx bx-error-circle error-icon"></i>
+            <p class="error-text">Please enter a valid email</p>
+          </span>
+        </div>
+        
+        <div class="field confirm-password">
+          <div class="input-field">
+          <input class="form-control " type="password" name="password" required="" placeholder="Password" autocomplete="off">
+            <i class="bx bx-hide show-hide"></i>
+          </div>
+          <span class="error cPassword-error">
+            <i class="bx bx-error-circle error-icon"></i>
+            <p class="error-text">Password don't match</p>
+          </span>
+        </div>
+        
+<a href="forgot-password"><i class="mdi mdi-lock"></i> Lupa Password?</a>
+        <div class="input-field button">
+          <input type="submit" name="login" value="Submit Now" />
+        </div>
+      </form>
+    </div>
+
+    
+         
           <!-- END HOME -->
+
+
+
+         
+
+
+
 
         <script>
             var resizefunc = [];
@@ -126,7 +171,8 @@ echo "<script>alert('Invalid Details');</script>";
         <script src="assets/js/jquery.blockUI.js"></script>
         <script src="assets/js/waves.js"></script>
         <script src="assets/js/jquery.slimscroll.js"></script>
-        <script src="assets/js/jquery.scrollTo.min.js"></script>
+        <script src="assets/js/jquery.scrollTo.min.js"></script>      
+        <script src="https://kit.fontawesome.com/6f2ba42180.js" crossorigin="anonymous"></script>
 
         <!-- App js -->
         <script src="assets/js/jquery.core.js"></script>
