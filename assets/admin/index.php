@@ -46,10 +46,15 @@ echo "<script>alert('Invalid Details');</script>";
         <link href="assets/css/menu.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/responsive.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/login.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
         <link
       href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
       rel="stylesheet"
     />
+    
+    
 
         <script src="assets/js/modernizr.min.js"></script>
 
@@ -102,7 +107,7 @@ echo "<script>alert('Invalid Details');</script>";
                                     </form>
 
                                     <div class="clearfix"></div>
-<a href="../index"><i class="mdi mdi-home"></i> Kembali</a>
+<a href="../../"><i class="mdi mdi-home"></i> Kembali</a>
                                 </div>
                             </div>
                             
@@ -116,37 +121,43 @@ echo "<script>alert('Invalid Details');</script>";
                     </div>
                 </div>
             </div>-->
+         
+           
+	<div class="limiter">
+  <div class="container-login100" >
+			<div class="wrap-login100">
+				<form class="login100-form validate-form" method="post">
+					<span class="login100-form-logo">				</span>
 
-            <div class="container">
-      <header>login</header>
-      <form action="" method="post">
-        <div class="field email-field">
-          <div class="input-field">
-          <input class="form-control" type="text" required="" name="username" placeholder="Username or email" autocomplete="off">
-          </div>
-          <span class="error email-error">
-            <i class="bx bx-error-circle error-icon"></i>
-            <p class="error-text">Please enter a valid email</p>
-          </span>
-        </div>
-        
-        <div class="field confirm-password">
-          <div class="input-field">
-          <input class="form-control " type="password" name="password" required="" placeholder="Password" autocomplete="off">
-            <i class="bx bx-hide show-hide"></i>
-          </div>
-          <span class="error cPassword-error">
-            <i class="bx bx-error-circle error-icon"></i>
-            <p class="error-text">Password don't match</p>
-          </span>
-        </div>
-        
-<a href="forgot-password"><i class="mdi mdi-lock"></i> Lupa Password?</a>
-        <div class="input-field button">
-          <input type="submit" name="login" value="Submit Now" />
-        </div>
-      </form>
-    </div>
+					<span class="login100-form-title p-b-34 p-t-27">
+						Log in
+					</span>
+
+					<div class="wrap-input100 validate-input" data-validate = "Enter username">
+          <input class="input100" type="text" required="" name="username" placeholder="Username or email" autocomplete="off">
+						<span class="focus-input100" data-placeholder="&#xf207;"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate="Enter password">
+          <input class="input100 " type="password" name="password" required="" placeholder="Password" autocomplete="off">
+						<span class="focus-input100" data-placeholder="&#xf191;"></span>
+					</div>
+
+			
+
+					<div class="container-login100-form-btn">
+						
+            <button class="login100-form-btn" type="submit" name="login">Log In</button>
+					</div>
+					<div class="text-center p-t-90">
+						<a class="txt1" href="forgot-password">
+							Forgot Password?
+						</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
 
     
          
