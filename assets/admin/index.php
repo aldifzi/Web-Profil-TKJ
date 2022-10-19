@@ -32,11 +32,12 @@ echo "<script>alert('Invalid Details');</script>";
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
         <meta name="author" content="">
-
+       
 
         <!-- App title -->
         <title>Admin Panel</title>
-
+        
+        <link href="../../assets/img/Logo-removebg-preview.png" rel="icon">
         <!-- App css -->
         <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/core.css" rel="stylesheet" type="text/css" />
@@ -47,12 +48,8 @@ echo "<script>alert('Invalid Details');</script>";
         <link href="assets/css/responsive.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/login.css" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
-        <link
-      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
-      rel="stylesheet"
-    />
+	    <link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+        <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet"/>
     
     
 

@@ -1,49 +1,46 @@
-<?php 
+<?php
 session_start();
 include('assets/includes/config.php');
 //Genrating CSRF Token
 if (empty($_SESSION['token'])) {
- $_SESSION['token'] = bin2hex(random_bytes(32));
+  $_SESSION['token'] = bin2hex(random_bytes(32));
 }
 
-if(isset($_POST['submit']))
-{
+if (isset($_POST['submit'])) {
   //Verifying CSRF Token
-if (!empty($_POST['csrftoken'])) {
+  if (!empty($_POST['csrftoken'])) {
     if (hash_equals($_SESSION['token'], $_POST['csrftoken'])) {
-$name=$_POST['name'];
-$email=$_POST['email'];
-$comment=$_POST['comment'];
-$postid=intval($_GET['nid']);
-$st1='0';
-$query=mysqli_query($con,"insert into tblcomments(postId,name,email,comment,status) values('$postid','$name','$email','$comment','$st1')");
-if($query):
-  echo "<script>alert('comment successfully submit. Comment will be display after admin review ');</script>";
-  unset($_SESSION['token']);
-else :
- echo "<script>alert('Something went wrong. Please try again.');</script>";  
+      $name = $_POST['name'];
+      $email = $_POST['email'];
+      $comment = $_POST['comment'];
+      $postid = intval($_GET['nid']);
+      $st1 = '0';
+      $query = mysqli_query($con, "insert into tblcomments(postId,name,email,comment,status) values('$postid','$name','$email','$comment','$st1')");
+      if ($query) :
+        echo "<script>alert('comment successfully submit. Comment will be display after admin review ');</script>";
+        unset($_SESSION['token']);
+      else :
+        echo "<script>alert('Something went wrong. Please try again.');</script>";
 
-endif;
-
-}
-}
-}
-$postid=intval($_GET['nid']);
-
-    $sql = "SELECT viewCounter FROM tblposts WHERE id = '$postid'";
-    $result = $con->query($sql);
-
-    if ($result->num_rows > 0) {
-        while($row = $result->fetch_assoc()) {
-            $visits = $row["viewCounter"];
-            $sql = "UPDATE tblposts SET viewCounter = $visits+1 WHERE id ='$postid'";
-    $con->query($sql);
-
-        }
-    } else {
-        echo "no results";
+      endif;
     }
-    
+  }
+}
+$postid = intval($_GET['nid']);
+
+$sql = "SELECT viewCounter FROM tblposts WHERE id = '$postid'";
+$result = $con->query($sql);
+
+if ($result->num_rows > 0) {
+  while ($row = $result->fetch_assoc()) {
+    $visits = $row["viewCounter"];
+    $sql = "UPDATE tblposts SET viewCounter = $visits+1 WHERE id ='$postid'";
+    $con->query($sql);
+  }
+} else {
+  echo "no results";
+}
+
 
 
 ?>
@@ -51,29 +48,29 @@ $postid=intval($_GET['nid']);
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
- <!-- Favicons -->
-    <link href="assets/img/Logo-removebg-preview.png" rel="icon">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+<head>
+  <!-- Favicons -->
+  <link href="assets/img/Logo-removebg-preview.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-    <?php
-          $pid=intval($_GET['nid']);
-          $currenturl="http://".$_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];;
-          $query=mysqli_query($con,"select tblposts.PostTitle as posttitle,tblposts.PostImage,tblcategory.CategoryName as category,tblcategory.id as cid,tblsubcategory.Subcategory as subcategory,tblposts.PostDetails as postdetails,tblposts.PostingDate as postingdate,tblposts.PostUrl as url,tblposts.postedBy,tblposts.lastUpdatedBy,tblposts.UpdationDate from tblposts left join tblcategory on tblcategory.id=tblposts.CategoryId left join  tblsubcategory on  tblsubcategory.SubCategoryId=tblposts.SubCategoryId where tblposts.id='$pid'");
-          while ($row=mysqli_fetch_array($query)) {
-          ?>
-    <title><?php echo htmlentities($row['posttitle']);?></title>
-    <?php } ?>
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <?php
+  $pid = intval($_GET['nid']);
+  $currenturl = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];;
+  $query = mysqli_query($con, "select tblposts.PostTitle as posttitle,tblposts.PostImage,tblcategory.CategoryName as category,tblcategory.id as cid,tblsubcategory.Subcategory as subcategory,tblposts.PostDetails as postdetails,tblposts.PostingDate as postingdate,tblposts.PostUrl as url,tblposts.postedBy,tblposts.lastUpdatedBy,tblposts.UpdationDate from tblposts left join tblcategory on tblcategory.id=tblposts.CategoryId left join  tblsubcategory on  tblsubcategory.SubCategoryId=tblposts.SubCategoryId where tblposts.id='$pid'");
+  while ($row = mysqli_fetch_array($query)) {
+  ?>
+    <title><?php echo htmlentities($row['posttitle']); ?></title>
+  <?php } ?>
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-<!-- Vendor CSS Files -->
-<link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
@@ -82,15 +79,15 @@ $postid=intval($_GET['nid']);
 
   <!-- Template Main CSS File -->
   <link href="assets/css/galeri.css" rel="stylesheet">
-    
 
-  </head>
 
-  <body class="selection:bg-slate-400 selection:text-white">
+</head>
 
-    <!-- Navigation -->
- <!-- ======= Top Bar ======= -->
- <section id="topbar" class="d-flex align-items-center">
+<body class="selection:bg-slate-400 selection:text-white">
+
+  <!-- Navigation -->
+  <!-- ======= Top Bar ======= -->
+  <section id="topbar" class="d-flex align-items-center">
     <div class="container d-flex justify-content-center justify-content-md-between">
       <div class="contact-info d-flex align-items-center">
         <i class="bi bi-envelope-fill"></i><a href="mailto:contact@example.com">smeanbtl@yahoo.com</a>
@@ -110,7 +107,7 @@ $postid=intval($_GET['nid']);
   <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
       <a class="navbar-brand logo me-auto flex" href="#">
-        <img src="assets/img/Logo-removebg-preview.png" alt=""   class="h-10 mr-3" width="51" height="70">
+        <img src="assets/img/Logo-removebg-preview.png" alt="" class="h-10 mr-3" width="51" height="70">
         <span class="self-center text-base font-semibold whitespace-nowrap" id="tkj">TEKNIK KOMPUTER JARINGAN <p class="text-xs font-light" id="tkj">SMK 1 BANTUL</p></span>
       </a>
       <!-- Uncomment below if you prefer to use an image logo -->
@@ -139,10 +136,10 @@ $postid=intval($_GET['nid']);
     </div>
   </header><!-- End Header -->
 
-   <!-- ======= Breadcrumbs ======= -->
+  <!-- ======= Breadcrumbs ======= -->
   <section id="breadcrumbs" class="breadcrumbs">
     <div class="container">
-    
+
       <div class="d-flex justify-content-between align-items-center">
         <h2>Detail Berita</h2>
         <ol>
@@ -155,214 +152,141 @@ $postid=intval($_GET['nid']);
 
 
 
-    <!-- Page Content -->
-    <div class="container">
+  <!-- Page Content -->
+  <div class="container">
 
 
-     
-      <div class="row" style="margin-top: 4%">
 
-        <!-- Blog Entries Column -->
-        <div class="col-md-8">
-  
-          <!-- Blog Post -->
-          <?php
-          $pid=intval($_GET['nid']);
-          $currenturl="http://".$_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];;
-          $query=mysqli_query($con,"select tblposts.PostTitle as posttitle,tblposts.PostImage,tblcategory.CategoryName as category,tblcategory.id as cid,tblsubcategory.Subcategory as subcategory,tblposts.PostDetails as postdetails,tblposts.PostingDate as postingdate,tblposts.PostUrl as url,tblposts.postedBy,tblposts.lastUpdatedBy,tblposts.UpdationDate from tblposts left join tblcategory on tblcategory.id=tblposts.CategoryId left join  tblsubcategory on  tblsubcategory.SubCategoryId=tblposts.SubCategoryId where tblposts.id='$pid'");
-          while ($row=mysqli_fetch_array($query)) {
-          ?>
+    <div class="row" style="margin-top: 4%">
+
+      <!-- Blog Entries Column -->
+      <div class="col-md-8">
+
+        <!-- Blog Post -->
+        <?php
+        $pid = intval($_GET['nid']);
+        $currenturl = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];;
+        $query = mysqli_query($con, "select tblposts.PostTitle as posttitle,tblposts.PostImage,tblcategory.CategoryName as category,tblcategory.id as cid,tblsubcategory.Subcategory as subcategory,tblposts.PostDetails as postdetails,tblposts.PostingDate as postingdate,tblposts.PostUrl as url,tblposts.postedBy,tblposts.lastUpdatedBy,tblposts.UpdationDate from tblposts left join tblcategory on tblcategory.id=tblposts.CategoryId left join  tblsubcategory on  tblsubcategory.SubCategoryId=tblposts.SubCategoryId where tblposts.id='$pid'");
+        while ($row = mysqli_fetch_array($query)) {
+        ?>
 
           <div class="p-6 mt-4 max-w-full font-sans bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-      
+
             <div class="card-body">
-              <h2 class="text-red-700 text-center font-bold font-sans text-xl"><?php echo htmlentities($row['posttitle']);?></h2>
-        <!--category-->
-        <a class="badge bg-secondary text-decoration-none link-light" href="category.php?catid=<?php echo htmlentities($row['cid'])?>" style="color:#fff"><?php echo htmlentities($row['category']);?></a>
-       
+              <h2 class="text-red-700 text-center font-bold font-sans text-xl"><?php echo htmlentities($row['posttitle']); ?></h2>
+              <!--category-->
+              <a class="badge bg-secondary text-decoration-none link-light" href="category.php?catid=<?php echo htmlentities($row['cid']) ?>" style="color:#fff"><?php echo htmlentities($row['category']); ?></a>
 
 
-<p>
-             <div class="text-slate-500 text-xs mx-52">
-           <?php echo htmlentities($row['postedBy']);?> on </b><?php echo htmlentities($row['postingdate']);?>
-          <?php if($row['lastUpdatedBy']!=''):?></div>
-        <?php endif;?>
-        
-                <div class=" float-right flex">
-                <p class="font-semibold font-sans mr-3">Bagikan</p>
-                 <a href="http://www.facebook.com/share.php?u=<?php echo $currenturl;?>" target="_blank"><img src="assets/img/Icon/fb.png" alt=""  width="22px" class="mx-1"></a> 
-<a  href="https://twitter.com/share?url=<?php echo $currenturl;?>" target="_blank"> <img src="assets/img/Icon/twitter.png" alt="" width="22px"></a> 
-<a href="https://web.whatsapp.com/send?text=<?php echo $currenturl;?>" target="_blank"><img src="assets/img/Icon/wa.png" alt="" width="23px" class="
-mx-1"></a> 
 
-</div> 
-                <hr />
+              <p>
+              <div class="text-slate-500 text-xs mx-52">
+                <?php echo htmlentities($row['postedBy']); ?> on </b><?php echo htmlentities($row['postingdate']); ?>
+                <?php if ($row['lastUpdatedBy'] != '') : ?></div>
+            <?php endif; ?>
 
- <img class="img-fluid rounded mt-5" src="assets/admin/postimages/<?php echo htmlentities($row['PostImage']);?>" alt="<?php echo htmlentities($row['posttitle']);?>">
-  
-              <p class="card-text mt-4"><?php 
-$pt=$row['postdetails'];
-              echo  (substr($pt,0));?></p>
-             
+            <div class=" float-right flex">
+              <p class="font-semibold font-sans mr-3">Bagikan</p>
+              <a href="http://www.facebook.com/share.php?u=<?php echo $currenturl; ?>" target="_blank"><img src="assets/img/Icon/fb.png" alt="" width="22px" class="mx-1"></a>
+              <a href="https://twitter.com/share?url=<?php echo $currenturl; ?>" target="_blank"> <img src="assets/img/Icon/twitter.png" alt="" width="22px"></a>
+              <a href="https://web.whatsapp.com/send?text=<?php echo $currenturl; ?>" target="_blank"><img src="assets/img/Icon/wa.png" alt="" width="23px" class="
+mx-1"></a>
+
+            </div>
+            <hr />
+
+            <img class="img-fluid rounded mt-5" src="assets/admin/postimages/<?php echo htmlentities($row['PostImage']); ?>" alt="<?php echo htmlentities($row['posttitle']); ?>">
+
+            <p class="card-text mt-4"><?php
+                                      $pt = $row['postdetails'];
+                                      echo (substr($pt, 0)); ?></p>
+
             </div>
             <div class="card-footer text-muted">
-             
-           
+
+
             </div>
           </div>
-<?php } ?>
-       
+        <?php } ?>
 
-      
 
-     
 
-        </div>
 
-        <!-- Sidebar Widgets Column -->
-      <?php include('assets/includes/sidebar.php');?>
+
+
       </div>
-      <!-- /.row -->
-<!---Comment Section --->
 
-          <div class="row left-1" style="margin-top: -8%">
-            <div class="col-md-8 mt-6">
-            <div class=" my-4">
-                        <h5 class="font-bold">Komentar</h5>
-                        <div class="mt-2">
-                          <form name="Comment" method="post">
-                  <input type="hidden" name="csrftoken" value="<?php echo htmlentities($_SESSION['token']); ?>" />
-                <div class="form-group">
+      <!-- Sidebar Widgets Column -->
+      <?php include('assets/includes/sidebar.php'); ?>
+    </div>
+    <!-- /.row -->
+    <!---Comment Section --->
+
+    <div class="row left-1" style="margin-top: -8%">
+      <div class="col-md-8 mt-6">
+        <div class=" my-4">
+          <h5 class="font-bold">Komentar</h5>
+          <div class="mt-2">
+            <form name="Comment" method="post">
+              <input type="hidden" name="csrftoken" value="<?php echo htmlentities($_SESSION['token']); ?>" />
+              <div class="form-group">
                 <input type="text" name="name" class="bg-white max-w-full border-2 border-gray-400 rounded py-2 px-44  text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-red-500" placeholder="Nama.." required>
-                </div>
+              </div>
 
-                <div class="form-group mt-3">
+              <div class="form-group mt-3">
                 <input type="email" name="email" class="bg-white border-2 border-gray-400 rounded py-2 px-44 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-red-500" placeholder="Email.." required>
-                </div>
-
-
-                  <div class="form-group mt-3">
-                    <textarea type="Comment" class="bg-white border-2 border-gray-400 rounded py-2 px-44 text-gray-700  focus:outline-none focus:bg-white focus:border-red-500" name="comment" rows="3" placeholder="Comment" required></textarea>
-                  </div>
-                  <button type="submit" class=" bg-red-500 mt-2 text-white font-bold py-1 px-4 rounded-full cursor-pointer hover:bg-red-900" name="submit">Kirim</button>
-                </form>
               </div>
-            </div>
 
 
-   
+              <div class="form-group mt-3">
+                <textarea type="Comment" class="bg-white border-2 border-gray-400 rounded py-2 px-44 text-gray-700  focus:outline-none focus:bg-white focus:border-red-500" name="comment" rows="3" placeholder="Comment" required></textarea>
+              </div>
+              <button type="submit" class=" bg-red-500 mt-2 text-white font-bold py-1 px-4 rounded-full cursor-pointer hover:bg-red-900" name="submit">Kirim</button>
+            </form>
           </div>
-<!---End Comment Section --->
- 
-  
+        </div>
 
-  <!---Comment Display Section --->
 
-  <?php 
- $sts=1;
- $query=mysqli_query($con,"select name,comment,postingDate from  tblcomments where postId='$pid' and status='$sts'");
-while ($row=mysqli_fetch_array($query)) {
-?>
-    <!-- This is an example component -->
-<div class=" p-4 mb-8 border rounded-lg bg-white shadow-lg">
-    <div class="relative flex gap-4">
-        <img src="assets/img/icon.png" class="relative rounded-lg -top-8 -mb-4 bg-white border h-20 w-20" alt="" loading="lazy">
-        <div class="flex flex-col w-full">
-            <div class="flex flex-row justify-between">
-                <p class="relative text-xl whitespace-nowrap truncate overflow-hidden"><?php echo htmlentities($row['name']);?></p>
+
+      </div>
+      <!---End Comment Section --->
+
+
+
+      <!---Comment Display Section --->
+
+      <?php
+      $sts = 1;
+      $query = mysqli_query($con, "select name,comment,postingDate from  tblcomments where postId='$pid' and status='$sts'");
+      while ($row = mysqli_fetch_array($query)) {
+      ?>
+        <!-- This is an example component -->
+        <div class=" p-4 mb-8 border rounded-lg bg-white shadow-lg">
+          <div class="relative flex gap-4">
+            <img src="assets/img/icon.png" class="relative rounded-lg -top-8 -mb-4 bg-white border h-20 w-20" alt="" loading="lazy">
+            <div class="flex flex-col w-full">
+              <div class="flex flex-row justify-between">
+                <p class="relative text-xl whitespace-nowrap truncate overflow-hidden"><?php echo htmlentities($row['name']); ?></p>
                 <a class="text-gray-500 text-xl" href="#"><i class="fa-solid fa-trash"></i></a>
-            </div>
-            <p class="text-gray-400 text-sm"><?php echo htmlentities($row['postingDate']);?></p>
-        </div>
-    </div>
-    <p class="-mt-4 text-gray-500"><?php echo htmlentities($row['comment']);?> </p>
-    <?php } ?>
-</div>
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-lg-4 col-md-6">
-            <div class="footer-info">
-              <h3>SMK N1 Bantul</h3>
-              <p>
-                Jl. Parangtritis No.KM.11, Dukuh, Sabdodadi, Kec. Bantul, Kabupaten Bantul<br>
-                Daerah Istimewa Yogyakarta 55715<br><br>
-                <strong>Phone:</strong> 0274-367156 <br>
-                <strong>Email:</strong> smeanbtl@yahoo.com<br>
-              </p>
-              <div class="social-links mt-3">
-              <a href="https://twitter.com/skansaba_id" target="_blank" class="twitter"><i class="bi bi-twitter"></i></a>
-              <a href="https://id-id.facebook.com/smknegeri1bantul/" target="_blank" class="facebook"><i class="bi bi-facebook"></i></a>
-              <a href="https://www.instagram.com/smkn1bantul/" target="_blank" class="instagram"><i class="bi bi-instagram"></i></a>
-              <a href="https://www.youtube.com/channel/UCQgXA3YAufCRhmBVXjNZisw" target="_blank" class="youtube"><i class="bi bi-youtube"></i></i></a>
-              <a href="https://www.tiktok.com/@skansaba.id" target="_blank" class="linkedin"><i class="bi bi-tiktok"></i></i></a>
               </div>
+              <p class="text-gray-400 text-sm"><?php echo htmlentities($row['postingDate']); ?></p>
             </div>
           </div>
-
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="index">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="https://www.smkn1bantul.sch.id/" target="_blank" >SMK N1 Bantul</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="https://skansaba.id/login/index.php" target="_blank" >Elerning</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="https://policies.google.com/terms?hl=en-US" target="_blank" >Terms of
-                  service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="assets//admin/index.php">Admin</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a
-                  href="https://www.google.com/intl/id/policies/privacy/archive/20160325/" target="_blank" >Privacy policy</a></li>
-            </ul>
-          </div>
-
-
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Anggota Pembuat</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"><a href="#"></i>Fadlan Buwono Mukti</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="https://www.instagram.com/aldyfzi_/">Aldi Fauzi</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="https://www.instagram.com/dnkwy_/">Denok Wahyuni</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Arul</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Ridho</a></li>
-            </ul>
-          </div>
-
-
-          <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Kata Pengantar</h4>
-            <p>WebSide ini di buat sepenuh hati oleh kelompok TKJ 
-              yang beranggotakan 5 orang yaitu : 1.Fadlan Buwono Mukti,2.Aldi fauzi,3.Denok Wahyuni,4.Arul,5.Ridho Yang berasal dari sekolah SMK N1 Bantul dengan jurusan XI RPL1.
-              Web ini di buat untuk menyelesaikan tugas project yang di berikan oleh guru jurusan RPL.Web ini akan di jadikan nilai di semua pelajaran produktif.
-              Dengan webside ini semoga dapat mengangkat nama sekolah agar di lirik oleh dunia kerja.
-              Dan Terimakasih kami ucapkan untuk guru produktif TKJ yang telah membantu kami dalam pembuatan webside ini</p>
-
-          </div>
-
+          <p class="-mt-4 text-gray-500"><?php echo htmlentities($row['comment']); ?> </p>
+        <?php } ?>
         </div>
-      </div>
-    </div>
 
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>bootstrap</span></strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-       
-        Designed by Kelompok TKJ
-      </div>
-    </div>
-  </footer><!-- End Footer -->
-  
-      
+        <!-- ======= Footer ======= -->
+        <?php include('assets/includes/footer.php'); ?>
+        <!-- End Footer -->
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
 
-  </body>
+
+        <!-- Bootstrap core JavaScript -->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
+
+</body>
 
 </html>
