@@ -87,54 +87,8 @@ if ($result->num_rows > 0) {
 
   <!-- Navigation -->
   <!-- ======= Top Bar ======= -->
-  <section id="topbar" class="d-flex align-items-center">
-    <div class="container d-flex justify-content-center justify-content-md-between">
-      <div class="contact-info d-flex align-items-center">
-        <i class="bi bi-envelope-fill"></i><a href="mailto:contact@example.com">smeanbtl@yahoo.com</a>
-        <i class="bi bi-phone-fill phone-icon"></i> 0274-367156
-        <i class="bi bi-clock-history"><span class="ml-3" id="jam" style="font-size:24"></span></i>
-      </div>
-      <div class="social-links d-none d-md-block">
-        <a href="" class="twitter"><i class="bi bi-twitter"></i></a>
-        <a href="https://id-id.facebook.com/smknegeri1bantul/" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ======= Header ======= -->
-  <header id="header" class="d-flex align-items-center">
-    <div class="container d-flex align-items-center justify-content-between">
-      <a class="navbar-brand logo me-auto flex" href="#">
-        <img src="assets/img/Logo-removebg-preview.png" alt="" class="h-10 mr-3" width="51" height="70">
-        <span class="self-center text-base font-semibold whitespace-nowrap" id="tkj">TEKNIK KOMPUTER JARINGAN <p class="text-xs font-light" id="tkj">SMK 1 BANTUL</p></span>
-      </a>
-      <!-- Uncomment below if you prefer to use an image logo -->
-
-
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="" href="index">Home</a></li>
-          <li class="dropdown"><a class="" href="#"><span>Profil</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a class="" href="visiMisi">Visi dan Misi</a></li>
-              <li><a class="" href="Prestasi">Prestasi</a></li>
-              <li><a class="" href="galeri">Galeri</a></li>
-            </ul>
-          <li class="dropdown"><a href="#"><span>Data TKJ</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a class="" href="datasiswa">Data Siswa</a></li>
-              <li><a class="" href="dataguru">Data Guru</a></li>
-            </ul>
-          <li><a class="" href="berita.php">Berita</a></li>
-          <li><a class="" href="contact">Kontak</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
-    </div>
-  </header><!-- End Header -->
+  <?php include('assets/includes/header.php'); ?>
+  <!-- End Header -->
 
   <!-- ======= Breadcrumbs ======= -->
   <section id="breadcrumbs" class="breadcrumbs">

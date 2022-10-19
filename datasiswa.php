@@ -1,3 +1,6 @@
+<?php
+$page = 'datasiswa';
+?>
 <!DOCTYPE html>
 <html lang="en">
 

@@ -14,7 +14,7 @@
       </div>
     </div>
   </section>
-  
+
 <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
         <a class="navbar-brand logo me-auto flex" href="index">
@@ -28,7 +28,10 @@
             <ul>
                 <li><a class="<?php if ($page == 'home') {
                          echo 'active';    } ?>" href="index">Home</a></li>
-                <li class="dropdown"><a class="" href="#"><span>Profil</span> <i class="bi bi-chevron-down"></i></a>
+                <li class="dropdown"><a class="<?php if ($page == 'prestasi') {
+                         echo 'active';    } if ($page == 'visimisi') {
+                            echo 'active';    } if ($page == 'galeri') {
+                                echo 'active';    } ?>" href="#"><span>Profil</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
                         <li><a class="<?php if ($page == 'visimisi') {
                          echo 'active';    } ?>" href="visiMisi">Visi dan Misi</a></li>
@@ -37,7 +40,9 @@
                         <li><a class="<?php if ($page == 'galeri') {
                          echo 'active';    } ?>" href="galeri">Galeri</a></li>
                     </ul>
-                <li class="dropdown"><a href="#"><span>Data TKJ</span> <i class="bi bi-chevron-down"></i></a>
+                <li class="dropdown"><a href="#" class="<?php if ($page == 'datasiswa') {
+                         echo 'active';    } if ($page == 'dataguru') {
+                            echo 'active';    } ?>"><span>Data TKJ</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
                         <li><a class="<?php if ($page == 'datasiswa') {
                          echo 'active';    } ?>" href="datasiswa">Data Siswa</a></li>
