@@ -52,10 +52,9 @@
           <div class="col-lg-4 col-md-6 footer-newsletter">
             <h4>Kata Pengantar</h4>
             <p>WebSide ini di buat sepenuh hati oleh kelompok TKJ 
-              yang beranggotakan 5 orang yaitu : 1.Fadlan Buwono Mukti,2.Aldi fauzi,3.Denok Wahyuni,4.Arul,5.Ridho Yang berasal dari sekolah SMK N1 Bantul dengan jurusan XI RPL1.
-              Web ini di buat untuk menyelesaikan tugas project yang di berikan oleh guru jurusan RPL.Web ini akan di jadikan nilai di semua pelajaran produktif.
-              Dengan webside ini semoga dapat mengangkat nama sekolah agar di lirik oleh dunia kerja.
-              Dan Terimakasih kami ucapkan untuk guru produktif TKJ yang telah membantu kami dalam pembuatan webside ini</p>
+              yang beranggotakan 5 orang yaitu : <br> 1.Fadlan Buwono Mukti <br> 2.Aldi fauzi <br> 3.Denok Wahyuni <br> 4.Arul <br> 5.Ridho <br> Yang berasal dari sekolah SMK N1 Bantul dengan jurusan XI RPL1.
+              Web ini di buat untuk menyelesaikan tugas project yang di berikan oleh guru jurusan RPL. Web ini akan di jadikan nilai di semua pelajaran produktif.
+              Dengan webside ini semoga dapat mengangkat nama sekolah agar di lirik oleh dunia kerja. Terimakasih kami ucapkan untuk guru produktif TKJ yang telah membantu kami dalam pembuatan webside ini</p>
 
           </div>
 
@@ -65,7 +64,7 @@
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong><span>❤️</span></strong>. All Rights Reserved
+        &copy; Copyright <strong><span>2022</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
        

@@ -111,7 +111,7 @@ Prestasi</h2>
       <td><?php echo  $row['nama'];?></td>
       <td><?php echo  $row['tgl'];?></td>
       <td><?php echo  $row['kelas'];?></td>
-      <td ><?php echo  $row['hasil'];?></td>
+      <td >Juara ke - <?php echo  $row['hasil'];?></td>
       <td ><?php echo  $row['tingkat'];?></td>
       <td ><?php echo  $row['jenis'];?></td>
       
