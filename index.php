@@ -333,32 +333,31 @@ $page = 'home';
         </div>
         <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right">
 
-          <?php
-                                                            if (isset($_GET['pageno'])) {
-                                                              $pageno = $_GET['pageno'];
-                                                            } else {
-                                                              $pageno = 3;
-                                                            }
-                                                            $no_of_records_per_page = 1;
-                                                            $offset = ($pageno - 3) * $no_of_records_per_page;
+        <?php 
+     if (isset($_GET['pageno'])) {
+            $pageno = $_GET['pageno'];
+        } else {
+            $pageno = 1;
+        }
+        $no_of_records_per_page = 5;
+        $offset = ($pageno-1) * $no_of_records_per_page;
 
 
-                                                            $total_pages_sql = "SELECT COUNT(*) FROM tblposts";
-                                                            $result = mysqli_query($con, $total_pages_sql);
-                                                            $total_rows = mysqli_fetch_array($result)[0];
-                                                            $total_pages = ceil($total_rows / $no_of_records_per_page);
+        $total_pages_sql = "SELECT COUNT(*) FROM tblposts";
+        $result = mysqli_query($con,$total_pages_sql);
+        $total_rows = mysqli_fetch_array($result)[0];
+        $total_pages = ceil($total_rows / $no_of_records_per_page);
 
 
-                                                            $query = mysqli_query($con, "select tblposts.id as pid,tblposts.PostTitle as posttitle,tblposts.postedBy,tblposts.PostImage,tblcategory.CategoryName as category,tblcategory.id as cid,tblsubcategory.Subcategory as subcategory,tblposts.PostDetails as postdetails,tblposts.PostingDate as postingdate,tblposts.PostUrl as url from tblposts left join tblcategory on tblcategory.id=tblposts.CategoryId left join  tblsubcategory on  tblsubcategory.SubCategoryId=tblposts.SubCategoryId where tblposts.Is_Active=1 order by tblposts.id desc  LIMIT $offset, $no_of_records_per_page");
-                                                            while ($row = mysqli_fetch_array($query)) {
-                                                            ?>
-                                                            <div class="pt-7 pl-6 drop-shadow-lg bg-slate-50">
-              <p class="font-sans">
-                <?php echo htmlentities($row['posttitle']); ?>
-              </p>
+$query=mysqli_query($con,"select tblposts.id as pid,tblposts.PostTitle as posttitle,tblposts.PostImage,tblcategory.CategoryName as category,tblcategory.id as cid,tblsubcategory.Subcategory as subcategory,tblposts.PostDetails as postdetails,tblposts.PostingDate as postingdate,tblposts.PostUrl as url from tblposts left join tblcategory on tblcategory.id=tblposts.CategoryId left join  tblsubcategory on  tblsubcategory.SubCategoryId=tblposts.SubCategoryId where tblposts.Is_Active=1 order by tblposts.id desc  LIMIT $offset, $no_of_records_per_page");
+while ($row=mysqli_fetch_array($query)) {
+?>
+
+          <div class="p-2 max-w-full px-8 mt-4  bg-white rounded-lg border border-gray-200 shadow-md">
+<a href="news-details.php?nid=<?php echo htmlentities($row['pid'])?>"><p class="font-semibold"><?php echo htmlentities($row['posttitle']);?></p></a>
             
           </div>
-          <?php } ?>
+<?php } ?>
         </div>
       </div>
     </div>
