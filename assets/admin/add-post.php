@@ -62,14 +62,14 @@ $error="Something went wrong . Please try again.";
         <title>Newsportal | Add Post</title>
 
         <!-- Summernote css -->
-        <link href="../plugins/summernote/summernote.css" rel="stylesheet" />
+        <link href="./../../plugins/summernote/summernote.css" rel="stylesheet" />
 
         <!-- Select2 -->
-        <link href="../plugins/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
+        <link href="./../../plugins/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
 
         <!-- Jquery filer css -->
-        <link href="../plugins/jquery.filer/css/jquery.filer.css" rel="stylesheet" />
-        <link href="../plugins/jquery.filer/css/themes/jquery.filer-dragdropbox-theme.css" rel="stylesheet" />
+        <link href="./../../plugins/jquery.filer/css/jquery.filer.css" rel="stylesheet" />
+        <link href="./../../plugins/jquery.filer/css/themes/jquery.filer-dragdropbox-theme.css" rel="stylesheet" />
 
         <!-- App css -->
         <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -199,7 +199,7 @@ while($result=mysqli_fetch_array($ret))
 <div class="col-sm-12">
  <div class="card-box">
 <h4 class="m-b-30 m-t-0 header-title"><b>Post Details</b></h4>
-<textarea class="summernote" name="postdescription" required></textarea>
+<textarea id="summernote" name="postdescription" required></textarea>
 </div>
 </div>
 </div>
@@ -258,14 +258,14 @@ while($result=mysqli_fetch_array($ret))
         <script src="assets/js/waves.js"></script>
         <script src="assets/js/jquery.slimscroll.js"></script>
         <script src="assets/js/jquery.scrollTo.min.js"></script>
-        <script src="../../plugins/switchery/switchery.min.js"></script>
+        <script src="./../../plugins/switchery/switchery.min.js"></script>
 
         <!--Summernote js-->
-        <script src="../../plugins/summernote/summernote.min.js"></script>
+        <script src="./../../plugins/summernote/summernote.min.js"></script>
         <!-- Select 2 -->
-        <script src="../../plugins/select2/js/select2.min.js"></script>
+        <script src="./../../plugins/select2/js/select2.min.js"></script>
         <!-- Jquery filer js -->
-        <script src="../../plugins/jquery.filer/js/jquery.filer.min.js"></script>
+        <script src="./../../plugins/jquery.filer/js/jquery.filer.min.js"></script>
 
         <!-- page specific js -->
         <script src="assets/pages/jquery.blog-add.init.js"></script>
@@ -275,28 +275,23 @@ while($result=mysqli_fetch_array($ret))
         <script src="assets/js/jquery.app.js"></script>
 
         <script>
-
-            jQuery(document).ready(function(){
-
-                $('.summernote').summernote({
-                    height: 240,                 // set editor height
-                    minHeight: null,             // set minimum height of editor
-                    maxHeight: null,             // set maximum height of editor
-                    focus: false                 // set focus to editable area after initializing summernote
-                });
-                // Select2
-                $(".select2").select2();
-
-                $(".select2-limiting").select2({
-                    maximumSelectionLength: 2
-                });
-            });
-        </script>
-  <script src="../plugins/switchery/switchery.min.js"></script>
+    $(document).ready(function() {
+        $("#summernote").summernote({
+            placeholder: "Write your content here",
+            height: 200,
+        });
+    });
+  
+    function showContent() {
+        document.getElementById("myContent").innerHTML = 
+        $("#summernote").summernote("code");
+    }
+    </script>
+  <script src="./../../plugins/switchery/switchery.min.js"></script>
 
         <!--Summernote js-->
-        <script src="../plugins/summernote/summernote.min.js"></script>
-
+        <script src="./../../plugins/summernote/summernote.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.20/summernote.min.js" ></script>
     
 
 
