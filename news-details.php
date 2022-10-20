@@ -4,6 +4,7 @@ include('assets/includes/config.php');
 //Genrating CSRF Token
 if (empty($_SESSION['token'])) {
   $_SESSION['token'] = bin2hex(random_bytes(32));
+  $page = 'detailberita';
 }
 
 if (isset($_POST['submit'])) {

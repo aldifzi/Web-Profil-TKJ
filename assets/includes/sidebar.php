@@ -31,7 +31,7 @@ while($row=mysqli_fetch_array($query))
 ?>
 
                     <li class="my-1">
-                      <a href="category.php?catid=<?php echo htmlentities($row['id'])?>"><?php echo htmlentities($row['CategoryName']);?></a>
+                      <a href="category?catid=<?php echo htmlentities($row['id'])?>"><?php echo htmlentities($row['CategoryName']);?></a>
                     </li>
 <?php } ?>
                   </ul>

@@ -50,7 +50,9 @@
                          echo 'active';    } ?>" href="dataguru">Data Guru</a></li>
                     </ul>
                 <li><a class="<?php if ($page == 'berita') {
-                         echo 'active';    } ?>" href="berita.php">Berita</a></li>
+                         echo 'active';    } if ($page == 'detailberita') {
+                          echo 'active';    } if ($page == 'search') {
+                            echo 'active';    } ?>" href="berita.php">Berita</a></li>
                 <li><a class="<?php if ($page == 'contact') {
                          echo 'active';    } ?>" href="contact">Kontak</a></li>
             </ul>

@@ -258,14 +258,14 @@ while($result=mysqli_fetch_array($ret))
         <script src="assets/js/waves.js"></script>
         <script src="assets/js/jquery.slimscroll.js"></script>
         <script src="assets/js/jquery.scrollTo.min.js"></script>
-        <script src="../../plugins/switchery/switchery.min.js"></script>
+        <script src="../plugins/switchery/switchery.min.js"></script>
 
         <!--Summernote js-->
-        <script src="../../plugins/summernote/summernote.min.js"></script>
+        <script src="../plugins/summernote/summernote.min.js"></script>
         <!-- Select 2 -->
-        <script src="../../plugins/select2/js/select2.min.js"></script>
+        <script src="../plugins/select2/js/select2.min.js"></script>
         <!-- Jquery filer js -->
-        <script src="../../plugins/jquery.filer/js/jquery.filer.min.js"></script>
+        <script src="../plugins/jquery.filer/js/jquery.filer.min.js"></script>
 
         <!-- page specific js -->
         <script src="assets/pages/jquery.blog-add.init.js"></script>
