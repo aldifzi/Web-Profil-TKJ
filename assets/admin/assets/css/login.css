@@ -186,7 +186,7 @@ iframe {
   height: 100%;
   top: 0;
   left: 0;
-  background-color: rgba(255, 255, 255, 0.659);
+  background-color: transparent;
 }
 
 .wrap-login100 {
@@ -247,7 +247,7 @@ iframe {
 .wrap-input100 {
   width: 100%;
   position: relative;
-  border-bottom: 2px solid rgba(255,255,255,0.24);
+  border-bottom: 2px solid ;
   margin-bottom: 30px;
 }
 

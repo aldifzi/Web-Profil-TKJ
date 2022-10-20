@@ -41,10 +41,10 @@
             <h4>Anggota Pembuat</h4>
             <ul>
               <li><i class="bx bx-chevron-right"><a href="#"></i>Fadlan Buwono Mukti</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="https://www.instagram.com/aldyfzi_/">Aldi Fauzi</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://www.instagram.com/aldyfzi/">Aldi Fauzi Ilmamuslim</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="https://www.instagram.com/dnkwy_/">Denok Wahyuni</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Arul</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Ridho</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Amrullah</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Anugrah Ridho</a></li>
             </ul>
           </div>
 
