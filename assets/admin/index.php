@@ -119,8 +119,22 @@ echo "<script>alert('Invalid Details');</script>";
                 </div>
             </div>-->
          
-           
+            
+ 
 	<div class="limiter">
+    <div class="area" >
+            <ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ul>
   <div class="container-login100" >
 			<div class="wrap-login100">
 				<form class="login100-form validate-form" method="post">
@@ -156,7 +170,7 @@ echo "<script>alert('Invalid Details');</script>";
 		</div>
 	</div>
 
-    
+    </div >
          
           <!-- END HOME -->
 
