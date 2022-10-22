@@ -173,6 +173,7 @@ iframe {
   background-position: center;
   background-size: cover;
   position: relative;
+  background-image: url(../../../img/GambarGedung.jpeg);
   z-index: 1;
 }
 
@@ -241,6 +242,18 @@ iframe {
 
 
 
+context {
+  width: 100%;
+  position: absolute;
+  top:50vh;
+  
+}
+
+.context h1{
+  text-align: center;
+  color: #fff;
+  font-size: 50px;
+}
 
 
 .area{
@@ -366,7 +379,6 @@ iframe {
   }
 
 }
-
 
 /*------------------------------------------------------------------
 [ Input ]*/
