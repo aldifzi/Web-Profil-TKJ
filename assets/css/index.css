@@ -75,7 +75,8 @@ h6 {
   bottom: 0;
   z-index: 9999;
   overflow: hidden;
-  background: #fff;
+  background: rgb(238,238,238);
+background: linear-gradient(56deg, rgba(238,238,238,1) 0%, rgba(251,239,239,1) 56%, rgba(255,253,241,1) 100%);
 }
 
 #preloader:before {
@@ -837,7 +838,7 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Pesan Guru Produktif
+#   Daftar siswa
 --------------------------------------------------------------*/
 .testimonials .section-header {
   margin-bottom: 40px;
@@ -916,11 +917,11 @@ section {
   height: 12px;
   background-color: #fff;
   opacity: 1;
-  border: 1px solid #34b7a7;
+  border: 1px solid #ea0c0c;
 }
 
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #34b7a7;
+  background-color: #ea0c0c;
 }
 
 

@@ -100,8 +100,11 @@ $page = 'contact';
             style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe>
         </div>
         <div class="col-lg-6">
-          <form action="https://formspree.io/f/myyvkrvv" method="POST">
+          <form action="kirim.php" method="POST" target="_blank">
             <div class="row">
+            <div class="col-md-6 form-group mt-3 mt-md-0">
+                <input type="text" class="form-control" name="name" id="name" placeholder="Your Name" required>
+              </div>
               <div class="col-md-6 form-group mt-3 mt-md-0">
                 <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
               </div>
@@ -109,8 +112,8 @@ $page = 'contact';
             <div class="form-group mt-3">
               <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
             </div>
-            
-            <div class="bg-red-700 rounded-full text-slate-100 hover:bg-red-900 mt-3 py-2 pl-4 text-center "><button type="submit">Send Message</button></div>
+            <input type="hidden" value="0896828291" name="noWa">
+            <div class="bg-red-700 rounded-full text-slate-100 hover:bg-red-900 mt-3 py-2 pl-4 text-center "><button type="submit" name="submit">Send Message</button></div>
           </form>
         </div>
 
