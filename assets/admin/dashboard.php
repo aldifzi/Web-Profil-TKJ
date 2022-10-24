@@ -94,10 +94,10 @@ else{
 							</div>
 						</div>
                         <!-- end row -->
+                   
 
-
-                        <h2>Selamat Datang<p></p></h2>
-
+                        <h2>Selamat Datang<p><?= $row['AdminUserName'] ?></p></h2>
+                       
                         <div class="row">
 <a href="manage-categories.php">
                             <div class="col-lg-4 col-md-4 col-sm-6">
