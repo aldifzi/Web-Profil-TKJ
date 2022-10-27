@@ -406,7 +406,7 @@ $page = 'home';
             <div class="swiper-slide">
 
               <div class="testimonial-item">
-                <img src="assets/img/no-image.jpg" class="testimonial-img" alt="">
+                <img src="assets/img/no-image.jpg" class="testimonial-img"  alt="">
                 <h3><?= $row['name'] ?></h3>
                 <h4><?= $row['kelas'] ?></h4>
                 <p>
