@@ -2,7 +2,7 @@
 <?php
 session_start();
 require_once '.././../koneksi.php';
-$query = mysqli_query($connection, "SELECT id, nama, alamat, foto, no_hp, mata_pelajaran FROM tbl_guru");
+$query = mysqli_query($connection, "SELECT id, nama, alamat, foto , no_hp, mata_pelajaran FROM tbl_guru");
 $no = 1;
 $active = 'master';
 if(strlen($_SESSION['login'])==0)
@@ -98,8 +98,9 @@ else{
 						    <tbody>
 						        <?php while($row = mysqli_fetch_assoc($query)) : ?>
 									<tr>
+										
 										<td><?= $no++ ?></td>
-										<td><img src="../../images/guru/<?= $row['foto'] ?>" alt="" width="100%" class="img-thumbnail"></td>
+										<td><img src="./../../images/guru/b.png" alt="<?= $row['nama'] ?>" width="100%" class=""></td>
 										<td><a href="detail.php?id=<?= $row['id'] ?>"><?= $row['nama'] ?></a></td>
 										<td><?= $row['no_hp'] ?></td>
 										<td><?= $row['mata_pelajaran'] ?></td>

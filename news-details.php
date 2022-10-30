@@ -1,6 +1,7 @@
 <?php
 session_start();
 include('assets/includes/config.php');
+$page = 'detailberita';
 //Genrating CSRF Token
 if (empty($_SESSION['token'])) {
   $_SESSION['token'] = bin2hex(random_bytes(32));
@@ -177,24 +178,24 @@ mx-1"></a>
     <!-- /.row -->
     <!---Comment Section --->
 
-    <div class="row left-1" style="margin-top: -8%">
-      <div class="col-md-8 mt-6">
+    <div class="row left-1">
+      <div class="col-md-8 mt-9">
         <div class=" my-4">
           <h5 class="font-bold">Komentar</h5>
           <div class="mt-2">
             <form name="Comment" method="post">
               <input type="hidden" name="csrftoken" value="<?php echo htmlentities($_SESSION['token']); ?>" />
               <div class="form-group">
-                <input type="text" name="name" class="bg-white max-w-full border-2 border-gray-400 rounded py-2 px-44  text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-red-500" placeholder="Nama.." required>
+                <input type="text" name="name" class="bg-white max-w-full border-2 border-gray-400 rounded py-2 px-32  text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-red-500" placeholder="Nama.." required>
               </div>
 
               <div class="form-group mt-3">
-                <input type="email" name="email" class="bg-white border-2 border-gray-400 rounded py-2 px-44 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-red-500" placeholder="Email.." required>
+                <input type="email" name="email" class="bg-white border-2 border-gray-400 rounded py-2 px-32 max-w-full text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-red-500" placeholder="Email.." required>
               </div>
 
 
               <div class="form-group mt-3">
-                <textarea type="Comment" class="bg-white border-2 border-gray-400 rounded py-2 px-44 text-gray-700  focus:outline-none focus:bg-white focus:border-red-500" name="comment" rows="3" placeholder="Comment" required></textarea>
+                <textarea type="Comment" class="bg-white border-2 border-gray-400 rounded py-2 px-32 max-w-full text-gray-700  focus:outline-none focus:bg-white focus:border-red-500" name="comment" rows="3" placeholder="Comment" required></textarea>
               </div>
               <button type="submit" class=" bg-red-500 mt-2 text-white font-bold py-1 px-4 rounded-full cursor-pointer hover:bg-red-900" name="submit">Kirim</button>
             </form>
@@ -230,9 +231,11 @@ mx-1"></a>
           <p class="-mt-4 text-gray-500"><?php echo htmlentities($row['comment']); ?> </p>
         <?php } ?>
         </div>
+    </div>
 
-        <!-- ======= Footer ======= -->
-        <?php include('assets/includes/footer.php'); ?>
+
+  <!-- ======= Footer ======= -->
+  <?php include('assets/includes/footer.php'); ?>
         <!-- End Footer -->
 
 

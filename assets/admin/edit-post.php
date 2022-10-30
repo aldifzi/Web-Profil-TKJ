@@ -11,14 +11,13 @@ if(isset($_POST['update']))
 {
 $posttitle=$_POST['posttitle'];
 $catid=$_POST['category'];
-$subcatid=$_POST['subcategory'];
 $postdetails=$_POST['postdescription'];
 $lastuptdby=$_SESSION['login'];
 $arr = explode(" ",$posttitle);
 $url=implode("-",$arr);
 $status=1;
 $postid=intval($_GET['pid']);
-$query=mysqli_query($con,"update tblposts set PostTitle='$posttitle',CategoryId='$catid',SubCategoryId='$subcatid',PostDetails='$postdetails',PostUrl='$url',Is_Active='$status',lastUpdatedBy='$lastuptdby' where id='$postid'");
+$query=mysqli_query($con,"update tblposts set PostTitle='$posttitle',CategoryId='$catid',PostDetails='$postdetails',PostUrl='$url',Is_Active='$status',lastUpdatedBy='$lastuptdby' where id='$postid'");
 if($query)
 {
 $msg="Post updated ";
@@ -55,18 +54,7 @@ $error="Something went wrong . Please try again.";
 		<link rel="stylesheet" href="../plugins/switchery/switchery.min.css">
         <script src="assets/js/modernizr.min.js"></script>
         <link href="../../plugins/summernote/summernote.css" rel="stylesheet">
- <script>
-function getSubCat(val) {
-  $.ajax({
-  type: "POST",
-  url: "get_subcategory.php",
-  data:'catid='+val,
-  success: function(data){
-    $("#subcategory").html(data);
-  }
-  });
-  }
-  </script>
+
     </head>
 
 
@@ -152,7 +140,7 @@ while($row=mysqli_fetch_array($query))
 
 <div class="form-group m-b-20">
 <label for="exampleInputEmail1">Category</label>
-<select class="form-control" name="category" id="category" onChange="getSubCat(this.value);" required>
+<select class="form-control" name="category" id="category" required>
 <option value="<?php echo htmlentities($row['catid']);?>"><?php echo htmlentities($row['category']);?></option>
 <?php
 // Feching active categories
@@ -166,12 +154,7 @@ while($result=mysqli_fetch_array($ret))
 </select> 
 </div>
     
-<div class="form-group m-b-20">
-<label for="exampleInputEmail1">Sub Category</label>
-<select class="form-control" name="subcategory" id="subcategory" required>
-<option value="<?php echo htmlentities($row['subcatid']);?>"><?php echo htmlentities($row['subcategory']);?></option>
-</select> 
-</div>
+
          
 
      <div class="row">

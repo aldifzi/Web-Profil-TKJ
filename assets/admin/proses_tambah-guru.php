@@ -11,6 +11,7 @@ $tempat_lahir = mysqli_escape_string($connection, $_POST['tempat_lahir']);
 $tanggal_lahir = mysqli_escape_string($connection, $_POST['tanggal_lahir']);
 $mata_pelajaran = mysqli_escape_string($connection, $_POST['mata_pelajaran']);
 $alamat = mysqli_escape_string($connection, $_POST['alamat']);
+$foto = mysqli_escape_string($connection, $_POST['foto']);
 
 // persiapan upload foto
 $ekstensi = $_FILES['foto']['name'];
@@ -20,7 +21,7 @@ $nama_foto = strtolower($nama);
 $nama_foto = str_replace(' ', '-', $nama_foto) . '.' . $ekstensi;
 
 $asal = $_FILES['foto']['tmp_name'];
-$tujuan = './../../';
+$tujuan = '../../images/guru/';
 
 if($_FILES['foto']['error'] == 0){
 	if($_FILES['foto']['size'] < 1000000){
