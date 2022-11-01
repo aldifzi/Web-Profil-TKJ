@@ -1,6 +1,7 @@
 <?php 
 session_start();
 include('assets/includes/config.php');
+include('lang/config.php');
 $page = 'berita';
     ?>
 
@@ -55,10 +56,10 @@ $page = 'berita';
 
       <div class="d-flex justify-content-between align-items-center">
         <h2><i class="fa fa-newspaper-o" aria-hidden="true"></i>
-Berita</h2>
+<?=$lang['berita']?></h2>
         <ol>
           <li><a href="index">Home</a></li>
-          <li>Berita</li>
+          <li><?=$lang['berita']?></li>
         </ol>
       </div>
 

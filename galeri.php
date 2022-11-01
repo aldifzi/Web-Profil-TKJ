@@ -1,4 +1,6 @@
 <?php
+session_start();
+include ('lang/config.php');
 $page = 'galeri';
 ?>
 <?php
@@ -16,7 +18,7 @@ $numRows = $sql->num_rows;
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Galeri</title>
+    <title><?=$lang['galeri']?></title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -125,10 +127,10 @@ $numRows = $sql->num_rows;
 
             <div class="d-flex justify-content-between align-items-center">
                 <h2><i class="fa fa-picture-o" aria-hidden="true"></i>
-                    Galeri</h2>
+                <?=$lang['galeri']?></h2>
                 <ol>
                     <li><a href="index">Home</a></li>
-                    <li>Galeri</li>
+                    <li><?=$lang['galeri']?></li>
                 </ol>
             </div>
 
@@ -140,7 +142,7 @@ $numRows = $sql->num_rows;
     <section class="head">
 
         <div class="Judul">
-            <h2>Galeri TKJ</h2>
+            <h2><?=$lang['galeri']?> TKJ</h2>
         </div>
     </section>
 

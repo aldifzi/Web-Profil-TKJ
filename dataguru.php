@@ -1,5 +1,6 @@
 <?php 
-
+session_start();
+include ('lang/config.php');
 require_once 'koneksi.php';
 $query = mysqli_query($connection, "SELECT id, nama, alamat, foto, no_hp, mata_pelajaran FROM tbl_guru");
 $aktif = 'guru';

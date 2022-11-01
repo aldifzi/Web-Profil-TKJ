@@ -1,17 +1,17 @@
 <?php
 session_start();
 include('assets/includes/config.php');
-$_SESSION['lang'] = NULL;
+include ('lang/config.php');
 $page = 'home';
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>TKJ SMK N1 BANTUL</title>
+  <title>TKJ SMK 1 BANTUL</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -49,15 +49,15 @@ $page = 'home';
 
   <!-- ***** Main Banner Area Start ***** -->
   <div class="main-banner" id="top">
-    <video autoplay muted loop id="bg-video">
-      <source src="assets/img/Video/vidio3.mp4" type="">
+    <video autoplay muted loop id="bg-video"> 
+      <source src="https://res.cloudinary.com/dlkt4s6jz/video/upload/v1667316626/vidio3_qjkn5a.mp4" type="">
     </video>
 
     <div class="video-overlay header-text">
       <div class="caption">
-        <h6>Kuasai teknologi, maka dunia akan menyambut kita dengan bangga</h6>
+        <h6><?= $lang['kuasai'] ?></h6>
         <h2 class="">
-          <span class="box"></span><span class='hi'>SELAMAT DATANG DI <br><span class="kelas">Teknik Komputer Jaringan</span> </span>
+          <span class="box"></span><span class="hi"><?= $lang['selamatdatang'] ?> <br><span class="kelas"><?= $lang['tkj'] ?></span> </span>
           <hr><span class="text"></span><span class="cursor">_</span>
         </h2>
         <div class="main-button scroll-to-section">
@@ -150,23 +150,11 @@ $page = 'home';
           <img src="assets/img/TKJ-1.jpg" class="img-fluid" alt="">
         </div>
         <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right">
-          <h3>Pengertian <b>TKJ</b> (Teknik Komputer dan Jaringan)</h3>
+          <h3><?= $lang['pengertian'] ?></h3>
           <p class="fst-italic mt-2">
-          <?php
-	if($_GET['lang'] == "english") {
-		$a = include "lang/english.php";
-	} 
-	else if ($_GET['lang'] == "indo") {
-		$a = include "lang/indo.php";
-	} 
-	else {
-		$a = include "lang/indo.php";
-	}
-	print "$_SESSION[lang]$faq";
-	?>
-            
+            <?= $lang['isi pengertian'] ?>
           </p>
-          <h3 class="mt-4">Pekerjaan Yang Cocok Dengan Jurusan <b>TKJ</b> </h3>
+          <h3 class="mt-4"><?= $lang['pekerjaan'] ?> <b>TKJ</b> </h3>
           <ul>
             <li><i class="bi bi-check-circle"></i> Jaringan nirkabel</li>
             <li><i class="bi bi-check-circle"></i> Administrator server</li>
@@ -180,6 +168,8 @@ $page = 'home';
 
     </div>
   </section><!-- End Pengertian TKJ -->
+
+
 
   <!-- ======= Sponsor TKJ ======= -->
   <section id="clients" class="clients">
@@ -222,7 +212,7 @@ $page = 'home';
     <div class="container" data-aos="zoom-in">
 
       <div class="section-title">
-        <h2>Data Tentang TKJ</h2>
+        <h2><?= $lang['Data Tentang TKJ']?></h2>
       </div>
 
       <div class="row counters">
@@ -349,7 +339,7 @@ $page = 'home';
   <section id="berita" class="berita mt-1">
     <div class="container">
       <div class="section-title">
-        <h2>Berita</h2>
+        <h2><?= $lang['berita']?></h2>
       </div>
 
       <div class="row">
@@ -511,6 +501,7 @@ $page = 'home';
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
   <script>
     $(document).ready(function() {
       var owl = $('.owl-carousel');

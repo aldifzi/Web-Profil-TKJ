@@ -1,8 +1,10 @@
 <?php
+session_start();
+include ('lang/config.php');
 $page = 'contact';
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 
 <head>
   <meta charset="utf-8">
@@ -35,7 +37,7 @@ $page = 'contact';
   
 </head>
 
-<body>
+<body class="selection:bg-slate-600 selection:text-white">
 
   <!-- ======= Header ======= -->
   <?php include('assets/includes/header.php');?>
@@ -47,10 +49,10 @@ $page = 'contact';
     <div class="container">
 
       <div class="d-flex justify-content-between align-items-center">
-        <h2>Contact</h2>
+        <h2><?=$lang['kontak']?></h2>
         <ol>
           <li><a href="index">Home</a></li>
-          <li>Contact</li>
+          <li><?=$lang['kontak']?></li>
         </ol>
       </div>
 
@@ -62,14 +64,14 @@ $page = 'contact';
     <div class="container">
 
       <div class="section-title">
-        <h2>Hubungi kami memlalui</h2>
+        <h2><?=$lang['hubungi']?></h2>
       </div>
 
       <div class="row" data-aos="fade-up">
         <div class="col-lg-6">
           <div class="info-box mb-4">
             <i class="bx bx-map"></i>
-            <h3>Alamat Sekolah</h3>
+            <h3><?=$lang['alamatsekolah']?></h3>
             <p>Jl.Parangtritis KM 11 Sabdodadi Bantul Yogyakarta 55702</p>
           </div>
         </div>

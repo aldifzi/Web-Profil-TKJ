@@ -1,6 +1,7 @@
 <?php
 session_start();
 include('assets/includes/config.php');
+include ('lang/config.php');
 $page = 'detailberita';
 //Genrating CSRF Token
 if (empty($_SESSION['token'])) {

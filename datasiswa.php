@@ -1,4 +1,6 @@
 <?php
+session_start();
+include ('lang/config.php');
 $page = 'datasiswa';
 ?>
 <!DOCTYPE html>
@@ -49,10 +51,10 @@ $page = 'datasiswa';
     <div class="container">
 
       <div class="d-flex justify-content-between align-items-center">
-        <h2>Data Siswa</h2>
+        <h2><?=$lang['siswa']?></h2>
         <ol>
           <li><a href="index">Home</a></li>
-          <li>Data Siswa</li>
+          <li><?=$lang['siswa']?></li>
         </ol>
       </div>
 
@@ -76,7 +78,7 @@ $page = 'datasiswa';
     <th></th>
     <th>NIS</th>
     <TH>Nama</TH>
-    <TH>Kelas</TH>
+    <TH><?=$lang['kelas/jurusan']?></TH>
   </tr>
  </thead>
 <tbody>

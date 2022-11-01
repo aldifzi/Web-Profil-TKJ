@@ -1,10 +1,12 @@
 <?php
 $page = 'prestasi';
+
 ?>
 <?php 
 session_start();
 include('assets/includes/config.php');
 $sqlslide = "select * from slideshow_banner";
+include ('lang/config.php');
     ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -54,10 +56,10 @@ $sqlslide = "select * from slideshow_banner";
 
       <div class="d-flex justify-content-between align-items-center">
         <h2><i class="fa fa-trophy" aria-hidden="true"></i>
-Prestasi</h2>
+<?=$lang['prestasi']?></h2>
         <ol>
           <li><a href="index.html">Home</a></li>
-          <li>prestasi</li>
+          <li><?=$lang['prestasi']?></li>
         </ol>
       </div>
 
@@ -66,7 +68,7 @@ Prestasi</h2>
 
  <!-- ======= Hero Slider Section ======= -->
 
- <!— Banner SlideShow nya —>
+ <!-- Banner SlideShow nya -->
      <div id="dmbannerhead" class="carousel slide" data-ride="carousel">
        <div class="carousel-inner">
 
@@ -75,7 +77,7 @@ Prestasi</h2>
 	 <a class="left carousel-control" href="#dmbannerhead" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
 	 <a class="right carousel-control" href="#dmbannerhead" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
    </div>
-   <!— /Banner Slideshow nya —><!-- End Hero Slider Section -->
+<!-- End Hero Slider Section -->
 
 
   <!-- ======= Tabel ======= -->
@@ -87,12 +89,12 @@ Prestasi</h2>
     <table  id="dataTable" class="table table-striped table-bordered" style="width:100%">
  <thead class="bg-light">
   <tr>
-    <th class="px-5">Nama Lengkap</th>
-    <th>Tanggal Pelaksanaan</th>
-    <TH>Kelas/Jurusan</TH>
-    <TH>Hasil</TH>
-    <th>Tingkat Kejuaraan</th>
-    <th>Jenis</th>
+    <th class="px-5"><?=$lang['nmlengkap']?></th>
+    <th><?=$lang['tglpelak']?></th>
+    <TH><?=$lang['kelas/jurusan']?></TH>
+    <TH><?=$lang['hasil']?></TH>
+    <th><?=$lang['tgtkejuaraan']?></th>
+    <th><?=$lang['jenis']?></th>
   </tr>
  </thead>
 <tbody>

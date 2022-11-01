@@ -1,5 +1,7 @@
 <?php
 $page = 'visimisi';
+session_start();
+include ('lang/config.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -36,7 +38,7 @@ $page = 'visimisi';
 
 </head>
 
-<body>
+<body  class="selection:bg-slate-600 selection:text-white">
 
 
   <!-- ======= Header ======= -->
@@ -48,10 +50,10 @@ $page = 'visimisi';
     <div class="container">
 
       <div class="d-flex justify-content-between align-items-center">
-        <h2>Visi Misi</h2>
+        <h2><?=$lang['visi']?></h2>
         <ol>
           <li><a href="index">Home</a></li>
-          <li>Visi misi</li>
+          <li><?=$lang['visi']?></li>
         </ol>
       </div>
 

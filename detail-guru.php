@@ -1,5 +1,6 @@
 <?php 
-
+session_start();
+include ('lang/config.php');
 require_once 'koneksi.php';
 if(!isset($_GET['id']) || $_GET['id'] == '') header('Location: index.php');
 

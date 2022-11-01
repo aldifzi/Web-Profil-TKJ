@@ -1,5 +1,6 @@
 <?php 
 session_start();
+include ('lang/config.php');
 error_reporting(0);
 include('assets/includes/config.php');
 $page = 'search';

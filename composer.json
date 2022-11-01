@@ -1,11 +1,16 @@
 {
-    "name": "siswa-lab6/web-sekolah",
+    "name": "asus/web-sekolah",
+    "description": "web tkj",
     "autoload": {
         "psr-4": {
-            "SiswaLab6\\WebSekolah\\": "src/"
+            "Asus\\WebSekolah\\": "src/"
         }
     },
-    "require": {
-        "phpoffice/phpspreadsheet": "^1.25"
-    }
+    "authors": [
+        {
+            "name": "aldifzi",
+            "email": "faaldy16@gmail.com"
+        }
+    ],
+    "require": {}
 }

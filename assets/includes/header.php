@@ -5,6 +5,9 @@
         <i class="bi bi-phone-fill phone-icon"></i> 0274-367156
         <i class="bi bi-clock-history"><span class="ml-3" id="jam" style="font-size:24"></span></i>
       </div>
+
+     
+      
       <div class="social-links d-none d-md-block">
         <a href="https://twitter.com/skansaba_id" target="_blank" class="twitter"><i class="bi bi-twitter"></i></a>
         <a href="https://id-id.facebook.com/smknegeri1bantul/" target="_blank" class="facebook"><i class="bi bi-facebook"></i></a>
@@ -31,57 +34,148 @@
                 <li class="dropdown"><a class="<?php if ($page == 'prestasi') {
                          echo 'active';    } if ($page == 'visimisi') {
                             echo 'active';    } if ($page == 'galeri') {
-                                echo 'active';    } ?>" href="#"><span>Profil</span> <i class="bi bi-chevron-down"></i></a>
+                                echo 'active';    } ?>" href="#"><span><?= $lang['profil'] ?></span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
                         <li><a class="<?php if ($page == 'visimisi') {
-                         echo 'active';    } ?>" href="visiMisi">Visi dan Misi</a></li>
+                         echo 'active';    } ?>" href="visiMisi"><?=$lang['visi']?></a></li>
                         <li><a class="<?php if ($page == 'prestasi') {
-                         echo 'active';    } ?>" href="Prestasi">Prestasi</a></li>
+                         echo 'active';    } ?>" href="Prestasi"><?= $lang['prestasi'] ?></a></li>
                         <li><a class="<?php if ($page == 'galeri') {
-                         echo 'active';    } ?>" href="galeri">Galeri</a></li>
+                         echo 'active';    } ?>" href="galeri"><?= $lang['galeri'] ?></a></li>
                     </ul>
                 <li class="dropdown"><a href="#" class="<?php if ($page == 'datasiswa') {
                          echo 'active';    } if ($page == 'dataguru') {
                             echo 'active';    } ?>"><span>Data TKJ</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
                         <li><a class="<?php if ($page == 'datasiswa') {
-                         echo 'active';    } ?>" href="datasiswa">Data Siswa</a></li>
+                         echo 'active';    } ?>" href="datasiswa"><?=$lang['siswa']?></a></li>
                         <li><a class="<?php if ($page == 'dataguru') {
-                         echo 'active';    } ?>" href="dataguru">Data Guru</a></li>
+                         echo 'active';    } ?>" href="dataguru"><?=$lang['guru']?></a></li>
                     </ul>
                 <li><a class="<?php if ($page == 'berita') {
                          echo 'active';    } if ($page == 'detailberita') {
                           echo 'active';    } if ($page == 'search') {
-                            echo 'active';    } ?>" href="berita.php">Berita</a></li>
+                            echo 'active';    } ?>" href="berita.php"><?=$lang['berita']?></a></li>
                 <li><a class="<?php if ($page == 'contact') {
-                         echo 'active';    } ?>" href="contact">Kontak</a></li>
+                         echo 'active';    } ?>" href="contact"><?=$lang['kontak']?></a></li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
-            <form name="form1" method="post" action="?lang=">
+            
+            <div class="flex justify-center">
+  <div>
+    <div class="dropdown relative">
+      <button
+        class="
+          dropdown-toggle
+          px-3
+          py-2
+          bg-red-600
+          text-white
+          font-medium
+          text-xs
+          leading-tight
+          uppercase
+          rounded
+          shadow-md
+          hover:bg-red-800 hover:shadow-lg
+          focus:bg-red-900 focus:shadow-lg focus:outline-none focus:ring-0
+          active:bg-red-800 active:shadow-lg active:text-white
+          transition
+          duration-150
+          ease-in-out
+          flex
+          items-center
+          whitespace-nowrap
+        "
+        type="button"
+        id="dropdownMenuButton1"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        Bahasa:
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          data-prefix="fas"
+          data-icon="caret-down"
+          class="w-2 ml-2"
+          role="img"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 320 512"
+        >
+          <path
+            fill="currentColor"
+            d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"
+          ></path>
+        </svg>
+      </button>
+      <ul
+        class="
+          dropdown-menu
+          min-w-max
+          absolute
+          hidden
+          bg-white
+          text-base
+          z-50
+          float-left
+          py-2
+          list-none
+          text-left
+          rounded-lg
+          shadow-lg
+          mt-1
+          hidden
+          m-0
+          bg-clip-padding
+          border-none
+        "
+        aria-labelledby="dropdownMenuButton1"
+      >
+        <li>
+          <a
+            class="
+              dropdown-item
+              text-sm
+              py-2
+              px-4
+              font-normal
+              block
+              w-full
+              whitespace-nowrap
+              bg-transparent
+              text-gray-700
+              hover:bg-gray-100
+            "
+            href="index?lang=id"
+            >Indonesia</a
+          >
+        </li>
+       
+        <li>
+          <a
+            class="
+              dropdown-item
+              text-sm
+              py-2
+              px-4
+              font-normal
+              block
+              w-full
+              whitespace-nowrap
+              bg-transparent
+              text-gray-700
+              hover:bg-gray-100
+            "
+            href="index?lang=en"
+            >English</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
 
-	Ganti Bahasa :
-	<select name="menu1" onChange="MM_jumpMenu('parent',this,0)">
-
-	<?php
-	if(($_GET['lang'] == "indo") || (empty($_GET['lang']))) {
-	?>
-
-	<option value="?lang=ind" selected>Indonesian</option>
-	<option value="?lang=english">English</option>
-
-	<?php
-	} else {
-	?>
-
-	<option value="?lang=indo">Indonesian</option>
-	<option value="?lang=english" selected>English</option>
-
-	<?php
-	} // end else
-	?>
-
-	</select>
-</form>
         </nav><!-- .navbar -->
 
     </div>
