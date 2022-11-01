@@ -57,6 +57,31 @@
                          echo 'active';    } ?>" href="contact">Kontak</a></li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
+            <form name="form1" method="post" action="?lang=">
+
+	Ganti Bahasa :
+	<select name="menu1" onChange="MM_jumpMenu('parent',this,0)">
+
+	<?php
+	if(($_GET['lang'] == "indonesian") || (empty($_GET['lang']))) {
+	?>
+
+	<option value="?lang=indonesian" selected>Indonesian</option>
+	<option value="?lang=english">English</option>
+
+	<?php
+	} else {
+	?>
+
+	<option value="?lang=indonesian">Indonesian</option>
+	<option value="?lang=english" selected>English</option>
+
+	<?php
+	} // end else
+	?>
+
+	</select>
+</form>
         </nav><!-- .navbar -->
 
     </div>

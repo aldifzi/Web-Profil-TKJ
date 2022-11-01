@@ -1,6 +1,7 @@
 <?php
 session_start();
 include('assets/includes/config.php');
+$_SESSION['lang'] = NULL;
 $page = 'home';
 ?>
 <!DOCTYPE html>
@@ -151,11 +152,19 @@ $page = 'home';
         <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right">
           <h3>Pengertian <b>TKJ</b> (Teknik Komputer dan Jaringan)</h3>
           <p class="fst-italic mt-2">
-            TKJ (Teknik Komputer dan Jaringan) adalah ilmu berbasis Teknologi Informasi dan Komunikasi terkait
-            kemampuan algoritma, dan pemrograman komputer, perakitan komputer, perakitan jaringan komputer, dan
-            pengoperasian perangkat lunak, dan internet. Teknik komputer, dan jaringan juga membutuhkan pemahaman di
-            bidang teknik listrik, dan ilmu komputer sehingga mampu mengembangkan, dan mengintegrasikan perangkat
-            lunak, dan perangkat keras.
+          <?php
+	if($_GET['lang'] == "english") {
+		$a = include "lang/english.php";
+	} 
+	else if ($_GET['lang'] == "indonesian") {
+		$a = include "lang/indo.php";
+	} 
+	else {
+		$a = include "lang/ind.php";
+	}
+	print "$_SESSION[lang]$faq";
+	?>
+            
           </p>
           <h3 class="mt-4">Pekerjaan Yang Cocok Dengan Jurusan <b>TKJ</b> </h3>
           <ul>
