@@ -63,17 +63,17 @@
 	<select name="menu1" onChange="MM_jumpMenu('parent',this,0)">
 
 	<?php
-	if(($_GET['lang'] == "indonesian") || (empty($_GET['lang']))) {
+	if(($_GET['lang'] == "indo") || (empty($_GET['lang']))) {
 	?>
 
-	<option value="?lang=indonesian" selected>Indonesian</option>
+	<option value="?lang=ind" selected>Indonesian</option>
 	<option value="?lang=english">English</option>
 
 	<?php
 	} else {
 	?>
 
-	<option value="?lang=indonesian">Indonesian</option>
+	<option value="?lang=indo">Indonesian</option>
 	<option value="?lang=english" selected>English</option>
 
 	<?php

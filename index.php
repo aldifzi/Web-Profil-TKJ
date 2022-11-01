@@ -156,11 +156,11 @@ $page = 'home';
 	if($_GET['lang'] == "english") {
 		$a = include "lang/english.php";
 	} 
-	else if ($_GET['lang'] == "indonesian") {
+	else if ($_GET['lang'] == "indo") {
 		$a = include "lang/indo.php";
 	} 
 	else {
-		$a = include "lang/ind.php";
+		$a = include "lang/indo.php";
 	}
 	print "$_SESSION[lang]$faq";
 	?>
