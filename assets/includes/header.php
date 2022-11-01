@@ -2,7 +2,7 @@
     <div class="container d-flex justify-content-center justify-content-md-between">
       <div class="contact-info d-flex align-items-center">
         <i class="bi bi-envelope-fill"></i><a href="mailto:contact@example.com">smeanbtl@yahoo.com</a>
-        <i class="bi bi-phone-fill phone-icon"></i> 0274-367156
+        <i class="bi bi-phone-fill phone-icon"></i> <p class="md:text-xs md:font-thin sm:text-xs">0274-367156</p> 
         <i class="bi bi-clock-history"><span class="ml-3" id="jam" style="font-size:24"></span></i>
       </div>
 
@@ -69,9 +69,11 @@
           dropdown-toggle
           px-3
           py-2
+          sm:
+          md:
           bg-red-600
           text-white
-          font-medium
+          font-normal
           text-xs
           leading-tight
           uppercase
