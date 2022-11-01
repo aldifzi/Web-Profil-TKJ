@@ -1,0 +1,11 @@
+{
+    "name": "siswa-lab6/web-sekolah",
+    "autoload": {
+        "psr-4": {
+            "SiswaLab6\\WebSekolah\\": "src/"
+        }
+    },
+    "require": {
+        "phpoffice/phpspreadsheet": "^1.25"
+    }
+}

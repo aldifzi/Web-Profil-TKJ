@@ -74,8 +74,21 @@ header('location:index.php');
                 width: 100% !important;
             }
 		</style>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+       
+      
+       
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/core.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/components.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/icons.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/pages.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/menu.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/responsive.css" rel="stylesheet" type="text/css" />
+        <script src="assets/js/modernizr.min.js"></script>
+        <link href="assets/css/login.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	    <link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+        <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet"/>
     </head>
 	<body class="fixed-left">
         <div class="wrapper">
@@ -112,7 +125,20 @@ header('location:index.php');
 		<script src="js/jquery.iframe-transport.js" type="text/javascript"></script>
 		<script src="js/jquery.fileupload.js" type="text/javascript"></script>
         <script src="https://cdn.tailwindcss.com"></script>
+                    <!-- jQuery  -->
+                    <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/detect.js"></script>
+        <script src="assets/js/fastclick.js"></script>
+        <script src="assets/js/jquery.blockUI.js"></script>
+        <script src="assets/js/waves.js"></script>
+        <script src="assets/js/jquery.slimscroll.js"></script>
+        <script src="assets/js/jquery.scrollTo.min.js"></script>      
+        <script src="https://kit.fontawesome.com/6f2ba42180.js" crossorigin="anonymous"></script>
+
+       
         <script type="text/javascript">
+
             
             $(document).ready(function () {
                 getImages(0, <?php echo $numRows ?>);

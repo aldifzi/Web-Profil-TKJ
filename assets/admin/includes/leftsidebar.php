@@ -58,15 +58,32 @@
                         <ul>
                         <li class="menu-title"></li>
                         <li class="has_sub">
-                                <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-format-list-bulleted"></i> <span>Ubah Data </span> <span class="menu-arrow"></span></a>
-                                <ul class="list-unstyled">
-                                  <li><a href="admin">Data Siswa </a></li>
-                                    <li><a href="galeri">Galeri</a></li>
-                                    <li><a href="data-guru">Data Guru</a></li>
-                                    <li><a href="prestasi">Prestasi</a></li>
-                                    <li><a href="VisiMisi">Visi Misi</a></li>
-                                </ul>
+                                <a href="admin" class="waves-effect"><i class="mdi mdi-format-list-bulleted"></i> <span>Siswa </span> <span class="menu-arrow"></span></a>
+                                
+                            </li> 
+                            <li class="has_sub">
+                                <a href="galeri" class="waves-effect"><i class="mdi mdi-format-list-bulleted"></i> <span>Galeri </span> <span class="menu-arrow"></span></a>
+                                
                             </li>   
+                            <li class="has_sub">
+                                <a href="data-guru" class="waves-effect"><i class="mdi mdi-format-list-bulleted"></i> <span>Guru </span> <span class="menu-arrow"></span></a>
+                                <ul class="list-unstyled">
+                                  
+                                </ul>
+                            </li>    
+                            <li class="has_sub">
+                                <a href="prestasi" class="waves-effect"><i class="mdi mdi-format-list-bulleted"></i> <span>Prestasi </span> <span class="menu-arrow"></span></a>
+                                <ul class="list-unstyled">
+                                  
+                                </ul>
+                            </li>
+                            <li class="has_sub">
+                                <a href="VisiMisi" class="waves-effect"><i class="mdi mdi-format-list-bulleted"></i> <span>Visi Misi </span> <span class="menu-arrow"></span></a>
+                                <ul class="list-unstyled">
+                                  
+                                </ul>
+                            </li>
+                           
 
                         </ul>
                     </div>

@@ -175,7 +175,7 @@ header('location:index.php');
                     
                     
                     
-                    <div class="col-12">
+                    <div class="col-12 mt-8">
                         <input type="submit" name="simpan" value="Simpan Data" class="btn btn-blue mt-9 text-white bg-blue-500 hover:bg-blue-800  font-bold py-1 px-4 left-5 rounded-full hover:text-blue-700 cursor-pointer hover:border-2 border-blue-500 border-2 hover:border-blue-600" />
                     </div>
                 </form>
@@ -189,7 +189,7 @@ header('location:index.php');
             </div>
             <div class="card-body ">
                 
-                 ]
+                 
                     <?php
                         $sql2   = "SELECT * from visi_misi order by id desc";
                         $q2     = mysqli_query($koneksi, $sql2);

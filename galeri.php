@@ -40,48 +40,75 @@ $numRows = $sql->num_rows;
     <link href="assets/css/Galeri.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" rel="stylesheet">
 <style>
-    #img 
-        .row > div {
-      padding: 0 4px !important;
-      
-}
-.card {
-    color: black;
-    border-radius: 2px;
-    background: white;
-    box-shadow:0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.24);
-}
-
-.img-fluid {
-    margin-top: 8px;
-    vertical-align: middle;
-  
-}
-.container {
-  max-width: 80rem;
-  width: 100%;
-  padding: 4rem 2rem;
-  margin: 0 auto;
-}
-.card-image {
+.wrap {
+      overflow: hidden;
+      margin: 10px;
+    }
+    .box {
+      float: left;
       position: relative;
-      display: block;
+      width: 20%;
+      padding-bottom: 20%;
+    }
+    .boxInner {
+      position: absolute;
+      left: 10px;
+      right: 10px;
+      top: 10px;
+      bottom: 10px;
+      overflow: hidden;
+    }
+    .boxInner img {
       width: 100%;
-      padding-top: 70%;
-      background: white;
-}
-.card .card-image #img 
-     {
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
+    }
+    .boxInner .titleBox {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin-bottom: -50px;
+      background: #fff;
+      background: rgba(0, 0, 0, 0.5);
+      color: #FFF;
+      padding: 10px;
+      text-align: center;
+      -webkit-transition: all 0.3s ease-out;
+      -moz-transition: all 0.3s ease-out;
+      -o-transition: all 0.3s ease-out;
+      transition: all 0.3s ease-out;
+    }
+    section.no-touch .boxInner:hover .titleBox, section.touch .boxInner.touchFocus .titleBox {
+      margin-bottom: 0;
+    }
+    @media only screen and (max-width : 480px) {
+      /* Smartphone view: 1 tile */
+      .box {
         width: 100%;
-        height: 100%;
-        object-fit: cover;
+        padding-bottom: 100%;
       }
+    }
+    @media only screen and (max-width : 650px) and (min-width : 481px) {
+      /* Tablet view: 2 tiles */
+      .box {
+        width: 50%;
+        padding-bottom: 50%;
+      }
+    }
+    @media only screen and (max-width : 1050px) and (min-width : 651px) {
+      /* Small desktop / ipad view: 3 tiles */
+      .box {
+        width: 33.3%;
+        padding-bottom: 33.3%;
+      }
+    }
+    @media only screen and (max-width : 1290px) and (min-width : 1051px) {
+      /* Medium desktop: 4 tiles */
+      .box {
+        width: 25%;
+        padding-bottom: 25%;
+      }
+    }
 
-    
 </style>
 </head>
 
@@ -114,14 +141,13 @@ $numRows = $sql->num_rows;
 
         <div class="Judul">
             <h2>Galeri TKJ</h2>
-            <p>Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur.</p>
         </div>
     </section>
 
 
 
 
-    <div class="container-fluid" id="uploadedFiles">
+    <!-- <div class="container-fluid" id="uploadedFiles">
         <div class="row">
         <?php
     require('koneksi.php');
@@ -138,12 +164,39 @@ $numRows = $sql->num_rows;
     </div>
     </div>
         
+
+    
         
       </div><!-- End testimonial item -->
-    <?php }  ?>
+    <!-- <?php }  ?>
         </div>
+    </div> --> -->
+    
+
+    <section class="no-touch">
+
+  <div class="wrap">
+  <?php
+    require('koneksi.php');
+    $query1 = mysqli_query($connection, "SELECT * FROM photos");
+    while ($row = mysqli_fetch_array($query1)) {
+    ?>
+    <div class="box">
+      <div class="boxInner">
+        <img src="assets/admin/uploads/<?= $row['path'] ?>" data-fancybox="gallery" />
+    
+      </div>
+    </div>
+    <?php }  ?>
+  
+   
+    
+    
     </div>
     
+  </div>
+  
+</section>
 
     <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="js/vendor/jquery.ui.widget.js" type="text/javascript"></script>

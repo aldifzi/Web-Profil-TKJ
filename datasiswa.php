@@ -62,9 +62,13 @@ $page = 'datasiswa';
 
     <!-- ======= Tabel ======= -->
 
-
+    
 
     <div class="container my-5">
+    <a href="reportdataexcel">
+          <button class="bg-green-800 hover:bg-green-700 text-white py-2 px-4 text-center border-b-4 border-green-700 hover:border-green-500 rounded">
+            Export Excel   <i class="fa fa-file-excel-o fa-xl" aria-hidden="true"></i>
+        </button></a>
 <div class="">
     <table  id="table1" class="table table-striped table-bordered" style="width:100%">
  <thead class="bg-light">
@@ -142,6 +146,7 @@ $page = 'datasiswa';
 <script src="https://cdn.datatables.net/fixedheader/3.1.5/js/dataTables.fixedHeader.min.js"></script>
 <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
 <script src="https://cdn.datatables.net/responsive/2.2.3/js/responsive.bootstrap.min.js"></script>
+<script src="https://kit.fontawesome.com/6f2ba42180.js" crossorigin="anonymous"></script>
   
 <script>
     $(document).ready(function () {
