@@ -1,19 +1,21 @@
-<?php 
+<?php
 
-if(!isset($_GET['id']) || $_GET['id'] == '') header('Location: index.php');
+if (!isset($_GET['id']) || $_GET['id'] == '') header('Location: index.php');
 
 require_once '../../koneksi.php';
 $id = $_GET['id'];
-$query = mysqli_query($connection, "SELECT foto FROM tbl_guru WHERE id = {$id}");
-$row = mysqli_fetch_assoc($query);
 
-if(file_exists("../../images/guru/" . $row['foto'])) unlink("../../images/guru/" . $row['foto']) or die('foto tidak bisa dihapus');
+// AMBIL NAMA FILE FOTO SEBELUMNYA
+$data = mysqli_query($connection, "SELECT gambar FROM tguru WHERE id='$id'");
+$dataImage = mysqli_fetch_assoc($data);
+$oldImage = $dataImage['gambar'];
 
-$query = mysqli_query($connection, "DELETE FROM tbl_guru WHERE id = {$id}");
-if($query){
-	$_SESSION['sukses'] = 'Data Berhasil Dihapus!';
-	header('Location: data-guru');
-} else {
-	$_SESSION['gagal'] = 'Data Gagal Dihapus!';
-	header('Location: data-guru');
-}
+// DELETE GAMBAR LAMA
+$link = "image/" . $oldImage;
+unlink($link);
+
+// DELETE DATA DARI TABLE
+$result = mysqli_query($connection, "DELETE FROM tguru WHERE id=$id");
+
+// REDIRECT KE index.php
+header("Location:data-guru.php");
