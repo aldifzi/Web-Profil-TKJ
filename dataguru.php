@@ -2,7 +2,9 @@
 session_start();
 include ('lang/config.php');
 require_once 'koneksi.php';
-$query = mysqli_query($connection, "SELECT id, nama, alamat, foto, no_hp, mata_pelajaran FROM tbl_guru");
+// AMBIL DATA DARI DATABASE BERDASARKAN DATA TERAKHIR DI INPUT
+$result = mysqli_query($connection, "SELECT * FROM tguru ORDER BY id DESC");
+
 $aktif = 'guru';
 $no = 1;
 $page = 'dataguru';
@@ -77,30 +79,99 @@ $page = 'dataguru';
         <h2> Data Guru Produktif </h2>
 
       </div>
-      <?php while($row = mysqli_fetch_assoc($query)) : ?>
+     
       <div class="container">
-      <div class="row justify-content-center">
-      <div class="col-12 col-sm-6 col-lg-3">
-            <div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
-              <!-- Team Thumb-->
-              <div class="advisor_thumb"><img src="images/guru/<?= $row['foto'] ?>" alt="">
-                <!-- Social Info-->
-                <div class="social-info"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
+      <div class="row">
+      <?php
+      $no = 0;
+      while ($res = mysqli_fetch_array($result)) {
+        $no++;
+      ?>
+        <!-- Single Advisor-->
+        <div class="col-12 col-sm-6 col-lg-3" data-bs-toggle="modal" data-bs-target="#exampleModalCenter<?= $no ?>">
+          <div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+            <!-- Team Thumb-->
+            <div class="advisor_thumb"><?php echo "<img height='500' width='350' src='assets/admin/images/" . $res['gambar'] . "'"; ?>
+              <!-- Social Info-->
+              <div class="social-info">
+                <p><?= $res['pendidikan'] ?></p>
               </div>
-              <!-- Team Details-->
-              <div class="single_advisor_details_info">
-                <h6><?= $row['nama'] ?></h6>
-                <a href="detail-guru?id=<?= $row['id'] ?>"><button id="bguru" class="bg-red-500  text-white font-bold py-1 mt-2 px-2 rounded">Detail Guru</button></a>
+            </div>
+            <!-- Team Details-->
+            <div class="single_advisor_details_info">
+              <h6><?= $res['nama'] ?></h6>
+              <p class="designation">Mengajar Pelajaran <?= $res['mata_pelajaran'] ?></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade modal-lg" id="exampleModalCenter<?= $no ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <div style="border-radius: .5rem;">
+                  <div class="row g-0">
+                    <div class="col-md-4  text-center text-white">
+                      <?php echo "<img height='500' style='border-radius: 8%;' width='350' src='assets/admin/images/" . $res['gambar'] . "'"; ?>
+                      <!-- <img src="HmZu4TERI6CWcfTN8yP__oRMiznX.png" alt="Avatar" class="img-fluid mt-5" style="border-radius: 20%;"> -->
+                    </div>
+                    <div class="col-md-8 mt-5">
+                      <div class="card-body p-4">
+                        <h6>Information</h6>
+                        <hr class="mt-0 mb-4">
+                        <div class="row pt-1">
+                          <div class="col-6 mb-3">
+                            <h6>Nama</h6>
+                            <p class="text-muted" style="word-wrap:break-word"><?= $res['nama'] ?></p>
+                          </div>
+                          <div class="col-6 mb-3">
+                            <h6>Nip</h6>
+                            <p class="text-muted" style="word-wrap:break-word"><?= $res['nip'] ?></p>
+                          </div>
+                          <div class="col-6 mb-3">
+                            <h6>Pendidikan</h6>
+                            <p class="text-muted" style="word-wrap:break-word"><?= $res['pendidikan'] ?></p>
+                          </div>
+                          <div class="col-6 mb-3">
+                            <h6>Mengajar</h6>
+                            <p class="text-muted" style="word-wrap:break-word"><?= $res['mata_pelajaran'] ?></p>
+                          </div>
+                          <div class="col-6 mb-3">
+                            <h6>Phone</h6>
+                            <p class="text-muted" style="word-wrap:break-word"><?= $res['hp'] ?></p>
+                          </div>
+                          <div class="col-6 mb-3">
+                            <h6>Alamat</h6>
+                            <p class="text-muted" style="word-wrap:break-word"><?= $res['alamat'] ?></p>
+                          </div>
+                          <div class="col-6 mb-3">
+                            <h6>Tanggal Lahir</h6>
+                            <p class="text-muted" style="word-wrap:break-word"><?= $res['tangal_lahir'] ?></p>
+                          </div>
+                          <div class="col-6 mb-3">
+                            <h6>Tempat Lahir</h6>
+                            <p class="text-muted" style="word-wrap:break-word"><?= $res['tempat_lahir'] ?></p>
+                          </div>
+                        </div>
+                        <hr class="mt-0 mb-4">
+                        <div class="row pt-1">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-      </div>
-      </div>
         </div>
-        <?php endwhile; ?>
-       
 
+
+      <?php } ?>
     </div>
+  </div>
+
+
   </section><!-- End Team Section -->
 
    <!-- ======= Footer ======= -->
