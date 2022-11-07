@@ -79,12 +79,6 @@
                                 </ul>
                             </li>
                             </li>
-                            <li class="has_sub">
-                                <a href="VisiMisi" class="waves-effect"><i class="mdi mdi-format-list-bulleted"></i> <span>Visi Misi </span> <span class="menu-arrow"></span></a>
-                                <ul class="list-unstyled">
-
-                                </ul>
-                            </li>
 
 
                         </ul>

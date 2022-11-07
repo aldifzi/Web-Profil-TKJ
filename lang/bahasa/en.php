@@ -31,6 +31,14 @@ $lang = array(
     "alamatsekolah"=>"School Address",
     "daftarsiswa" =>"Student List",
     "more" => "More",
-    "bahasa" => "Language"
+    "bahasa" => "Language",
+    "isimisi"=>"1.Equipping students with knowledge, skills and attitudes that are noble, dignified and devoted to God Almighty<br>
+    2.Train students by organizing education on a competitive basis according to industry needs <br>
+    3.Produce competent, professional graduates",
+    "isivisi"=>"Realizing Computer and Network Engineering Graduates who are quality, productive, with character and with global insight",
+    "tujuan"=>"Mission Vision Goals",
+    "nama"=>"Name",
+    "anggota"=>"Team",
+    "katapengantar"=>"Introduction"
 );
 ?>

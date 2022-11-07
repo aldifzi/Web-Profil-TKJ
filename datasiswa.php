@@ -11,8 +11,8 @@ $page = 'datasiswa';
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>Siswa</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <meta content="Ini adalah daftar siswa web TKJ SMK 1 Bantul" name="description">
+  <meta content="web sekolah, web, smk, bantul ,SMK 1 Bantul ,sekolah ,website sekolah" name="keywords">
 
   <!-- Favicons -->
   <link href="assets/img/Logo-removebg-preview.png" rel="icon">
@@ -67,17 +67,14 @@ $page = 'datasiswa';
     
 
     <div class="container my-5">
-    <a href="reportdataexcel">
-          <button class="bg-green-800 hover:bg-green-700 text-white py-2 px-4 text-center border-b-4 border-green-700 hover:border-green-500 rounded">
-            Export Excel   <i class="fa fa-file-excel-o fa-xl" aria-hidden="true"></i>
-        </button></a>
+    
 <div class="">
     <table  id="table1" class="table table-striped table-bordered" style="width:100%">
  <thead class="bg-light">
   <tr>
     <th></th>
     <th>NIS</th>
-    <TH>Nama</TH>
+    <TH><?=$lang['nama']?></TH>
     <TH><?=$lang['kelas/jurusan']?></TH>
   </tr>
  </thead>
@@ -94,7 +91,7 @@ $page = 'datasiswa';
     ?>
 
     <tr>
-    <td><img src="assets/img/icon.png" alt="" width="80px" class="rounded ml-2" id="foto"></td>
+    <td><img src="assets/img/no-image.jpg" alt="" width="80px" class="rounded ml-2" id="foto"></td>
       <td><?php echo  $row['NIS'];?></td>
       <td><?php echo  $row['name'];?></td>
       <td class="kelas"><?php echo  $row['kelas'];?></td>

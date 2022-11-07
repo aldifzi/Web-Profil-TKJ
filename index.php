@@ -11,9 +11,9 @@ $page = 'home';
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>TKJ SMK 1 BANTUL</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <title>TKJ SMK 1 Bantul</title>
+  <meta content="Ini adalah web TKJ SMK 1 Bantul" name="description">
+  <meta content="web sekolah, web, smk, bantul ,SMK 1 Bantul ,sekolah ,website sekolah, tkj ,teknik komputer jaringan, komputer, jaringan" name="keywords">
 
   <!-- Favicons -->
   <link href="assets/img/Logo-removebg-preview.png" rel="icon">
@@ -28,6 +28,8 @@ $page = 'home';
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="lightbox/css/lightbox.css">
+  <link rel="stylesheet" href="lightbox/css/stylelightbox.css">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
@@ -440,7 +442,7 @@ $page = 'home';
 <div class="container" data-aos="fade-up">
 
 <div class="section-title">
-  <h2>Galeri</h2>
+  <h2><?= $lang['galeri']?></h2>
   <p></p>
 </div>
 
@@ -454,7 +456,7 @@ $page = 'home';
       <div class="swiper-slide">
 
         <div class="testimonial-item">
-          <img src="assets/admin/uploads/<?= $row['path'] ?>" class="testimonial-img" alt="">
+          <img src="assets/admin/uploads/<?= $row['path'] ?>" style="width: 500px;" class="testimonial-img img-fluid" alt="">
         </div>
       </div><!-- End testimonial item -->
     <?php }  ?>

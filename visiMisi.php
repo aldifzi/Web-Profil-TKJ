@@ -1,7 +1,7 @@
 <?php
 $page = 'visimisi';
 session_start();
-include ('lang/config.php');
+include('lang/config.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,9 +19,7 @@ include ('lang/config.php');
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
@@ -38,11 +36,11 @@ include ('lang/config.php');
 
 </head>
 
-<body  class="selection:bg-slate-600 selection:text-white">
+<body class="selection:bg-slate-600 selection:text-white">
 
 
   <!-- ======= Header ======= -->
-  <?php include('assets/includes/header.php');?>
+  <?php include('assets/includes/header.php'); ?>
   <!-- End Header -->
 
   <!-- ======= Breadcrumbs ======= -->
@@ -50,10 +48,10 @@ include ('lang/config.php');
     <div class="container">
 
       <div class="d-flex justify-content-between align-items-center">
-        <h2><?=$lang['visi']?></h2>
+        <h2><?= $lang['visi'] ?></h2>
         <ol>
           <li><a href="index">Home</a></li>
-          <li><?=$lang['visi']?></li>
+          <li><?= $lang['visi'] ?></li>
         </ol>
       </div>
 
@@ -94,7 +92,7 @@ include ('lang/config.php');
             </div>
           </div>
         </div>
-        
+
         <!-- Slide 3 -->
         <div class="carousel-item" style="background-image: url(assets/img/slide/slide-3.jpg)">
           <div class="carousel-container">
@@ -129,41 +127,29 @@ include ('lang/config.php');
       <div class="container" data-aos="fade-up">
 
         <div class="section-header">
-          <h2> Tujuan Visi Misi</h2>
+          <h2> <?= $lang['tujuan']?></h2>
           <p> </p>
         </div>
 
         <div class="row gy-4">
-        
-<div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-  <div class="card-item">
-    <div class="row">
-      <div class="col-xl-5">
-        <div class="card-bg" style="background-image: url(assets/img/foto11.jpg);"></div>
-      </div>
-      <div class="col-xl-7 d-flex align-items-center">
-        <div class="card-body">
-          <h4 class="card-title">VISI</h4>
-          <?php
- 
-    
- require('koneksi.php');
- $query1= mysqli_query($connection,"SELECT * FROM visi_misi");
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-item">
+              <div class="row">
+                <div class="col-xl-5">
+                  <div class="card-bg" style="background-image: url(assets/img/foto11.jpg);"></div>
+                </div>
+                <div class="col-xl-7 d-flex align-items-center">
+                  <div class="card-body">
+                    <h4 class="card-title">VISI</h4>
+                    <p><?= $lang ['isivisi']?></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Card Item -->
 
 
- 
- while($row=mysqli_fetch_array($query1))
- { 
-    ?>
-          <p><?php echo  $row['visi'];?></p>
-          <?php }  ?>
-        </div>
-      </div>
-    </div>
-  </div>
-</div><!-- End Card Item -->
-
-    
 
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
@@ -175,30 +161,16 @@ include ('lang/config.php');
                 <div class="col-xl-7 d-flex align-items-center">
                   <div class="card-body">
                     <h4 class="card-title">MISI</h4>
-
-                    <?php
- 
-    
- require('koneksi.php');
- $query1= mysqli_query($connection,"SELECT * FROM visi_misi");
-
- 
- while($row=mysqli_fetch_array($query1))
- { 
-    ?>
-                    <p><?php echo  $row['misi'];?></p>
-                      <?php }  ?>
-
- 
+                    <p><?= $lang ['isimisi']?></p>
                   </div>
                 </div>
               </div>
             </div>
           </div><!-- End Card Item -->
 
-          
 
-          
+
+
 
         </div>
 
@@ -245,8 +217,7 @@ include ('lang/config.php');
 
           <div class="tab-pane active show" id="tab-1">
             <div class="row">
-              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center"
-                data-aos="fade-up" data-aos-delay="100">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="100">
                 <h3>Voluptatem dignissimos provident</h3>
                 <p class="fst-italic">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
@@ -343,11 +314,10 @@ include ('lang/config.php');
     </section><!-- End Features Section -->
 
     <!-- ======= Footer ======= -->
-    <?php include('assets/includes/footer.php');?>
+    <?php include('assets/includes/footer.php'); ?>
     <!-- End Footer -->
 
-    <a href="" class="back-to-top d-flex align-items-center justify-content-center"><i
-        class="bi bi-arrow-up-short"></i></a>
+    <a href="" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
     <div id="preloader"></div>
 
     <!-- Vendor JS Files -->
@@ -364,8 +334,8 @@ include ('lang/config.php');
     <script src="jam.js"></script>
 
 
-  <script type="text/javascript" src="assets/js/jam.js">
-        
+    <script type="text/javascript" src="assets/js/jam.js">
+
     </script>
 </body>
 

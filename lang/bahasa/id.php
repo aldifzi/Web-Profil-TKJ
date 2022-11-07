@@ -31,6 +31,14 @@ $lang = array(
     "alamatsekolah"=>"Alamat Sekolah",
     "daftarsiswa" =>"Daftar Siswa",
     "more" => "Lebih Banyak",
-    "bahasa" => "Bahasa"
+    "bahasa" => "Bahasa",
+    "isimisi"=>"1.Membekali siswa dengan pengetahuan keterampilan dan sikap yang mulia bermartabat dan bertaqwa kepada Tuhan Yang Maha Esa <br>
+    2.Melatih siswa dengan menyelenggarakan Pendidikan dengan basis kompetisi sesuai dengan kebutuhan industri <br>
+    3.Menghasilkan Lulusan yang berkompeten, professional",
+    "isivisi"=>"Mewujudkan Lulusan Teknik Komputer dan Jaringan yang berkualitas,produktif,berkarakter dan berwawasan Global",
+    "tujuan"=>"Tujuan Visi Misi",
+    "nama"=>"Nama",
+    "anggota"=>"Anggota Pembuat",
+    "katapengantar"=>"Kata Pengantar"
 );
 ?>

@@ -2,7 +2,7 @@
 # General
 --------------------------------------------------------------*/
 body {
-    font-family: "Open Sans", sans-serif;
+  font-family: "Baloo 2", cursive;
     color: #444444;
   }
   
@@ -77,7 +77,7 @@ body {
     top: calc(50% - 30px);
     left: calc(50% - 30px);
     border: 6px solid #cc1616;
-    border-top-color: #efefef;
+    border-top-color: #E8E8E8;
     border-radius: 50%;
     width: 60px;
     height: 60px;

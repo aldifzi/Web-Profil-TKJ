@@ -37,7 +37,7 @@
 
 
           <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Anggota Pembuat</h4>
+            <h4><?= $lang['anggota']?></h4>
             <ul>
               <li><i class="bx bx-chevron-right"><a href="#"></i>Fadlan Buwono Mukti</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="https://www.instagram.com/aldyfzi/">Aldi Fauzi Ilmamuslim</a></li>
@@ -49,7 +49,7 @@
 
 
           <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Kata Pengantar</h4>
+            <h4><?= $lang['katapengantar']?></h4>
             <p><?=$lang['kata pengantar']?></p>
 
           </div>

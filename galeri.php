@@ -19,8 +19,8 @@ $numRows = $sql->num_rows;
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
     <title><?=$lang['galeri']?></title>
-    <meta content="" name="description">
-    <meta content="" name="keywords">
+    <meta content="Ini adalah galeri web TKJ SMK 1 Bantul" name="description">
+  <meta content="web sekolah, web, smk, galeri, bantul ,SMK 1 Bantul ,sekolah ,website sekolah" name="keywords">
 
     <!-- Favicons -->
     <link href="assets/img/Logo-removebg-preview.png" rel="icon">

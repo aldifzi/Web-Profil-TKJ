@@ -12,10 +12,12 @@ if (strlen($_SESSION['login']) == 0) {
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
+        <meta name="description" content="Dashboard Admin">
+        <meta name="keywords" content="Dashboard">
         <meta name="author" content="">
         <!-- App title -->
         <title>Dashboard</title>
+        <link href="../img/Logo-removebg-preview.png" rel="icon">
         <link rel="stylesheet" href="../../plugins/morris/morris.css">
 
         <!-- App css -->

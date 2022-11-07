@@ -58,8 +58,8 @@ if ($result->num_rows > 0) {
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <meta content="Ini adalah halaman berita web TKJ SMK 1 Bantul" name="description">
+  <meta content="web sekolah, web, smk, bantul ,SMK 1 Bantul ,sekolah , berita,website sekolah" name="keywords">
 
   <?php
   $pid = intval($_GET['nid']);
