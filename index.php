@@ -63,8 +63,7 @@ $page = 'home';
           <hr><span class="text"></span><span class="cursor">_</span>
         </h2>
         <div class="main-button scroll-to-section">
-          <a href="#about" class=" animate__animated animate__fadeInUp scrollto">PELAJARI LEBIH
-            LANJUT</a>
+          <a href="#about" class=" animate__animated animate__fadeInUp scrollto"><?= $lang['learn more']?></a>
         </div>
       </div>
     </div>
@@ -221,22 +220,22 @@ $page = 'home';
 
         <div class="col-lg-3 col-6 text-center">
           <span data-purecounter-start="0" data-purecounter-end="6" data-purecounter-duration="1" class="purecounter"></span>
-          <p>Jumlah Kelas</p>
+          <p><?= $lang['jmlkelas']?></p>
         </div>
 
         <div class="col-lg-3 col-6 text-center">
           <span data-purecounter-start="0" data-purecounter-end="210" data-purecounter-duration="1" class="purecounter"></span>
-          <p>Jumlah Siswa</p>
+          <p><?= $lang['jmlsiswa']?></p>
         </div>
 
         <div class="col-lg-3 col-6 text-center">
           <span data-purecounter-start="0" data-purecounter-end="4" data-purecounter-duration="1" class="purecounter"></span>
-          <p>Jumlah Guru Produktif</p>
+          <p><?= $lang['jmlguru']?></p>
         </div>
 
         <div class="col-lg-3 col-6 text-center">
           <span data-purecounter-start="0" data-purecounter-end="4" data-purecounter-duration="1" class="purecounter"></span>
-          <p>Jumlah Lab</p>
+          <p><?= $lang['jmllab']?></p>
         </div>
 
       </div>
@@ -252,9 +251,7 @@ $page = 'home';
 
       <div class="section-title">
         <h2>Skills</h2>
-        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-          consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
-          in iste officiis commodi quidem hic quas.</p>
+
       </div>
 
       <div class="row skills-content">

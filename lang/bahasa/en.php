@@ -39,6 +39,11 @@ $lang = array(
     "tujuan"=>"Mission Vision Goals",
     "nama"=>"Name",
     "anggota"=>"Team",
-    "katapengantar"=>"Introduction"
+    "katapengantar"=>"Introduction",
+    "jmlsiswa"=>"Total Student",
+    "jmlguru"=>"Total Teacher",
+    "jmlkelas"=>"Total Class",
+    "jmllab"=>"Total Lab",
+    "learn more"=>"Learn More"
 );
 ?>
