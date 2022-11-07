@@ -36,82 +36,15 @@ $numRows = $sql->num_rows;
     <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
     <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="lightbox/css/lightbox.css">
+  <link rel="stylesheet" href="lightbox/css/stylelightbox.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- Template Main CSS File -->
     <link href="assets/css/Galeri.css" rel="stylesheet">
+    
     <link href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" rel="stylesheet">
-<style>
-.wrap {
-      overflow: hidden;
-      margin: 10px;
-    }
-    .box {
-      float: left;
-      position: relative;
-      width: 20%;
-      padding-bottom: 20%;
-    }
-    .boxInner {
-      position: absolute;
-      left: 10px;
-      right: 10px;
-      top: 10px;
-      bottom: 10px;
-      overflow: hidden;
-    }
-    .boxInner img {
-      width: 100%;
-    }
-    .boxInner .titleBox {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      margin-bottom: -50px;
-      background: #fff;
-      background: rgba(0, 0, 0, 0.5);
-      color: #FFF;
-      padding: 10px;
-      text-align: center;
-      -webkit-transition: all 0.3s ease-out;
-      -moz-transition: all 0.3s ease-out;
-      -o-transition: all 0.3s ease-out;
-      transition: all 0.3s ease-out;
-    }
-    section.no-touch .boxInner:hover .titleBox, section.touch .boxInner.touchFocus .titleBox {
-      margin-bottom: 0;
-    }
-    @media only screen and (max-width : 480px) {
-      /* Smartphone view: 1 tile */
-      .box {
-        width: 100%;
-        padding-bottom: 100%;
-      }
-    }
-    @media only screen and (max-width : 650px) and (min-width : 481px) {
-      /* Tablet view: 2 tiles */
-      .box {
-        width: 50%;
-        padding-bottom: 50%;
-      }
-    }
-    @media only screen and (max-width : 1050px) and (min-width : 651px) {
-      /* Small desktop / ipad view: 3 tiles */
-      .box {
-        width: 33.3%;
-        padding-bottom: 33.3%;
-      }
-    }
-    @media only screen and (max-width : 1290px) and (min-width : 1051px) {
-      /* Medium desktop: 4 tiles */
-      .box {
-        width: 25%;
-        padding-bottom: 25%;
-      }
-    }
 
-</style>
 </head>
 
 <body>
@@ -175,30 +108,23 @@ $numRows = $sql->num_rows;
     </div> --> -->
     
 
-    <section class="no-touch">
-
-  <div class="wrap">
-  <?php
-    require('koneksi.php');
-    $query1 = mysqli_query($connection, "SELECT * FROM photos");
-    while ($row = mysqli_fetch_array($query1)) {
-    ?>
-    <div class="box">
-      <div class="boxInner">
-        <img src="assets/admin/uploads/<?= $row['path'] ?>" data-fancybox="gallery" />
-    
+    <section id="portfolio" class="portfolio">
+    <div class="container">
+      <div class="row portfolio-container" data-aos="fade-up">
+        <?php
+        require('koneksi.php');
+        $galeri = mysqli_query($connection, "SELECT * FROM photos order by id");
+        while ($data = mysqli_fetch_array($galeri)) :
+        ?>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <a href="assets/admin/uploads/<?= $data['path'] ?>" data-lightbox="myGallery" data-title="<?= $data['id'] ?>">
+              <img src="assets/admin/uploads/<?= $data['path'] ?>" alt="<?= $data['id'] ?>" class="img-fluid" loading="lazy">
+            </a>
+          </div>
+        <?php endwhile; ?>
       </div>
     </div>
-    <?php }  ?>
-  
-   
-    
-    
-    </div>
-    
-  </div>
-  
-</section>
+  </section>
 
     <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="js/vendor/jquery.ui.widget.js" type="text/javascript"></script>
@@ -246,6 +172,7 @@ $numRows = $sql->num_rows;
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- App js -->
     <script src="assets/js/jquery.core.js"></script>
+    <script src="lightbox/js/lightbox-plus-jquery.min.js"></script>
     <script src="assets/js/jquery.app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
     </main><!-- End #main -->

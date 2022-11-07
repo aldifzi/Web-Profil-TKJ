@@ -4,93 +4,95 @@
                     <!--- Sidemenu -->
                     <div id="sidebar-menu">
                         <ul>
-                        	<li class="menu-title">Berita</li>
+                            <li class="menu-title">Berita</li>
 
                             <li class="has_sub">
                                 <a href="dashboard" class="waves-effect"><i class="mdi mdi-view-dashboard"></i> <span> Dashboard </span> </a>
-                         
+
                             </li>
-<?php if($_SESSION['utype']=='1'):?>
-  <li class="has_sub">
-                                <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-format-list-bulleted"></i> <span> Sub-admins </span> <span class="menu-arrow"></span></a>
-                                <ul class="list-unstyled">
-                                    <li><a href="add-subadmins">Tambah Sub-admin</a></li>
-                                    <li><a href="manage-subadmins">Kelola Sub-admin</a></li>
-                                </ul>
-                            </li>
-<?php endif;?>
-               
+                            <?php if ($_SESSION['utype'] == '1') : ?>
+                                <li class="has_sub">
+                                    <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-format-list-bulleted"></i> <span> Sub-admins </span> <span class="menu-arrow"></span></a>
+                                    <ul class="list-unstyled">
+                                        <li><a href="add-subadmins">Tambah Sub-admin</a></li>
+                                        <li><a href="manage-subadmins">Kelola Sub-admin</a></li>
+                                    </ul>
+                                </li>
+                            <?php endif; ?>
+
 
 
                             <li class="has_sub">
                                 <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-format-list-bulleted"></i> <span> Kategori </span> <span class="menu-arrow"></span></a>
                                 <ul class="list-unstyled">
-                                	<li><a href="add-category">Tambah Kategori</a></li>
+                                    <li><a href="add-category">Tambah Kategori</a></li>
                                     <li><a href="manage-categories">Kelola Kategori</a></li>
                                     <li><a href="manage-subcategories">Kelola Sub Kategori</a></li>
                                 </ul>
                             </li>
 
-                            
-                            
 
-    
-  <li class="has_sub">
+
+
+
+                            <li class="has_sub">
                                 <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-format-list-bulleted"></i> <span> Posts (News) </span> <span class="menu-arrow"></span></a>
                                 <ul class="list-unstyled">
-                                    <li><a href="add-post">Add Posts</a></li>
-                                    <li><a href="manage-posts">Manage Posts</a></li>
-                                     <li><a href="trash-posts">Trash Posts</a></li>
+                                    <li><a href="add-post">Tambah Postingan</a></li>
+                                    <li><a href="manage-posts">Kelola Postingan</a></li>
+                                    <li><a href="trash-posts">Trash Posts</a></li>
                                 </ul>
-                            </li>  
-                     
+                            </li>
 
-                          
-   <li class="has_sub">
+
+
+                            <li class="has_sub">
                                 <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-format-list-bulleted"></i> <span> Comments </span> <span class="menu-arrow"></span></a>
                                 <ul class="list-unstyled">
-                                  <li><a href="unapprove-comment">Waiting for Approval </a></li>
-                                    <li><a href="manage-comments">Approved Comments</a></li>
+                                    <li><a href="unapprove-comment">Menunggu Persetujuan </a></li>
+                                    <li><a href="manage-comments">Komen Disetujui</a></li>
                                 </ul>
-                            </li>   
+                            </li>
 
                         </ul>
                         <ul>
-                        <li class="menu-title"></li>
-                        <li class="has_sub">
+                            <li class="menu-title"></li>
+                            <li class="has_sub">
                                 <a href="admin" class="waves-effect"><i class="mdi mdi-format-list-bulleted"></i> <span>Siswa </span> <span class="menu-arrow"></span></a>
-                                
-                            </li> 
+
+                            </li>
                             <li class="has_sub">
                                 <a href="galeri" class="waves-effect"><i class="mdi mdi-format-list-bulleted"></i> <span>Galeri </span> <span class="menu-arrow"></span></a>
-                                
-                            </li>   
+
+                            </li>
                             <li class="has_sub">
                                 <a href="data-guru" class="waves-effect"><i class="mdi mdi-format-list-bulleted"></i> <span>Guru </span> <span class="menu-arrow"></span></a>
                                 <ul class="list-unstyled">
-                                  
+
                                 </ul>
-                            </li>    
+                            </li>
                             <li class="has_sub">
-                                <a href="prestasi" class="waves-effect"><i class="mdi mdi-format-list-bulleted"></i> <span>Prestasi </span> <span class="menu-arrow"></span></a>
+                                <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-format-list-bulleted"></i> <span> Prestasi </span> <span class="menu-arrow"></span></a>
                                 <ul class="list-unstyled">
-                                  
+                                    <li><a href="add_prestasi">Tambah Posts</a></li>
+                                    <li><a href="manage_prestasi">Kelola Prestasi</a></li>
                                 </ul>
+                            </li>
                             </li>
                             <li class="has_sub">
                                 <a href="VisiMisi" class="waves-effect"><i class="mdi mdi-format-list-bulleted"></i> <span>Visi Misi </span> <span class="menu-arrow"></span></a>
                                 <ul class="list-unstyled">
-                                  
+
                                 </ul>
                             </li>
-                           
+
 
                         </ul>
                     </div>
                     <!-- Sidebar -->
-                   
 
-                    
+
+
 
                 </div>
                 <!-- Sidebar -left -->

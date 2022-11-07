@@ -28,6 +28,9 @@ $lang = array(
     "guru"=>"Teacher",
     "siswa"=>"Student",
     "hubungi"=>"CONTACT US",
-    "alamatsekolah"=>"School Address"
+    "alamatsekolah"=>"School Address",
+    "daftarsiswa" =>"Student List",
+    "more" => "More",
+    "bahasa" => "Language"
 );
 ?>

@@ -33,9 +33,9 @@ include ('lang/config.php');
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/fixedheader/3.1.5/css/fixedHeader.bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/fixedheader/3.1.5/css/fixedHeader.bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.bootstrap.min.css">
 
   <!-- Template Main CSS File -->
   <link href="assets/css/prestasi.css" rel="stylesheet">
@@ -46,97 +46,65 @@ include ('lang/config.php');
 <body class="selection:bg-slate-600 selection:text-white">
 
 
-<!-- ======= Header ======= -->
-<?php include('assets/includes/header.php');?>
-<!-- End Header -->
+  <!-- ======= Header ======= -->
+  <?php include('assets/includes/header.php'); ?>
+  <!-- End Header -->
 
-   <!-- ======= Breadcrumbs ======= -->
-   <section id="breadcrumbs" class="breadcrumbs">
+  <!-- ======= Breadcrumbs ======= -->
+  <section id="breadcrumbs" class="breadcrumbs">
     <div class="container">
 
       <div class="d-flex justify-content-between align-items-center">
         <h2><i class="fa fa-trophy" aria-hidden="true"></i>
-<?=$lang['prestasi']?></h2>
+          <?= $lang['prestasi'] ?></h2>
         <ol>
           <li><a href="index.html">Home</a></li>
-          <li><?=$lang['prestasi']?></li>
+          <li><?= $lang['prestasi'] ?></li>
         </ol>
       </div>
 
     </div>
   </section><!-- End Breadcrumbs -->
 
- <!-- ======= Hero Slider Section ======= -->
-
- <!-- Banner SlideShow nya -->
-     <div id="dmbannerhead" class="carousel slide" data-ride="carousel">
-       <div class="carousel-inner">
-
-     </div>
-		
-	 <a class="left carousel-control" href="#dmbannerhead" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-	 <a class="right carousel-control" href="#dmbannerhead" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
-   </div>
-<!-- End Hero Slider Section -->
 
 
-  <!-- ======= Tabel ======= -->
+  <section class="light">
+    <div class="container py-2">
+      <?php
+      include "koneksi.php";
+      $result = mysqli_query($con, "SELECT * FROM tprestasi");
+      while ($res = mysqli_fetch_array($result)) {
+      ?>
+        <article class="postcard light blue">
+          <a class="postcard__img_link" href="#">
+            <?php echo "<img class='postcard__img' src='assets/admin/image_prestasi/" . $res['gambar'] . "'"; ?>
+          </a>
+          <div class="postcard__text t-dark">
+            <h1 class="postcard__title blue"><a href="#"><?= $res['nama_prestasi'] ?></a></h1>
+            <div class="postcard__subtitle small">
+              <time datetime="2020-05-25 12:00:00">
+                <i class="fas fa-calendar-alt mr-2"></i><?= $res['tahun_prestasi'] ?>
+              </time>
+            </div>
+            <div class="postcard__bar"></div>
+            <div class="postcard__preview-txt">
+              <p style="word-wrap: break word;"><?= $res['deskripsi'] ?></p>
+            </div>
+          </div>
+        </article>
+      <?php } ?>
+    </div>
+  </section>
 
-
-
-  <div class="container my-5">
-<div class="">
-    <table  id="dataTable" class="table table-striped table-bordered" style="width:100%">
- <thead class="bg-light">
-  <tr>
-    <th class="px-5"><?=$lang['nmlengkap']?></th>
-    <th><?=$lang['tglpelak']?></th>
-    <TH><?=$lang['kelas/jurusan']?></TH>
-    <TH><?=$lang['hasil']?></TH>
-    <th><?=$lang['tgtkejuaraan']?></th>
-    <th><?=$lang['jenis']?></th>
-  </tr>
- </thead>
-<tbody>
-    <?php
- 
-    
- require('koneksi.php');
- $query1= mysqli_query($connection,"SELECT * FROM prestasi");
-
- 
- while($row=mysqli_fetch_array($query1))
- {
-    ?>
-
-    <tr>
-      <td><?php echo  $row['nama'];?></td>
-      <td><?php echo  $row['tgl'];?></td>
-      <td><?php echo  $row['kelas'];?></td>
-      <td >Juara ke - <?php echo  $row['hasil'];?></td>
-      <td ><?php echo  $row['tingkat'];?></td>
-      <td ><?php echo  $row['jenis'];?></td>
-      
-    </tr>
-    <?php }  ?>
-</tbody>
-
-        </table>
- </div>
-<script></script>
- </div>
-      
-    <!-- End tabel Section -->
-
-  <!-- ======= Footer ======= -->
-  <?php include('assets/includes/footer.php');?>'
-  <!-- End Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
   <div id="preloader"></div>
+  <!-- ======= Footer ======= -->
+  <?php include('assets/includes/footer.php'); ?>
+  <!-- End Footer -->
 
-<!-- Vendor JS Files -->
-<script src="assets/vendor/aos/aos.js"></script>
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
@@ -153,26 +121,17 @@ include ('lang/config.php');
   <script src="jam.js"></script>
   <script src="https://kit.fontawesome.com/6f2ba42180.js" crossorigin="anonymous"></script>
 
-<script type="text/javascript" src="assets/js/jam.js">
-      
+  <script type="text/javascript" src="assets/js/jam.js">
+
   </script>
 
 
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
-<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.12.1/js/dataTables.jqueryui.min.js"></script>
-<script src="https://cdn.datatables.net/fixedheader/3.1.5/js/dataTables.fixedHeader.min.js"></script>
-<script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
-<script src="https://cdn.datatables.net/responsive/2.2.3/js/responsive.bootstrap.min.js"></script>
-  
-<script>
-    $(document).ready(function () {
-        $('#dataTable').DataTable({
-          responsive: true
-          
-        });
-    });
-</script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.12.1/js/dataTables.jqueryui.min.js"></script>
+  <script src="https://cdn.datatables.net/fixedheader/3.1.5/js/dataTables.fixedHeader.min.js"></script>
+  <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+  <script src="https://cdn.datatables.net/responsive/2.2.3/js/responsive.bootstrap.min.js"></script>
 </body>
 
 </html>

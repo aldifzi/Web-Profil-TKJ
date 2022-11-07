@@ -387,7 +387,7 @@ $page = 'home';
     <div class="container" data-aos="fade-up">
 
       <div class="section-title">
-        <h2>Daftar Siswa</h2>
+        <h2><?= $lang['daftarsiswa'] ?></h2>
         <p></p>
       </div>
 
@@ -423,7 +423,7 @@ $page = 'home';
 
         <a href="datasiswa">
           <button class="bg-red-500 hover:bg-red-400 text-white font-bold py-2 px-4 text-center border-b-4 border-red-700 hover:border-red-500 rounded">
-            Lebih Banyak
+          <?= $lang['more'] ?>
           </button></a>
       </div>
 
@@ -462,7 +462,7 @@ $page = 'home';
  
   <a href="galeri">
     <button class="bg-red-500 hover:bg-red-400 text-white font-bold py-2 px-4 text-center border-b-4 border-red-700 hover:border-red-500 rounded">
-      Lebih Banyak
+    <?= $lang['more'] ?>
     </button></a>
 </div>
 </div>
