@@ -233,7 +233,7 @@ mx-1"></a>
         <?php } ?>
         </div>
     </div>
-
+  </div>
 
   <!-- ======= Footer ======= -->
   <?php include('assets/includes/footer.php'); ?>

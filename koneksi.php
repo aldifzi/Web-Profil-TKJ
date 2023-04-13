@@ -7,5 +7,3 @@ $password   = ''; // password database
 $dbname     = 'tkj'; // nama database
  
 $connection = new mysqli($host, $username, $password, $dbname);
- 
-
